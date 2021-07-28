@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 74e2c16
+The repo hash for this run is: f1f735d
 
-The branch on which it was run: develop-sedov-testsuite
+The branch on which it was run: develop-rayleightaylor-update
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
