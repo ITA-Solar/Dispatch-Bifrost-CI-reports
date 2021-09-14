@@ -1,5 +1,5 @@
 
-The repo hash for this run is: da76b14
+The repo hash for this run is: 8706b4d
 
 The branch on which it was run: develop
 
@@ -18,35 +18,20 @@ The branch on which it was run: develop
 Traceback (most recent call last):
   File "python/compare_quantities.py", line 104, in <module>
     write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 48, in write_table
-    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
-    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
-    gg.append(patch(p,copy=copy,aux=aux))
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
-    dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
-    elif is_hlld:
-NameError: name 'is_hlld' is not defined
+  File "python/compare_quantities.py", line 49, in write_table
+    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
+    s=dispatch.snapshot(iout,run,data)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 817, in __init__
+    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 563, in __init__
+    self.var=_var(self,self.filename,snap,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 163, in _var
+    patch.ip=(patch.id-1-patch.rank)//nrank + patch.rank*ntask
+AttributeError: '_patch' object has no attribute 'rank'
 cp: cannot stat ‘*.md’: No such file or directory
 
 ::: Running sod + analytical
-::: Runtime Warnings:
-
-Traceback (most recent call last):
-  File "python/plot_sod_with_analytical.py", line 28, in <module>
-    ds=dispatch.yt.snapshot(20, run=run, data=data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
-    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
-    gg.append(patch(p,copy=copy,aux=aux))
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
-    dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
-    elif is_hlld:
-NameError: name 'is_hlld' is not defined
-
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
@@ -57,41 +42,23 @@ NameError: name 'is_hlld' is not defined
 ::: Running yz plane
 ::: Running zx plane
 ::: Running plotting
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/plot_test_suite.py", line 42, in <module>
-    ds = dyt.open_amr(iout=iout,run=run,data=data,verbose=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 115, in open_amr
-    return snapshot(iout=iout,run=run,data=data,verbose=verbose,copy=copy,aux=aux)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
-    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
-    gg.append(patch(p,copy=copy,aux=aux))
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
-    dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
-    elif is_hlld:
-NameError: name 'is_hlld' is not defined
-cp: cannot stat ‘*.png’: No such file or directory
-
 ::: Running comparison
 ::: Runtime Errors:
 
 Traceback (most recent call last):
   File "python/compare_quantities.py", line 104, in <module>
     write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 47, in write_table
-    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
-    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
-    gg.append(patch(p,copy=copy,aux=aux))
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
-    dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
-    elif is_hlld:
-NameError: name 'is_hlld' is not defined
+  File "python/compare_quantities.py", line 48, in write_table
+    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
+    s=dispatch.snapshot(iout,run,data)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 817, in __init__
+    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 563, in __init__
+    self.var=_var(self,self.filename,snap,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 163, in _var
+    patch.ip=(patch.id-1-patch.rank)//nrank + patch.rank*ntask
+AttributeError: '_patch' object has no attribute 'rank'
 cp: cannot stat ‘*.md’: No such file or directory
 
 
@@ -105,16 +72,16 @@ cp: cannot stat ‘*.md’: No such file or directory
  04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ERRORS! ]
- 07 └──── sod + analytical                                       [ WARNING ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
  10 └──── xy plane                                               [ ALL  OK ]
  11 └──── yz plane                                               [ ALL  OK ]
  12 └──── zx plane                                               [ ALL  OK ]
- 13 └──── plotting                                               [ ERRORS! ]
+ 13 └──── plotting                                               [ ALL  OK ]
  14 └──── comparison                                             [ ERRORS! ]
                                                                  -----------
-                                                                 11   /   14
+                                                                 12   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
