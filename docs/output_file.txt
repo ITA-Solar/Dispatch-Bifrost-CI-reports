@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 5e0d8ce
+The repo hash for this run is: 0504ba6
 
 The branch on which it was run: develop
 
@@ -8,44 +8,43 @@ The branch on which it was run: develop
 
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
-::: Running x direction
-::: Running y direction
-::: Running z direction
-::: Running plotting
-::: Running comparison
-::: Running sod + analytical
+::: Compilation Errors:
+../../components/cartesian_mod.f90(308): error #6460: This is not a field name that is defined in the encompassing structure.   [ADD_BY_LEVEL]
+    call self%task_list%add_by_level (task%link)
+------------------------^
+compilation aborted for ../../components/cartesian_mod.f90 (code 1)
+make: *** [cartesian_mod.o] Error 1
+
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../components/cartesian_mod.f90(308): error #6460: This is not a field name that is defined in the encompassing structure.   [ADD_BY_LEVEL]
+    call self%task_list%add_by_level (task%link)
+------------------------^
+compilation aborted for ../../components/cartesian_mod.f90 (code 1)
+make: *** [cartesian_mod.o] Error 1
+
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
-::: Running xy plane
-::: Running yz plane
-::: Running zx plane
-::: Running plotting
-::: Running comparison
+::: Compilation Errors:
+../../components/cartesian_mod.f90(308): error #6460: This is not a field name that is defined in the encompassing structure.   [ADD_BY_LEVEL]
+    call self%task_list%add_by_level (task%link)
+------------------------^
+compilation aborted for ../../components/cartesian_mod.f90 (code 1)
+make: *** [cartesian_mod.o] Error 1
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel Parallel Studio 2020                              
 
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ALL  OK ]
- 05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ ALL  OK ]
- 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
- 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ ALL  OK ]
- 11 └──── yz plane                                               [ ALL  OK ]
- 12 └──── zx plane                                               [ ALL  OK ]
- 13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ALL  OK ]
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ERRORS! ]
+ 02 Brio&Wu [ramses/mhd_eos] - compilation                       [ ERRORS! ]
+ 03 Advection MagLoop [stagger2/bifrost] - compilation           [ ERRORS! ]
                                                                  -----------
-                                                                 14   /   14
+                                                                 0    /    3
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
