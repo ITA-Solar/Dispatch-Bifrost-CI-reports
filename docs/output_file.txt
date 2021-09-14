@@ -1,7 +1,7 @@
 
-The repo hash for this run is: a0427ba
+The repo hash for this run is: 8cadf1e
 
-The branch on which it was run: fork_merger
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -17,11 +17,11 @@ The branch on which it was run: fork_merger
 Traceback (most recent call last):
   File "python/plot_test_suite.py", line 21, in <module>
     s=dispatch.snapshot(10,run=run,data=data, verbose=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 832, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
     p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 537, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
     self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 626, in _h
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
     if self.kind[0:7]=='stagger':
 AttributeError: '_patch' object has no attribute 'kind'
 cp: cannot stat ‘*.png’: No such file or directory
@@ -34,13 +34,13 @@ Traceback (most recent call last):
     write_table(run1, run2, snapnum)
   File "python/compare_quantities.py", line 48, in write_table
     ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/yt/_yt.py", line 117, in snapshot
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
     s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 832, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
     p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 537, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
     self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 626, in _h
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
     if self.kind[0:7]=='stagger':
 AttributeError: '_patch' object has no attribute 'kind'
 cp: cannot stat ‘*.md’: No such file or directory
@@ -51,13 +51,13 @@ cp: cannot stat ‘*.md’: No such file or directory
 Traceback (most recent call last):
   File "python/plot_sod_with_analytical.py", line 28, in <module>
     ds=dispatch.yt.snapshot(20, run=run, data=data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/yt/_yt.py", line 117, in snapshot
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
     s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 832, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
     p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 537, in __init__
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
     self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_fork_merger/utilities/python/dispatch/_dispatch.py", line 626, in _h
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
     if self.kind[0:7]=='stagger':
 AttributeError: '_patch' object has no attribute 'kind'
 cp: cannot stat ‘*.png’: No such file or directory
