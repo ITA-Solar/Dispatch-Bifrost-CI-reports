@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 8cadf1e
+The repo hash for this run is: 375049e
 
 The branch on which it was run: develop
 
@@ -12,20 +12,6 @@ The branch on which it was run: develop
 ::: Running y direction
 ::: Running z direction
 ::: Running plotting
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/plot_test_suite.py", line 21, in <module>
-    s=dispatch.snapshot(10,run=run,data=data, verbose=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
-    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
-    self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
-    if self.kind[0:7]=='stagger':
-AttributeError: '_patch' object has no attribute 'kind'
-cp: cannot stat ‘*.png’: No such file or directory
-
 ::: Running comparison
 ::: Runtime Errors:
 
@@ -34,92 +20,79 @@ Traceback (most recent call last):
     write_table(run1, run2, snapnum)
   File "python/compare_quantities.py", line 48, in write_table
     ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
-    s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
-    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
-    self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
-    if self.kind[0:7]=='stagger':
-AttributeError: '_patch' object has no attribute 'kind'
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
+    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
+    gg.append(patch(p,copy=copy,aux=aux))
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
+    dict['ee']=p.var('ee')
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+    elif is_hlld:
+NameError: name 'is_hlld' is not defined
 cp: cannot stat ‘*.md’: No such file or directory
 
 ::: Running sod + analytical
-::: Runtime Errors:
+::: Runtime Warnings:
 
 Traceback (most recent call last):
   File "python/plot_sod_with_analytical.py", line 28, in <module>
     ds=dispatch.yt.snapshot(20, run=run, data=data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
-    s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 833, in __init__
-    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 538, in __init__
-    self.idx.h=self._h()
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 627, in _h
-    if self.kind[0:7]=='stagger':
-AttributeError: '_patch' object has no attribute 'kind'
-cp: cannot stat ‘*.png’: No such file or directory
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
+    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
+    gg.append(patch(p,copy=copy,aux=aux))
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
+    dict['ee']=p.var('ee')
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+    elif is_hlld:
+NameError: name 'is_hlld' is not defined
 
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../solvers/vector_ops.f90(360): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out(:,:,:,1) = ddx (ds, in)
------------------^
-../../solvers/vector_ops.f90(361): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out(:,:,:,2) = ddy (ds, in)
------------------^
-../../solvers/vector_ops.f90(362): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out(:,:,:,3) = ddz (ds, in)
------------------^
-../../solvers/vector_ops.f90(370): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out(:,:,:,1) = ddx (ds, in)
------------------^
-../../solvers/vector_ops.f90(371): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out(:,:,:,2) = ddy (ds, in)
------------------^
-../../solvers/vector_ops.f90(372): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out(:,:,:,3) = ddz (ds, in)
------------------^
-../../solvers/vector_ops.f90(381): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out = ddx(ds, in(:,:,:,1), l, u) &
---------^
-../../solvers/vector_ops.f90(382): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-      + ddy(ds, in(:,:,:,2), l, u) &
---------^
-../../solvers/vector_ops.f90(383): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-      + ddz(ds, in(:,:,:,3), l, u)
---------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
-----------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
----------------------------------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
---------------------------------------------------------^
-compilation aborted for ../../solvers/vector_ops.f90 (code 1)
-make: *** [vector_ops.o] Error 1
-
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-extras_mod.f90(64): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [CONNECT_MOD]
-  USE connect_mod
-------^
-extras_mod.f90(109): error #8278: An overriding binding and its corresponding overridden binding must have the same number of dummy arguments.   [CHECK_REFINE]
-    procedure:: check_refine
-----------------^
-extras_mod.f90(109): error #8383: The dummy arguments of an overriding and overridden binding that correspond by position must have the same characteristics, except for the type of the passed object dummy arguments.   [CHECK_REFINE]
-    procedure:: check_refine
-----------------^
-compilation aborted for extras_mod.f90 (code 1)
-make: *** [extras_mod.o] Error 1
+::: Running xy plane
+::: Running yz plane
+::: Running zx plane
+::: Running plotting
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/plot_test_suite.py", line 42, in <module>
+    ds = dyt.open_amr(iout=iout,run=run,data=data,verbose=0)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 115, in open_amr
+    return snapshot(iout=iout,run=run,data=data,verbose=verbose,copy=copy,aux=aux)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
+    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
+    gg.append(patch(p,copy=copy,aux=aux))
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
+    dict['ee']=p.var('ee')
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+    elif is_hlld:
+NameError: name 'is_hlld' is not defined
+cp: cannot stat ‘*.png’: No such file or directory
+
+::: Running comparison
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 47, in write_table
+    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 130, in snapshot
+    ds = yt.load_amr_grids(dispatch.yt.patches(s,copy=copy,aux=aux), **parameters)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 102, in patches
+    gg.append(patch(p,copy=copy,aux=aux))
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
+    dict['ee']=p.var('ee')
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+    elif is_hlld:
+NameError: name 'is_hlld' is not defined
+cp: cannot stat ‘*.md’: No such file or directory
 
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
@@ -130,13 +103,18 @@ make: *** [extras_mod.o] Error 1
  02 └──── x direction                                            [ ALL  OK ]
  03 └──── y direction                                            [ ALL  OK ]
  04 └──── z direction                                            [ ALL  OK ]
- 05 └──── plotting                                               [ ERRORS! ]
+ 05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ERRORS! ]
- 07 └──── sod + analytical                                       [ ERRORS! ]
- 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ERRORS! ]
- 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ERRORS! ]
+ 07 └──── sod + analytical                                       [ WARNING ]
+ 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
+ 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
+ 10 └──── xy plane                                               [ ALL  OK ]
+ 11 └──── yz plane                                               [ ALL  OK ]
+ 12 └──── zx plane                                               [ ALL  OK ]
+ 13 └──── plotting                                               [ ERRORS! ]
+ 14 └──── comparison                                             [ ERRORS! ]
                                                                  -----------
-                                                                 4    /    9
+                                                                 11   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
