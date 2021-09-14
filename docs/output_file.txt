@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 375049e
+The repo hash for this run is: da76b14
 
 The branch on which it was run: develop
 
@@ -26,7 +26,7 @@ Traceback (most recent call last):
     gg.append(patch(p,copy=copy,aux=aux))
   File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
     dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
     elif is_hlld:
 NameError: name 'is_hlld' is not defined
 cp: cannot stat ‘*.md’: No such file or directory
@@ -43,7 +43,7 @@ Traceback (most recent call last):
     gg.append(patch(p,copy=copy,aux=aux))
   File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
     dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
     elif is_hlld:
 NameError: name 'is_hlld' is not defined
 
@@ -70,7 +70,7 @@ Traceback (most recent call last):
     gg.append(patch(p,copy=copy,aux=aux))
   File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
     dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
     elif is_hlld:
 NameError: name 'is_hlld' is not defined
 cp: cannot stat ‘*.png’: No such file or directory
@@ -89,7 +89,7 @@ Traceback (most recent call last):
     gg.append(patch(p,copy=copy,aux=aux))
   File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 95, in patch
     dict['ee']=p.var('ee')
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 404, in var
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 387, in var
     elif is_hlld:
 NameError: name 'is_hlld' is not defined
 cp: cannot stat ‘*.md’: No such file or directory
