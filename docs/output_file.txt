@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 8706b4d
+The repo hash for this run is: 7e4dedd
 
 The branch on which it was run: develop
 
@@ -13,24 +13,6 @@ The branch on which it was run: develop
 ::: Running z direction
 ::: Running plotting
 ::: Running comparison
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 49, in write_table
-    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
-    s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 817, in __init__
-    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 563, in __init__
-    self.var=_var(self,self.filename,snap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 163, in _var
-    patch.ip=(patch.id-1-patch.rank)//nrank + patch.rank*ntask
-AttributeError: '_patch' object has no attribute 'rank'
-cp: cannot stat ‘*.md’: No such file or directory
-
 ::: Running sod + analytical
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
@@ -43,24 +25,6 @@ cp: cannot stat ‘*.md’: No such file or directory
 ::: Running zx plane
 ::: Running plotting
 ::: Running comparison
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 48, in write_table
-    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
-    s=dispatch.snapshot(iout,run,data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 817, in __init__
-    p=_patch(id,patch_dict[id],self,memmap=memmap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 563, in __init__
-    self.var=_var(self,self.filename,snap,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/_dispatch.py", line 163, in _var
-    patch.ip=(patch.id-1-patch.rank)//nrank + patch.rank*ntask
-AttributeError: '_patch' object has no attribute 'rank'
-cp: cannot stat ‘*.md’: No such file or directory
-
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -71,7 +35,7 @@ cp: cannot stat ‘*.md’: No such file or directory
  03 └──── y direction                                            [ ALL  OK ]
  04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ERRORS! ]
+ 06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
@@ -79,9 +43,9 @@ cp: cannot stat ‘*.md’: No such file or directory
  11 └──── yz plane                                               [ ALL  OK ]
  12 └──── zx plane                                               [ ALL  OK ]
  13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ERRORS! ]
+ 14 └──── comparison                                             [ ALL  OK ]
                                                                  -----------
-                                                                 12   /   14
+                                                                 14   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
