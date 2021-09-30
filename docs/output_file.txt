@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 9b01c36
+The repo hash for this run is: 7557ba4
 
 The branch on which it was run: develop
 
@@ -9,11 +9,134 @@ The branch on which it was run: develop
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006743D9  Unknown               Unknown  Unknown
+dispatch.x         0000000000485594  initial_condition         366  initial_conditions_mod.f90
+dispatch.x         00000000004611D9  extras_mod_mp_ini         159  extras_mod.f90
+dispatch.x         000000000050879D  mhd_mod_mp_init_          176  mhd_mod.f90
+dispatch.x         00000000005AA3A9  solver_mod_mp_ini          80  solver_mod.f90
+dispatch.x         00000000004608DC  experiment_mod_mp          36  experiment_mod.f90
+dispatch.x         000000000041581F  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         00000000004196FE  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007F45311473F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F45310CB937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F453108F533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000419129  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         0000000000408D0A  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F4530C6B555  __libc_start_main     Unknown  Unknown
+dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
+
 ::: Running y direction
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006743D9  Unknown               Unknown  Unknown
+dispatch.x         0000000000485594  initial_condition         366  initial_conditions_mod.f90
+dispatch.x         00000000004611D9  extras_mod_mp_ini         159  extras_mod.f90
+dispatch.x         000000000050879D  mhd_mod_mp_init_          176  mhd_mod.f90
+dispatch.x         00000000005AA3A9  solver_mod_mp_ini          80  solver_mod.f90
+dispatch.x         00000000004608DC  experiment_mod_mp          36  experiment_mod.f90
+dispatch.x         000000000041581F  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         00000000004196FE  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007FB2E03F23F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007FB2E0376937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007FB2E033A533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000419129  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         0000000000408D0A  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FB2DFF16555  __libc_start_main     Unknown  Unknown
+dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
+
 ::: Running z direction
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006743D9  Unknown               Unknown  Unknown
+dispatch.x         0000000000485594  initial_condition         366  initial_conditions_mod.f90
+dispatch.x         00000000004611D9  extras_mod_mp_ini         159  extras_mod.f90
+dispatch.x         000000000050879D  mhd_mod_mp_init_          176  mhd_mod.f90
+dispatch.x         00000000005AA3A9  solver_mod_mp_ini          80  solver_mod.f90
+dispatch.x         00000000004608DC  experiment_mod_mp          36  experiment_mod.f90
+dispatch.x         000000000041581F  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         00000000004196FE  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007F434F9CC3F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F434F950937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F434F914533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000419129  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         0000000000408D0A  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F434F4F0555  __libc_start_main     Unknown  Unknown
+dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
+
 ::: Running plotting
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/plot_test_suite.py", line 26, in <module>
+    dg.plot_values_along(ss[0],[0.00,0.000,0.000],dir=direction,iv='d', ls=lines[direction], label=run)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/graphics/_graphics.py", line 65, in plot_values_along
+    plot(ds.values_along(pp,pt,iv=kv['iv'],dir=kv['dir'],all=kv['all']),**kw)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 230, in values_along
+    patches=patches_along(pp,point,dir=dir,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 69, in patches_along
+    p=patch_at(pp,pt)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 35, in patch_at
+    for p in pp:
+TypeError: 'snapshot' object is not iterable
+cp: cannot stat ‘*.png’: No such file or directory
+
 ::: Running comparison
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 48, in write_table
+    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
+    parameters=dispatch.yt.parameters(s)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+    p=s.patches[0]
+AttributeError: 'snapshot' object has no attribute 'patches'
+cp: cannot stat ‘*.md’: No such file or directory
+
 ::: Running sod + analytical
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006743D9  Unknown               Unknown  Unknown
+dispatch.x         0000000000485594  initial_condition         366  initial_conditions_mod.f90
+dispatch.x         00000000004611D9  extras_mod_mp_ini         159  extras_mod.f90
+dispatch.x         000000000050879D  mhd_mod_mp_init_          176  mhd_mod.f90
+dispatch.x         00000000005AA3A9  solver_mod_mp_ini          80  solver_mod.f90
+dispatch.x         00000000004608DC  experiment_mod_mp          36  experiment_mod.f90
+dispatch.x         000000000041581F  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         00000000004196FE  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007F0E2623C3F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F0E261C0937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F0E26184533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000419129  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         0000000000408D0A  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F0E25D60555  __libc_start_main     Unknown  Unknown
+dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
+Traceback (most recent call last):
+  File "python/plot_sod_with_analytical.py", line 28, in <module>
+    ds=dispatch.yt.snapshot(20, run=run, data=data)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
+    parameters=dispatch.yt.parameters(s)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+    p=s.patches[0]
+AttributeError: 'snapshot' object has no attribute 'patches'
+cp: cannot stat ‘*.png’: No such file or directory
+
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
@@ -31,12 +154,12 @@ The branch on which it was run: develop
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ALL  OK ]
- 05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ ALL  OK ]
+ 02 └──── x direction                                            [ ERRORS! ]
+ 03 └──── y direction                                            [ ERRORS! ]
+ 04 └──── z direction                                            [ ERRORS! ]
+ 05 └──── plotting                                               [ ERRORS! ]
+ 06 └──── comparison                                             [ ERRORS! ]
+ 07 └──── sod + analytical                                       [ ERRORS! ]
  08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
  10 └──── xy plane                                               [ ALL  OK ]
@@ -45,7 +168,7 @@ The branch on which it was run: develop
  13 └──── plotting                                               [ ALL  OK ]
  14 └──── comparison                                             [ ALL  OK ]
                                                                  -----------
-                                                                 14   /   14
+                                                                 8    /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
