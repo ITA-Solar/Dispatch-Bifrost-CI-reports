@@ -1,4 +1,6 @@
-# Weekly test suite results
+# Weekly test suite results -- This page is under construction 
+
+Note that the results shown here are not yet corresponding the test suite that runs weekly
 
 Here are the results from the weekly run associated with Dispatch-Bifrost
 
