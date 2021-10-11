@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 8bf52ec
+The repo hash for this run is: 09cade1
 
 The branch on which it was run: develop
 
@@ -8,44 +8,84 @@ The branch on which it was run: develop
 
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
-::: Running x direction
-::: Running y direction
-::: Running z direction
-::: Running plotting
-::: Running comparison
-::: Running sod + analytical
+::: Compilation Errors:
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+      call patch%gas_pressure_sub (q)
+-----------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+      call patch%gas_pressure_sub (q)
+-----------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+      call patch%gas_pressure_sub (q)
+-----------^
+compilation aborted for ../../tasks/refine_mod.f90 (code 1)
+make: *** [refine_mod.o] Error 1
+
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
-::: Running xy plane
-::: Running yz plane
-::: Running zx plane
-::: Running plotting
-::: Running comparison
+::: Compilation Errors:
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+  call patch%gas_pressure_sub (pg)
+-------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
+      call patch%gas_pressure_sub (q)
+-----------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
+      call patch%gas_pressure_sub (q)
+-----------^
+../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
+      call patch%gas_pressure_sub (q)
+-----------^
+compilation aborted for ../../tasks/refine_mod.f90 (code 1)
+make: *** [refine_mod.o] Error 1
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel Parallel Studio 2020                              
 
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ALL  OK ]
- 05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ ALL  OK ]
- 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
- 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ ALL  OK ]
- 11 └──── yz plane                                               [ ALL  OK ]
- 12 └──── zx plane                                               [ ALL  OK ]
- 13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ALL  OK ]
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ERRORS! ]
+ 02 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
+ 03 Advection MagLoop [stagger2/bifrost] - compilation           [ ERRORS! ]
                                                                  -----------
-                                                                 14   /   14
+                                                                 1    /    3
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
