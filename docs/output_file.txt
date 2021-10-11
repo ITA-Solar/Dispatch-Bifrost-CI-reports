@@ -1,5 +1,5 @@
 
-The repo hash for this run is: be7c11d
+The repo hash for this run is: 8cceae4
 
 The branch on which it was run: develop
 
@@ -15,17 +15,17 @@ The branch on which it was run: develop
 forrtl: severe (408): fort: (3): Subscript #1 of the array MEM has value 0 which is less than the lower bound of 1
 
 Image              PC                Routine            Line        Source             
-dispatch.x         000000000148315F  Unknown               Unknown  Unknown
+dispatch.x         000000000148389F  Unknown               Unknown  Unknown
 dispatch.x         0000000000731E0F  experiment_mod_mp          41  experiment_mod.f90
 dispatch.x         0000000000460788  cartesian_mod_mp_         403  cartesian_mod.f90
 dispatch.x         0000000000459BF5  cartesian_mod_mp_         230  cartesian_mod.f90
-libiomp5.so        00007F10C76ED3F3  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00007F10C7671937  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        00007F10C7635533  __kmpc_fork_call      Unknown  Unknown
+libiomp5.so        00007F95590D53F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F9559059937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F955901D533  __kmpc_fork_call      Unknown  Unknown
 dispatch.x         000000000045876C  cartesian_mod_mp_         229  cartesian_mod.f90
 dispatch.x         000000000040931D  MAIN__                     17  dispatch.f90
 dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
-libc-2.17.so       00007F10C7211555  __libc_start_main     Unknown  Unknown
+libc-2.17.so       00007F9558BF9555  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
 
 ::: Running z direction
@@ -34,17 +34,17 @@ dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
 forrtl: severe (408): fort: (3): Subscript #1 of the array MEM has value 0 which is less than the lower bound of 1
 
 Image              PC                Routine            Line        Source             
-dispatch.x         000000000148315F  Unknown               Unknown  Unknown
+dispatch.x         000000000148389F  Unknown               Unknown  Unknown
 dispatch.x         0000000000731E0F  experiment_mod_mp          41  experiment_mod.f90
 dispatch.x         0000000000460788  cartesian_mod_mp_         403  cartesian_mod.f90
 dispatch.x         0000000000459BF5  cartesian_mod_mp_         230  cartesian_mod.f90
-libiomp5.so        00007FC296AD23F3  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00007FC296A56937  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        00007FC296A1A533  __kmpc_fork_call      Unknown  Unknown
+libiomp5.so        00007F683C7283F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F683C6AC937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F683C670533  __kmpc_fork_call      Unknown  Unknown
 dispatch.x         000000000045876C  cartesian_mod_mp_         229  cartesian_mod.f90
 dispatch.x         000000000040931D  MAIN__                     17  dispatch.f90
 dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
-libc-2.17.so       00007FC2965F6555  __libc_start_main     Unknown  Unknown
+libc-2.17.so       00007F683C24C555  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
 
 ::: Running plotting
