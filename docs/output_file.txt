@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 09cade1
+The repo hash for this run is: be7c11d
 
 The branch on which it was run: develop
 
@@ -8,84 +8,136 @@ The branch on which it was run: develop
 
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-      call patch%gas_pressure_sub (q)
------------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-      call patch%gas_pressure_sub (q)
------------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-      call patch%gas_pressure_sub (q)
------------^
-compilation aborted for ../../tasks/refine_mod.f90 (code 1)
-make: *** [refine_mod.o] Error 1
+::: Running x direction
+::: Running y direction
+::: Runtime Errors:
 
+forrtl: severe (408): fort: (3): Subscript #1 of the array MEM has value 0 which is less than the lower bound of 1
+
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000148315F  Unknown               Unknown  Unknown
+dispatch.x         0000000000731E0F  experiment_mod_mp          41  experiment_mod.f90
+dispatch.x         0000000000460788  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         0000000000459BF5  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007F10C76ED3F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F10C7671937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F10C7635533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         000000000045876C  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         000000000040931D  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F10C7211555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
+
+::: Running z direction
+::: Runtime Errors:
+
+forrtl: severe (408): fort: (3): Subscript #1 of the array MEM has value 0 which is less than the lower bound of 1
+
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000148315F  Unknown               Unknown  Unknown
+dispatch.x         0000000000731E0F  experiment_mod_mp          41  experiment_mod.f90
+dispatch.x         0000000000460788  cartesian_mod_mp_         403  cartesian_mod.f90
+dispatch.x         0000000000459BF5  cartesian_mod_mp_         230  cartesian_mod.f90
+libiomp5.so        00007FC296AD23F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007FC296A56937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007FC296A1A533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         000000000045876C  cartesian_mod_mp_         229  cartesian_mod.f90
+dispatch.x         000000000040931D  MAIN__                     17  dispatch.f90
+dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FC2965F6555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
+
+::: Running plotting
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/plot_test_suite.py", line 26, in <module>
+    dg.plot_values_along(ss[0],[0.00,0.000,0.000],dir=direction,iv='d', ls=lines[direction], label=run)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/graphics/_graphics.py", line 65, in plot_values_along
+    plot(ds.values_along(pp,pt,iv=kv['iv'],dir=kv['dir'],all=kv['all']),**kw)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 230, in values_along
+    patches=patches_along(pp,point,dir=dir,verbose=verbose)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 69, in patches_along
+    p=patch_at(pp,pt)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/select/_select.py", line 35, in patch_at
+    for p in pp:
+TypeError: 'snapshot' object is not iterable
+cp: cannot stat ‘*.png’: No such file or directory
+
+::: Running comparison
+::: Running sod + analytical
 
 :::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../solvers/vector_ops.f90(360): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out(:,:,:,1) = ddx (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(361): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out(:,:,:,2) = ddy (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(362): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out(:,:,:,3) = ddz (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(370): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out(:,:,:,1) = ddx (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(371): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out(:,:,:,2) = ddy (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(372): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out(:,:,:,3) = ddz (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(381): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out = ddx(ds, in(:,:,:,1), l, u) &
+--------^
+../../solvers/vector_ops.f90(382): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+      + ddy(ds, in(:,:,:,2), l, u) &
+--------^
+../../solvers/vector_ops.f90(383): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+      + ddz(ds, in(:,:,:,3), l, u)
+--------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+----------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+---------------------------------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+--------------------------------------------------------^
+compilation aborted for ../../solvers/vector_ops.f90 (code 1)
+make: *** [vector_ops.o] Error 1
+
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1033): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1168): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-  call patch%gas_pressure_sub (pg)
--------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [LND]
-      call patch%gas_pressure_sub (q)
------------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [EE]
-      call patch%gas_pressure_sub (q)
------------^
-../../tasks/refine_mod.f90(1281): error #6631: A non-optional actual argument must be present when invoking a procedure with an explicit interface.   [PG]
-      call patch%gas_pressure_sub (q)
------------^
-compilation aborted for ../../tasks/refine_mod.f90 (code 1)
-make: *** [refine_mod.o] Error 1
-
+::: Running xy plane
+::: Running yz plane
+::: Running zx plane
+::: Running plotting
+::: Running comparison
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel Parallel Studio 2020                              
 
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ERRORS! ]
- 02 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
- 03 Advection MagLoop [stagger2/bifrost] - compilation           [ ERRORS! ]
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 └──── y direction                                            [ ERRORS! ]
+ 04 └──── z direction                                            [ ERRORS! ]
+ 05 └──── plotting                                               [ ERRORS! ]
+ 06 └──── comparison                                             [ ALL  OK ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ERRORS! ]
+ 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
+ 10 └──── xy plane                                               [ ALL  OK ]
+ 11 └──── yz plane                                               [ ALL  OK ]
+ 12 └──── zx plane                                               [ ALL  OK ]
+ 13 └──── plotting                                               [ ALL  OK ]
+ 14 └──── comparison                                             [ ALL  OK ]
                                                                  -----------
-                                                                 1    /    3
+                                                                 10   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
