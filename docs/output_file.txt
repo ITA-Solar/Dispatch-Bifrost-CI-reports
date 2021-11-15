@@ -1,5 +1,5 @@
 
-The repo hash for this run is: ba20a4c
+The repo hash for this run is: d552f9e
 
 The branch on which it was run: develop
 
@@ -31,7 +31,7 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 
 
-:::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
+::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
@@ -65,7 +65,7 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
  05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ WARNING ]
- 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
  10 └──── xy plane                                               [ WARNING ]
  11 └──── yz plane                                               [ WARNING ]
