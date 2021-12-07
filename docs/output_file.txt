@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 37fe1f4
+The repo hash for this run is: 2dc9968
 
-The branch on which it was run: develop
+The branch on which it was run: develop-compile-cray
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -9,48 +9,20 @@ The branch on which it was run: develop
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running y direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running z direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
 ::: Running sod + analytical
-::: Runtime Warnings:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
-
-::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
+:::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running yz plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running zx plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
 
@@ -59,17 +31,17 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ WARNING ]
- 03 └──── y direction                                            [ WARNING ]
- 04 └──── z direction                                            [ WARNING ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 └──── y direction                                            [ ALL  OK ]
+ 04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ WARNING ]
- 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ WARNING ]
- 11 └──── yz plane                                               [ WARNING ]
- 12 └──── zx plane                                               [ WARNING ]
+ 10 └──── xy plane                                               [ ALL  OK ]
+ 11 └──── yz plane                                               [ ALL  OK ]
+ 12 └──── zx plane                                               [ ALL  OK ]
  13 └──── plotting                                               [ ALL  OK ]
  14 └──── comparison                                             [ ALL  OK ]
                                                                  -----------
