@@ -1,5 +1,5 @@
 
-The repo hash for this run is: dcf0640
+The repo hash for this run is: 8b6f8f8
 
 The branch on which it was run: 21-12-14-merge
 
@@ -50,46 +50,6 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../solvers/vector_ops.f90(360): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out(:,:,:,1) = ddx (ds, in)
------------------^
-../../solvers/vector_ops.f90(361): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out(:,:,:,2) = ddy (ds, in)
------------------^
-../../solvers/vector_ops.f90(362): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out(:,:,:,3) = ddz (ds, in)
------------------^
-../../solvers/vector_ops.f90(370): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out(:,:,:,1) = ddx (ds, in)
------------------^
-../../solvers/vector_ops.f90(371): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out(:,:,:,2) = ddy (ds, in)
------------------^
-../../solvers/vector_ops.f90(372): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out(:,:,:,3) = ddz (ds, in)
------------------^
-../../solvers/vector_ops.f90(381): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out = ddx(ds, in(:,:,:,1), l, u) &
---------^
-../../solvers/vector_ops.f90(382): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-      + ddy(ds, in(:,:,:,2), l, u) &
---------^
-../../solvers/vector_ops.f90(383): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-      + ddz(ds, in(:,:,:,3), l, u)
---------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
-----------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
----------------------------------^
-../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
-  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
---------------------------------------------------------^
-compilation aborted for ../../solvers/vector_ops.f90 (code 1)
-make: *** [vector_ops.o] Error 1
-
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
@@ -139,7 +99,7 @@ yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')'
  05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ WARNING ]
  07 └──── sod + analytical                                       [ WARNING ]
- 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ERRORS! ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
  10 └──── xy plane                                               [ WARNING ]
  11 └──── yz plane                                               [ WARNING ]
@@ -147,7 +107,7 @@ yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')'
  13 └──── plotting                                               [ ALL  OK ]
  14 └──── comparison                                             [ WARNING ]
                                                                  -----------
-                                                                 13   /   14
+                                                                 14   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
