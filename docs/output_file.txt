@@ -1,5 +1,5 @@
 
-The repo hash for this run is: d5cae2e
+The repo hash for this run is: 87c97fb
 
 The branch on which it was run: 21-12-14-merge
 
@@ -9,95 +9,52 @@ The branch on which it was run: 21-12-14-merge
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/brio-wu/brio-wu_bifrost_x.nml, line 8, position 62
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000634BFB  Unknown               Unknown  Unknown
-dispatch.x         0000000000670ED9  Unknown               Unknown  Unknown
-dispatch.x         000000000049F715  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059CD06  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007F26A3357555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running y direction
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/brio-wu/brio-wu_bifrost_y.nml, line 8, position 62
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000634BFB  Unknown               Unknown  Unknown
-dispatch.x         0000000000670ED9  Unknown               Unknown  Unknown
-dispatch.x         000000000049F715  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059CD06  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007F13F9B63555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running z direction
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/brio-wu/brio-wu_bifrost_z.nml, line 8, position 62
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000634BFB  Unknown               Unknown  Unknown
-dispatch.x         0000000000670ED9  Unknown               Unknown  Unknown
-dispatch.x         000000000049F715  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059CD06  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007FC1CB1B0555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running plotting
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/plot_test_suite.py", line 26, in <module>
-    dg.plot_values_along(ss[0],[0.00,0.000,0.000],dir=direction,iv='d', ls=lines[direction], label=run)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/graphics/_graphics.py", line 69, in plot_values_along
-    plot(ds.values_along(pp,pt,iv=kv['iv'],dir=kv['dir'],all=kv['all']),**kw)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/select/_select.py", line 230, in values_along
-    patches=patches_along(pp,point,dir=dir,verbose=verbose)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/select/_select.py", line 69, in patches_along
-    p=patch_at(pp,pt)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/select/_select.py", line 35, in patch_at
-    for p in pp:
-TypeError: 'snapshot' object is not iterable
-cp: cannot stat ‘*.png’: No such file or directory
-
 ::: Running comparison
-::: Runtime Errors:
+::: Runtime Warnings:
 
 Traceback (most recent call last):
   File "python/compare_quantities.py", line 104, in <module>
     write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 48, in write_table
-    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.md’: No such file or directory
+  File "python/compare_quantities.py", line 60, in write_table
+    quantity = ds1.r[field]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
+    return self.all_data[item]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
+    f = self._determine_fields([key])[0]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
+    finfo = self.ds._get_field_info(ftype, fname)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
+    raise YTFieldNotFound((ftype, fname), self)
+yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
 
 ::: Running sod + analytical
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/brio-wu/sod_bifrost_x.nml, line 8, position 62
 Image              PC                Routine            Line        Source             
-dispatch.x         0000000000634BFB  Unknown               Unknown  Unknown
-dispatch.x         0000000000670ED9  Unknown               Unknown  Unknown
+dispatch.x         000000000064388B  Unknown               Unknown  Unknown
+dispatch.x         000000000067FB69  Unknown               Unknown  Unknown
 dispatch.x         000000000049F715  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059CD06  setup_mod_mp_init          45  setup_mod.f90
+dispatch.x         00000000005A9202  setup_mod_mp_init          45  setup_mod.f90
 dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
 dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007F982D64F555  __libc_start_main     Unknown  Unknown
+libc-2.17.so       00007F345D16D555  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 Traceback (most recent call last):
   File "python/plot_sod_with_analytical.py", line 28, in <module>
@@ -107,88 +64,86 @@ Traceback (most recent call last):
   File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
     p=s.patches[0]
 AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.png’: No such file or directory
 
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../solvers/vector_ops.f90(360): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out(:,:,:,1) = ddx (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(361): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out(:,:,:,2) = ddy (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(362): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out(:,:,:,3) = ddz (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(370): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out(:,:,:,1) = ddx (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(371): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out(:,:,:,2) = ddy (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(372): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out(:,:,:,3) = ddz (ds, in)
+-----------------^
+../../solvers/vector_ops.f90(381): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out = ddx(ds, in(:,:,:,1), l, u) &
+--------^
+../../solvers/vector_ops.f90(382): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+      + ddy(ds, in(:,:,:,2), l, u) &
+--------^
+../../solvers/vector_ops.f90(383): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+      + ddz(ds, in(:,:,:,3), l, u)
+--------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDX]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+----------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDY]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+---------------------------------^
+../../solvers/vector_ops.f90(399): error #6404: This name does not have a type, and must have an explicit type.   [DDZ]
+  out = - ddx(ds, in(:,:,:,1)) - ddy(ds, in(:,:,:,2)) - ddz(ds, in(:,:,:,3))
+--------------------------------------------------------^
+compilation aborted for ../../solvers/vector_ops.f90 (code 1)
+make: *** [vector_ops.o] Error 1
+
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/MagLoopAdvection/loop_xy.nml, line 26, position 12
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000633D2B  Unknown               Unknown  Unknown
-dispatch.x         0000000000670009  Unknown               Unknown  Unknown
-dispatch.x         000000000049E845  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059BE36  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007FAC397B6555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running yz plane
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/MagLoopAdvection/loop_yz.nml, line 26, position 12
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000633D2B  Unknown               Unknown  Unknown
-dispatch.x         0000000000670009  Unknown               Unknown  Unknown
-dispatch.x         000000000049E845  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059BE36  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007F3C3BA23555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running zx plane
-::: Runtime Errors:
+::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/MagLoopAdvection/loop_zx.nml, line 26, position 12
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000633D2B  Unknown               Unknown  Unknown
-dispatch.x         0000000000670009  Unknown               Unknown  Unknown
-dispatch.x         000000000049E845  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         000000000059BE36  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007FF286B4A555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
 
 ::: Running plotting
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/plot_test_suite.py", line 42, in <module>
-    ds = dyt.open_amr(iout=iout,run=run,data=data,verbose=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 115, in open_amr
-    return snapshot(iout=iout,run=run,data=data,verbose=verbose,copy=copy,aux=aux)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.png’: No such file or directory
-
 ::: Running comparison
-::: Runtime Errors:
+::: Runtime Warnings:
 
 Traceback (most recent call last):
   File "python/compare_quantities.py", line 104, in <module>
     write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 47, in write_table
-    ds1 = dispatch.yt.snapshot(snapnumber,run=run1,data=data1)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.md’: No such file or directory
+  File "python/compare_quantities.py", line 59, in write_table
+    quantity = ds1.r[field]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
+    return self.all_data[item]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
+    f = self._determine_fields([key])[0]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
+    finfo = self.ds._get_field_info(ftype, fname)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
+    raise YTFieldNotFound((ftype, fname), self)
+yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
 
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
@@ -196,21 +151,21 @@ cp: cannot stat ‘*.md’: No such file or directory
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ERRORS! ]
- 03 └──── y direction                                            [ ERRORS! ]
- 04 └──── z direction                                            [ ERRORS! ]
- 05 └──── plotting                                               [ ERRORS! ]
- 06 └──── comparison                                             [ ERRORS! ]
- 07 └──── sod + analytical                                       [ ERRORS! ]
- 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 02 └──── x direction                                            [ WARNING ]
+ 03 └──── y direction                                            [ WARNING ]
+ 04 └──── z direction                                            [ WARNING ]
+ 05 └──── plotting                                               [ ALL  OK ]
+ 06 └──── comparison                                             [ WARNING ]
+ 07 └──── sod + analytical                                       [ WARNING ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ERRORS! ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ ERRORS! ]
- 11 └──── yz plane                                               [ ERRORS! ]
- 12 └──── zx plane                                               [ ERRORS! ]
- 13 └──── plotting                                               [ ERRORS! ]
- 14 └──── comparison                                             [ ERRORS! ]
+ 10 └──── xy plane                                               [ WARNING ]
+ 11 └──── yz plane                                               [ WARNING ]
+ 12 └──── zx plane                                               [ WARNING ]
+ 13 └──── plotting                                               [ ALL  OK ]
+ 14 └──── comparison                                             [ WARNING ]
                                                                  -----------
-                                                                 3    /   14
+                                                                 13   /   14
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
