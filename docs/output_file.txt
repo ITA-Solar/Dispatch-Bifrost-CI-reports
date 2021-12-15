@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 87c97fb
+The repo hash for this run is: dcf0640
 
 The branch on which it was run: 21-12-14-merge
 
@@ -46,24 +46,6 @@ yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')'
 ::: Runtime Warnings:
 
 OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/experiments/brio-wu/sod_bifrost_x.nml, line 8, position 62
-Image              PC                Routine            Line        Source             
-dispatch.x         000000000064388B  Unknown               Unknown  Unknown
-dispatch.x         000000000067FB69  Unknown               Unknown  Unknown
-dispatch.x         000000000049F715  io_mod_mp_init_           208  io_mod.f90
-dispatch.x         00000000005A9202  setup_mod_mp_init          45  setup_mod.f90
-dispatch.x         0000000000408E35  MAIN__                     14  dispatch.f90
-dispatch.x         0000000000408D62  Unknown               Unknown  Unknown
-libc-2.17.so       00007F345D16D555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408C69  Unknown               Unknown  Unknown
-Traceback (most recent call last):
-  File "python/plot_sod_with_analytical.py", line 28, in <module>
-    ds=dispatch.yt.snapshot(20, run=run, data=data)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_21-12-14-merge/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
 
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
