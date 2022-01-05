@@ -1,7 +1,7 @@
 ## Welcome to Dispatch-Bifrost CI pages 
 
 Here are the results from the last run associated with 
-**Dispatch-Bifrost offload, build #1**
+**s develop, build #1**
 
 ## Brio & Wu results
 

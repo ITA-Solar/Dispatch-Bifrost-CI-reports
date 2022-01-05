@@ -1,7 +1,7 @@
 
 The repo hash for this run is: 8b6f8f8
 
-The branch on which it was run: offload
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -25,23 +25,6 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 
 ::: Running plotting
 ::: Running comparison
-::: Runtime Warnings:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 60, in write_table
-    quantity = ds1.r[field]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
-    return self.all_data[item]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
-    f = self._determine_fields([key])[0]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
-    finfo = self.ds._get_field_info(ftype, fname)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
-    raise YTFieldNotFound((ftype, fname), self)
-yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
-
 ::: Running sod + analytical
 ::: Runtime Warnings:
 
@@ -70,23 +53,6 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 
 ::: Running plotting
 ::: Running comparison
-::: Runtime Warnings:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 59, in write_table
-    quantity = ds1.r[field]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
-    return self.all_data[item]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
-    f = self._determine_fields([key])[0]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
-    finfo = self.ds._get_field_info(ftype, fname)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
-    raise YTFieldNotFound((ftype, fname), self)
-yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
-
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -97,7 +63,7 @@ yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')'
  03 └──── y direction                                            [ WARNING ]
  04 └──── z direction                                            [ WARNING ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ WARNING ]
+ 06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ WARNING ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
@@ -105,7 +71,7 @@ yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')'
  11 └──── yz plane                                               [ WARNING ]
  12 └──── zx plane                                               [ WARNING ]
  13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ WARNING ]
+ 14 └──── comparison                                             [ ALL  OK ]
                                                                  -----------
                                                                  14   /   14
 
