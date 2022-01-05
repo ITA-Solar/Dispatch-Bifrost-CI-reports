@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 8b6f8f8
+The repo hash for this run is: f0d4eac
 
-The branch on which it was run: 21-12-14-merge
+The branch on which it was run: current_sheet2
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -9,71 +9,185 @@ The branch on which it was run: 21-12-14-merge
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running y direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running z direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
+::: Runtime Warnings:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 60, in write_table
+    quantity = ds1.r[field]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
+    return self.all_data[item]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
+    f = self._determine_fields([key])[0]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
+    finfo = self.ds._get_field_info(ftype, fname)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
+    raise YTFieldNotFound((ftype, fname), self)
+yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
+
 ::: Running sod + analytical
 ::: Runtime Warnings:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: error (73): floating divide by zero
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000148397B  Unknown               Unknown  Unknown
+libpthread-2.17.s  00007F5CA2208630  Unknown               Unknown  Unknown
+dispatch.x         0000000000AE6D21  mhd_mod_mp_pde_           294  mhd_mod.f90
+dispatch.x         0000000000BD4993  mhd_mod_mp_update         870  mhd_mod.f90
+dispatch.x         0000000001062E20  solver_mod_mp_upd         117  solver_mod.f90
+dispatch.x         000000000074659C  experiment_mod_mp         107  experiment_mod.f90
+dispatch.x         000000000128AB35  task_list_mod_mp_         426  task_list_mod.f90
+dispatch.x         00000000005B72BD  dispatcher0_mod_m         415  dispatcher0_mod.f90
+dispatch.x         00000000005AF825  dispatcher0_mod_m         118  dispatcher0_mod.f90
+libiomp5.so        00007F5CA1C213F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F5CA1BA5937  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F5CA1B69533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         00000000005AE2CD  dispatcher0_mod_m         115  dispatcher0_mod.f90
+dispatch.x         00000000005BD720  dispatcher_mod_mp         128  dispatcher_mod.f90
+dispatch.x         00000000005BD3B0  dispatcher_mod_mp         106  dispatcher_mod.f90
+dispatch.x         000000000040947F  MAIN__                     18  dispatch.f90
+dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F5CA1745555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
+/bin/sh: line 4: 36495 Aborted                 ./dispatch.x sod_bifrost_x.nml
+Traceback (most recent call last):
+  File "python/plot_sod_with_analytical.py", line 28, in <module>
+    ds=dispatch.yt.snapshot(20, run=run, data=data)
+  File "/var/lib/jenkins/workspace/s_current_sheet2/utilities/python/dispatch/yt/_yt.py", line 134, in snapshot
+    parameters=dispatch.yt.parameters(s)
+  File "/var/lib/jenkins/workspace/s_current_sheet2/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+    p=s.patches[0]
+AttributeError: 'snapshot' object has no attribute 'patches'
 
 
-::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
+:::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running yz plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running zx plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
+::: Runtime Warnings:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 59, in write_table
+    quantity = ds1.r[field]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
+    return self.all_data[item]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
+    f = self._determine_fields([key])[0]
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
+    finfo = self.ds._get_field_info(ftype, fname)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
+    raise YTFieldNotFound((ftype, fname), self)
+yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
+
+
+:::::::::::::::::::::: current sheet [stagger2/bifrost] :::::::::::::::::::::
+::: Compilation
+::: Running no mpi
+::: Running mpi with -np 8
+::: Running comparison
+::: Runtime Warnings:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 67, in write_table
+    abs_error = (1/len(q_array) * np.sum((q2_array-q_array)**2))**0.5
+ValueError: operands could not be broadcast together with shapes (242688,) (239616,) 
+
+::: Running mpi with -np 8 and 4 threads
+::: Running higher resolution
+::: Runtime Errors:
+
+forrtl: No space left on device
+forrtl: No space left on device
+forrtl: severe (30): open failure, unit 30, file /var/lib/jenkins/workspace/s_current_sheet2/experiments/current_sheet2/data/1024patches/00009/00650.aux
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000063EB3B  Unknown               Unknown  Unknown
+dispatch.x         000000000065E9E0  Unknown               Unknown  Unknown
+dispatch.x         000000000040E0C5  aux_mod_mp_output         670  aux_mod.f90
+dispatch.x         000000000043481B  data_io_mod_mp_ou         325  data_io_mod.f90
+dispatch.x         000000000046ACB1  gpatch_mod_mp_out         185  gpatch_mod.f90
+dispatch.x         000000000046A309  extras_mod_mp_out         244  extras_mod.f90
+dispatch.x         000000000051240D  mhd_mod_mp_output         903  mhd_mod.f90
+dispatch.x         0000000000511BC5  mhd_mod_mp_update         866  mhd_mod.f90
+dispatch.x         00000000005A6C48  solver_mod_mp_upd         117  solver_mod.f90
+dispatch.x         000000000046A00F  experiment_mod_mp          69  experiment_mod.f90
+dispatch.x         00000000005DEC84  task_list_mod_mp_         426  task_list_mod.f90
+dispatch.x         0000000000443287  dispatcher0_mod_m         415  dispatcher0_mod.f90
+dispatch.x         0000000000441892  dispatcher0_mod_m         118  dispatcher0_mod.f90
+libiomp5.so        00007F1684CF63F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F1684C7A273  Unknown               Unknown  Unknown
+libiomp5.so        00007F1684C7BCB5  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00007F1684C3E533  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000441330  dispatcher0_mod_m         115  dispatcher0_mod.f90
+dispatch.x         0000000000444F13  dispatcher_mod_mp         128  dispatcher_mod.f90
+dispatch.x         0000000000444E1F  dispatcher_mod_mp         106  dispatcher_mod.f90
+dispatch.x         0000000000408D7A  MAIN__                     18  dispatch.f90
+dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F168481A555  __libc_start_main     Unknown  Unknown
+dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
+forrtl: severe (30): open failure, unit 30, file /var/lib/jenkins/workspace/s_current_sheet2/experiments/current_sheet2/data/1024patches/00008/00490.aux
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000063EB3B  Unknown               Unknown  Unknown
+dispatch.x         000000000065E9E0  Unknown               Unknown  Unknown
+dispatch.x         000000000040E0C5  aux_mod_mp_output         670  aux_mod.f90
+dispatch.x         000000000043481B  data_io_mod_mp_ou         325  data_io_mod.f90
+dispatch.x         000000000046ACB1  gpatch_mod_mp_out         185  gpatch_mod.f90
+dispatch.x         000000000046A309  extras_mod_mp_out         244  extras_mod.f90
+dispatch.x         000000000051240D  mhd_mod_mp_output         903  mhd_mod.f90
+dispatch.x         0000000000511BC5  mhd_mod_mp_update         866  mhd_mod.f90
+dispatch.x         00000000005A6C48  solver_mod_mp_upd         117  solver_mod.f90
+dispatch.x         000000000046A00F  experiment_mod_mp          69  experiment_mod.f90
+dispatch.x         00000000005DEC84  task_list_mod_mp_         426  task_list_mod.f90
+dispatch.x         0000000000443287  dispatcher0_mod_m         415  dispatcher0_mod.f90
+dispatch.x         0000000000441892  dispatcher0_mod_m         118  dispatcher0_mod.f90
+libiomp5.so        00007F1DE09693F3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00007F1DE08ED273  Unknown               Unknown  Unknown
+libiomp5.so        00007F1DE08EC21E  Unknown               Unknown  Unknown
+libiomp5.so        00007F1DE09698CC  Unknown               Unknown  Unknown
+libpthread-2.17.s  00007F1DE0F48EA5  Unknown               Unknown  Unknown
+libc-2.17.so       00007F1DE0569B0D  clone                 Unknown  Unknown
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ WARNING ]
- 03 └──── y direction                                            [ WARNING ]
- 04 └──── z direction                                            [ WARNING ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 └──── y direction                                            [ ALL  OK ]
+ 04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
+ 06 └──── comparison                                             [ WARNING ]
  07 └──── sod + analytical                                       [ WARNING ]
- 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ WARNING ]
- 11 └──── yz plane                                               [ WARNING ]
- 12 └──── zx plane                                               [ WARNING ]
+ 10 └──── xy plane                                               [ ALL  OK ]
+ 11 └──── yz plane                                               [ ALL  OK ]
+ 12 └──── zx plane                                               [ ALL  OK ]
  13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ALL  OK ]
+ 14 └──── comparison                                             [ WARNING ]
+ 15 current sheet [stagger2/bifrost] - compilation               [ ALL  OK ]
+ 16 └──── no mpi                                                 [ ALL  OK ]
+ 17 └──── mpi with -np 8                                         [ ALL  OK ]
+ 18 └──── comparison                                             [ WARNING ]
+ 19 └──── mpi with -np 8 and 4 threads                           [ ALL  OK ]
+ 20 └──── higher resolution                                      [ ERRORS! ]
                                                                  -----------
-                                                                 14   /   14
+                                                                 19   /   20
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
