@@ -1,7 +1,7 @@
 
-The repo hash for this run is: f0d4eac
+The repo hash for this run is: 7859f43
 
-The branch on which it was run: current_sheet2
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -9,157 +9,297 @@ The branch on which it was run: current_sheet2
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Running y direction
-::: Running z direction
-::: Running plotting
-::: Running comparison
 ::: Runtime Warnings:
 
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 60, in write_table
-    quantity = ds1.r[field]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
-    return self.all_data[item]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
-    f = self._determine_fields([key])[0]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
-    finfo = self.ds._get_field_info(ftype, fname)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
-    raise YTFieldNotFound((ftype, fname), self)
-yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 
+::: Running y direction
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
+::: Running z direction
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
+::: Running plotting
+::: Running comparison
 ::: Running sod + analytical
 ::: Runtime Warnings:
 
-forrtl: error (73): floating divide by zero
-Image              PC                Routine            Line        Source             
-dispatch.x         000000000148397B  Unknown               Unknown  Unknown
-libpthread-2.17.s  00007F5CA2208630  Unknown               Unknown  Unknown
-dispatch.x         0000000000AE6D21  mhd_mod_mp_pde_           294  mhd_mod.f90
-dispatch.x         0000000000BD4993  mhd_mod_mp_update         870  mhd_mod.f90
-dispatch.x         0000000001062E20  solver_mod_mp_upd         117  solver_mod.f90
-dispatch.x         000000000074659C  experiment_mod_mp         107  experiment_mod.f90
-dispatch.x         000000000128AB35  task_list_mod_mp_         426  task_list_mod.f90
-dispatch.x         00000000005B72BD  dispatcher0_mod_m         415  dispatcher0_mod.f90
-dispatch.x         00000000005AF825  dispatcher0_mod_m         118  dispatcher0_mod.f90
-libiomp5.so        00007F5CA1C213F3  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00007F5CA1BA5937  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        00007F5CA1B69533  __kmpc_fork_call      Unknown  Unknown
-dispatch.x         00000000005AE2CD  dispatcher0_mod_m         115  dispatcher0_mod.f90
-dispatch.x         00000000005BD720  dispatcher_mod_mp         128  dispatcher_mod.f90
-dispatch.x         00000000005BD3B0  dispatcher_mod_mp         106  dispatcher_mod.f90
-dispatch.x         000000000040947F  MAIN__                     18  dispatch.f90
-dispatch.x         0000000000408CA2  Unknown               Unknown  Unknown
-libc-2.17.so       00007F5CA1745555  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000408BA9  Unknown               Unknown  Unknown
-/bin/sh: line 4: 36495 Aborted                 ./dispatch.x sod_bifrost_x.nml
-Traceback (most recent call last):
-  File "python/plot_sod_with_analytical.py", line 28, in <module>
-    ds=dispatch.yt.snapshot(20, run=run, data=data)
-  File "/var/lib/jenkins/workspace/s_current_sheet2/utilities/python/dispatch/yt/_yt.py", line 134, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/s_current_sheet2/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 
 
-:::::::::::::::::::::::::: Brio&Wu [ramses/mhd_eos] :::::::::::::::::::::::::
+::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
 ::: Running yz plane
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
 ::: Running zx plane
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
 ::: Running plotting
 ::: Running comparison
-::: Runtime Warnings:
 
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 59, in write_table
-    quantity = ds1.r[field]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/region_expression.py", line 42, in __getitem__
-    return self.all_data[item]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 249, in __getitem__
-    f = self._determine_fields([key])[0]
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/data_containers.py", line 1360, in _determine_fields
-    finfo = self.ds._get_field_info(ftype, fname)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/data_objects/static_output.py", line 739, in _get_field_info
-    raise YTFieldNotFound((ftype, fname), self)
-yt.utilities.exceptions.YTFieldNotFound: Could not find field '('stream', 'p1')' in AMRGridData.
-
-
-:::::::::::::::::::::: current sheet [stagger2/bifrost] :::::::::::::::::::::
+::::::::::::::::::::::: Orszag-Tang [stagger2/bifrost] ::::::::::::::::::::::
 ::: Compilation
-::: Running no mpi
-::: Running mpi with -np 8
-::: Running comparison
+::: Running xy plane with -np 4
 ::: Runtime Warnings:
 
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 67, in write_table
-    abs_error = (1/len(q_array) * np.sum((q2_array-q_array)**2))**0.5
-ValueError: operands could not be broadcast together with shapes (242688,) (239616,) 
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 
-::: Running mpi with -np 8 and 4 threads
-::: Running higher resolution
-::: Runtime Errors:
 
-forrtl: No space left on device
-forrtl: No space left on device
-forrtl: severe (30): open failure, unit 30, file /var/lib/jenkins/workspace/s_current_sheet2/experiments/current_sheet2/data/1024patches/00009/00650.aux
-Image              PC                Routine            Line        Source             
-dispatch.x         000000000063EB3B  Unknown               Unknown  Unknown
-dispatch.x         000000000065E9E0  Unknown               Unknown  Unknown
-dispatch.x         000000000040E0C5  aux_mod_mp_output         670  aux_mod.f90
-dispatch.x         000000000043481B  data_io_mod_mp_ou         325  data_io_mod.f90
-dispatch.x         000000000046ACB1  gpatch_mod_mp_out         185  gpatch_mod.f90
-dispatch.x         000000000046A309  extras_mod_mp_out         244  extras_mod.f90
-dispatch.x         000000000051240D  mhd_mod_mp_output         903  mhd_mod.f90
-dispatch.x         0000000000511BC5  mhd_mod_mp_update         866  mhd_mod.f90
-dispatch.x         00000000005A6C48  solver_mod_mp_upd         117  solver_mod.f90
-dispatch.x         000000000046A00F  experiment_mod_mp          69  experiment_mod.f90
-dispatch.x         00000000005DEC84  task_list_mod_mp_         426  task_list_mod.f90
-dispatch.x         0000000000443287  dispatcher0_mod_m         415  dispatcher0_mod.f90
-dispatch.x         0000000000441892  dispatcher0_mod_m         118  dispatcher0_mod.f90
-libiomp5.so        00007F1684CF63F3  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00007F1684C7A273  Unknown               Unknown  Unknown
-libiomp5.so        00007F1684C7BCB5  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        00007F1684C3E533  __kmpc_fork_call      Unknown  Unknown
-dispatch.x         0000000000441330  dispatcher0_mod_m         115  dispatcher0_mod.f90
-dispatch.x         0000000000444F13  dispatcher_mod_mp         128  dispatcher_mod.f90
-dispatch.x         0000000000444E1F  dispatcher_mod_mp         106  dispatcher_mod.f90
-dispatch.x         0000000000408D7A  MAIN__                     18  dispatch.f90
-dispatch.x         0000000000408AE2  Unknown               Unknown  Unknown
-libc-2.17.so       00007F168481A555  __libc_start_main     Unknown  Unknown
-dispatch.x         00000000004089E9  Unknown               Unknown  Unknown
-forrtl: severe (30): open failure, unit 30, file /var/lib/jenkins/workspace/s_current_sheet2/experiments/current_sheet2/data/1024patches/00008/00490.aux
-Image              PC                Routine            Line        Source             
-dispatch.x         000000000063EB3B  Unknown               Unknown  Unknown
-dispatch.x         000000000065E9E0  Unknown               Unknown  Unknown
-dispatch.x         000000000040E0C5  aux_mod_mp_output         670  aux_mod.f90
-dispatch.x         000000000043481B  data_io_mod_mp_ou         325  data_io_mod.f90
-dispatch.x         000000000046ACB1  gpatch_mod_mp_out         185  gpatch_mod.f90
-dispatch.x         000000000046A309  extras_mod_mp_out         244  extras_mod.f90
-dispatch.x         000000000051240D  mhd_mod_mp_output         903  mhd_mod.f90
-dispatch.x         0000000000511BC5  mhd_mod_mp_update         866  mhd_mod.f90
-dispatch.x         00000000005A6C48  solver_mod_mp_upd         117  solver_mod.f90
-dispatch.x         000000000046A00F  experiment_mod_mp          69  experiment_mod.f90
-dispatch.x         00000000005DEC84  task_list_mod_mp_         426  task_list_mod.f90
-dispatch.x         0000000000443287  dispatcher0_mod_m         415  dispatcher0_mod.f90
-dispatch.x         0000000000441892  dispatcher0_mod_m         118  dispatcher0_mod.f90
-libiomp5.so        00007F1DE09693F3  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00007F1DE08ED273  Unknown               Unknown  Unknown
-libiomp5.so        00007F1DE08EC21E  Unknown               Unknown  Unknown
-libiomp5.so        00007F1DE09698CC  Unknown               Unknown  Unknown
-libpthread-2.17.s  00007F1DE0F48EA5  Unknown               Unknown  Unknown
-libc-2.17.so       00007F1DE0569B0D  clone                 Unknown  Unknown
+::::::::::::::::::::::: Orszag-Tang [ramses/hlld_eos] :::::::::::::::::::::::
+::: Compilation
+::: Running xy plane with -np 4
+::: Runtime Warnings:
+
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+
+::: Running energy plots
+::: Runtime Warnings:
+
+/mn/stornext/u3/miko/anaconda3/lib/python3.8/_collections_abc.py:666: MatplotlibDeprecationWarning: The global colormaps dictionary is no longer considered public API.
+  self[key]
+yt : [INFO     ] 2022-01-31 15:23:23,635 Parameters: current_time              = 0.0
+yt : [INFO     ] 2022-01-31 15:23:23,636 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:23,636 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:23,636 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:23,637 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:24,560 Parameters: current_time              = 0.05
+yt : [INFO     ] 2022-01-31 15:23:24,560 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:24,560 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:24,560 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:24,561 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:25,243 Parameters: current_time              = 0.1
+yt : [INFO     ] 2022-01-31 15:23:25,243 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:25,244 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:25,244 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:25,244 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:25,930 Parameters: current_time              = 0.15
+yt : [INFO     ] 2022-01-31 15:23:25,930 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:25,930 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:25,930 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:25,931 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:26,683 Parameters: current_time              = 0.2
+yt : [INFO     ] 2022-01-31 15:23:26,683 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:26,683 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:26,683 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:26,684 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:27,365 Parameters: current_time              = 0.25
+yt : [INFO     ] 2022-01-31 15:23:27,365 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:27,365 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:27,365 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:27,366 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:28,041 Parameters: current_time              = 0.3
+yt : [INFO     ] 2022-01-31 15:23:28,041 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:28,041 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:28,041 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:28,042 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:28,802 Parameters: current_time              = 0.35
+yt : [INFO     ] 2022-01-31 15:23:28,802 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:28,802 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:28,802 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:28,803 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:29,468 Parameters: current_time              = 0.4
+yt : [INFO     ] 2022-01-31 15:23:29,468 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:29,468 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:29,468 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:29,468 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:30,134 Parameters: current_time              = 0.45
+yt : [INFO     ] 2022-01-31 15:23:30,134 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:30,134 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:30,135 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:30,135 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:30,808 Parameters: current_time              = 0.5
+yt : [INFO     ] 2022-01-31 15:23:30,808 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:30,809 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:30,809 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:30,809 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:31,577 Parameters: current_time              = 0.55
+yt : [INFO     ] 2022-01-31 15:23:31,578 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:31,578 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:31,578 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:31,578 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:32,253 Parameters: current_time              = 0.6
+yt : [INFO     ] 2022-01-31 15:23:32,253 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:32,253 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:32,254 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:32,254 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:32,925 Parameters: current_time              = 0.65
+yt : [INFO     ] 2022-01-31 15:23:32,926 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:32,926 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:32,926 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:32,926 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:33,652 Parameters: current_time              = 0.7
+yt : [INFO     ] 2022-01-31 15:23:33,652 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:33,652 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:33,652 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:33,653 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:34,314 Parameters: current_time              = 0.75
+yt : [INFO     ] 2022-01-31 15:23:34,314 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:34,314 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:34,314 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:34,314 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:34,985 Parameters: current_time              = 0.8
+yt : [INFO     ] 2022-01-31 15:23:34,986 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:34,986 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:34,986 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:34,986 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:35,721 Parameters: current_time              = 0.85
+yt : [INFO     ] 2022-01-31 15:23:35,721 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:35,721 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:35,721 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:35,722 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:36,384 Parameters: current_time              = 0.9
+yt : [INFO     ] 2022-01-31 15:23:36,384 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:36,385 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:36,385 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:36,385 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:37,045 Parameters: current_time              = 0.95
+yt : [INFO     ] 2022-01-31 15:23:37,046 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:37,046 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:37,046 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:37,046 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:37,733 Parameters: current_time              = 1.0
+yt : [INFO     ] 2022-01-31 15:23:37,733 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:37,733 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:37,734 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:37,734 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:38,501 Parameters: current_time              = 1.05
+yt : [INFO     ] 2022-01-31 15:23:38,501 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:38,501 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:38,501 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:38,502 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:39,649 Parameters: current_time              = 0.0
+yt : [INFO     ] 2022-01-31 15:23:39,649 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:39,649 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:39,649 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:39,649 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:40,291 Parameters: current_time              = 0.05
+yt : [INFO     ] 2022-01-31 15:23:40,291 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:40,292 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:40,292 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:40,292 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:41,033 Parameters: current_time              = 0.1
+yt : [INFO     ] 2022-01-31 15:23:41,033 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:41,033 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:41,034 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:41,034 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:41,673 Parameters: current_time              = 0.15
+yt : [INFO     ] 2022-01-31 15:23:41,673 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:41,674 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:41,674 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:41,674 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:42,313 Parameters: current_time              = 0.2
+yt : [INFO     ] 2022-01-31 15:23:42,313 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:42,313 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:42,314 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:42,314 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:43,058 Parameters: current_time              = 0.25
+yt : [INFO     ] 2022-01-31 15:23:43,058 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:43,059 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:43,059 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:43,059 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:43,700 Parameters: current_time              = 0.3
+yt : [INFO     ] 2022-01-31 15:23:43,700 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:43,700 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:43,700 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:43,701 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:44,342 Parameters: current_time              = 0.35
+yt : [INFO     ] 2022-01-31 15:23:44,342 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:44,342 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:44,342 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:44,342 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:45,090 Parameters: current_time              = 0.4
+yt : [INFO     ] 2022-01-31 15:23:45,090 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:45,090 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:45,091 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:45,091 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:45,730 Parameters: current_time              = 0.45
+yt : [INFO     ] 2022-01-31 15:23:45,730 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:45,730 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:45,730 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:45,731 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:46,375 Parameters: current_time              = 0.5
+yt : [INFO     ] 2022-01-31 15:23:46,375 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:46,375 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:46,375 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:46,376 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:47,016 Parameters: current_time              = 0.55
+yt : [INFO     ] 2022-01-31 15:23:47,016 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:47,016 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:47,016 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:47,016 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:47,770 Parameters: current_time              = 0.6
+yt : [INFO     ] 2022-01-31 15:23:47,770 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:47,771 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:47,771 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:47,771 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:48,439 Parameters: current_time              = 0.65
+yt : [INFO     ] 2022-01-31 15:23:48,439 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:48,439 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:48,440 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:48,440 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:49,105 Parameters: current_time              = 0.7
+yt : [INFO     ] 2022-01-31 15:23:49,105 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:49,105 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:49,105 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:49,105 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:49,894 Parameters: current_time              = 0.75
+yt : [INFO     ] 2022-01-31 15:23:49,894 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:49,894 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:49,895 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:49,895 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:50,550 Parameters: current_time              = 0.8
+yt : [INFO     ] 2022-01-31 15:23:50,550 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:50,551 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:50,551 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:50,551 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:51,202 Parameters: current_time              = 0.85
+yt : [INFO     ] 2022-01-31 15:23:51,202 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:51,202 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:51,202 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:51,203 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:51,971 Parameters: current_time              = 0.9
+yt : [INFO     ] 2022-01-31 15:23:51,972 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:51,972 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:51,972 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:51,972 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:52,614 Parameters: current_time              = 0.95
+yt : [INFO     ] 2022-01-31 15:23:52,614 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:52,614 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:52,615 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:52,615 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:53,262 Parameters: current_time              = 1.0
+yt : [INFO     ] 2022-01-31 15:23:53,262 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:53,262 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:53,262 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:53,262 Parameters: cosmological_simulation   = 0.0
+yt : [INFO     ] 2022-01-31 15:23:53,915 Parameters: current_time              = 1.05
+yt : [INFO     ] 2022-01-31 15:23:53,915 Parameters: domain_dimensions         = [6 6 1]
+yt : [INFO     ] 2022-01-31 15:23:53,915 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2022-01-31 15:23:53,915 Parameters: domain_right_edge         = [1.    1.    0.005]
+yt : [INFO     ] 2022-01-31 15:23:53,916 Parameters: cosmological_simulation   = 0.0
 
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
@@ -167,27 +307,26 @@ libc-2.17.so       00007F1DE0569B0D  clone                 Unknown  Unknown
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ALL  OK ]
+ 02 └──── x direction                                            [ WARNING ]
+ 03 └──── y direction                                            [ WARNING ]
+ 04 └──── z direction                                            [ WARNING ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ WARNING ]
+ 06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ WARNING ]
- 08 Brio&Wu [ramses/mhd_eos] - compilation                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ ALL  OK ]
- 11 └──── yz plane                                               [ ALL  OK ]
- 12 └──── zx plane                                               [ ALL  OK ]
+ 10 └──── xy plane                                               [ WARNING ]
+ 11 └──── yz plane                                               [ WARNING ]
+ 12 └──── zx plane                                               [ WARNING ]
  13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ WARNING ]
- 15 current sheet [stagger2/bifrost] - compilation               [ ALL  OK ]
- 16 └──── no mpi                                                 [ ALL  OK ]
- 17 └──── mpi with -np 8                                         [ ALL  OK ]
- 18 └──── comparison                                             [ WARNING ]
- 19 └──── mpi with -np 8 and 4 threads                           [ ALL  OK ]
- 20 └──── higher resolution                                      [ ERRORS! ]
+ 14 └──── comparison                                             [ ALL  OK ]
+ 15 Orszag-Tang [stagger2/bifrost] - compilation                 [ ALL  OK ]
+ 16 └──── xy plane with -np 4                                    [ WARNING ]
+ 17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
+ 18 └──── xy plane with -np 4                                    [ WARNING ]
+ 19 └──── energy plots                                           [ WARNING ]
                                                                  -----------
-                                                                 19   /   20
+                                                                 19   /   19
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
