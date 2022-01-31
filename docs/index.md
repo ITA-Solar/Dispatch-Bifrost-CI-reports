@@ -23,6 +23,16 @@ Here are the results from the last run associated with
   
   **[Comparison to reference](tables/MagLoopAdvection.md)**
 
+## Orszag Tang energy conservation
+
+  ![magnetic](img/ot_magnetic_energy.png){: style="width:400px"}
+  ![kinetic](img/ot_kinetic_energy.png){: style="width:400px"}
+  ![internal](img/ot_internal_energy.png){: style="width:400px"}
+  ![total](img/ot_total_energy.png){: style="width:400px"}
+  ![deviation](img/ot_energy_deviation.png){: style="width:400px"}
+  ![error](img/ot_energy_error.png){: style="width:400px"}
+   
+
 ## Stdout on Jenkins terminal
   - [Link to output](output_file.txt)
   
