@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 8577b9c
+The repo hash for this run is: e3d9e83
 
-The branch on which it was run: current_sheet2
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -9,26 +9,78 @@ The branch on which it was run: current_sheet2
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/brio-wu/brio-wu_bifrost_x.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061A53B  Unknown               Unknown  Unknown
+dispatch.x         000000000063A3E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000477038  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057D9B6  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FF991EBA555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running y direction
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/brio-wu/brio-wu_bifrost_y.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061A53B  Unknown               Unknown  Unknown
+dispatch.x         000000000063A3E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000477038  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057D9B6  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F3280626555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running z direction
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/brio-wu/brio-wu_bifrost_z.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061A53B  Unknown               Unknown  Unknown
+dispatch.x         000000000063A3E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000477038  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057D9B6  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F36F33C5555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running plotting
-::: Running comparison
-::: Running sod + analytical
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+python: can't open file 'python/plot_test_suite.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.png’: No such file or directory
+
+::: Running comparison
+::: Runtime Errors:
+
+python: can't open file 'python/compare_quantities.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.md’: No such file or directory
+
+::: Running sod + analytical
+::: Runtime Errors:
+
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/brio-wu/sod_bifrost_x.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061A53B  Unknown               Unknown  Unknown
+dispatch.x         000000000063A3E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000477038  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057D9B6  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F5EB7AB5555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
+python: can't open file 'python/plot_sod_with_analytical.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.png’: No such file or directory
 
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
@@ -37,269 +89,168 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/MagLoopAdvection/loop_xy.nml, line 26, position 12
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061993B  Unknown               Unknown  Unknown
+dispatch.x         0000000000655C19  Unknown               Unknown  Unknown
+dispatch.x         00000000004765DF  io_mod_mp_init_           207  io_mod.f90
+dispatch.x         000000000057CDAA  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F4B0127A555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running yz plane
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/MagLoopAdvection/loop_yz.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061993B  Unknown               Unknown  Unknown
+dispatch.x         00000000006397E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000476448  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057CDAA  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F6B4E91F555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running zx plane
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/MagLoopAdvection/loop_zx.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000061993B  Unknown               Unknown  Unknown
+dispatch.x         00000000006397E0  Unknown               Unknown  Unknown
+dispatch.x         0000000000476448  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000057CDAA  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408EB5  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408DE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FD983931555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408CE9  Unknown               Unknown  Unknown
 
 ::: Running plotting
+::: Runtime Errors:
+
+python: can't open file 'python/plot_test_suite.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.png’: No such file or directory
+
 ::: Running comparison
+::: Runtime Errors:
+
+python: can't open file 'python/compare_quantities.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.md’: No such file or directory
+
 
 ::::::::::::::::::::::: Orszag-Tang [stagger2/bifrost] ::::::::::::::::::::::
 ::: Compilation
 ::: Running xy plane with -np 4
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: No such file or directory
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_bifrost_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000713A7B  Unknown               Unknown  Unknown
+dispatch.x         0000000000733920  Unknown               Unknown  Unknown
+dispatch.x         00000000004B0162  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062AB1D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408DDC  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408CE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FC23A7A3555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BE9  Unknown               Unknown  Unknown
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_bifrost_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000713A7B  Unknown               Unknown  Unknown
+dispatch.x         0000000000733920  Unknown               Unknown  Unknown
+dispatch.x         00000000004B0162  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062AB1D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408DDC  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408CE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FF43957F555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BE9  Unknown               Unknown  Unknown
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_bifrost_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000713A7B  Unknown               Unknown  Unknown
+dispatch.x         0000000000733920  Unknown               Unknown  Unknown
+dispatch.x         00000000004B0162  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062AB1D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408DDC  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408CE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007FEB5CADB555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BE9  Unknown               Unknown  Unknown
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_bifrost_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000713A7B  Unknown               Unknown  Unknown
+dispatch.x         0000000000733920  Unknown               Unknown  Unknown
+dispatch.x         00000000004B0162  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062AB1D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408DDC  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408CE2  Unknown               Unknown  Unknown
+libc-2.17.so       00007F402AFFE555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408BE9  Unknown               Unknown  Unknown
 
 
 ::::::::::::::::::::::: Orszag-Tang [ramses/hlld_eos] :::::::::::::::::::::::
 ::: Compilation
 ::: Running xy plane with -np 4
-::: Runtime Warnings:
+::: Runtime Errors:
 
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+forrtl: No such file or directory
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_hlld_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006FD81B  Unknown               Unknown  Unknown
+dispatch.x         000000000071D6C0  Unknown               Unknown  Unknown
+dispatch.x         00000000004BFC9C  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062001D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408D1C  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408C22  Unknown               Unknown  Unknown
+libc-2.17.so       00007F1F01A21555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408B29  Unknown               Unknown  Unknown
+forrtl: No such file or directory
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_hlld_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006FD81B  Unknown               Unknown  Unknown
+dispatch.x         000000000071D6C0  Unknown               Unknown  Unknown
+dispatch.x         00000000004BFC9C  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062001D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408D1C  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408C22  Unknown               Unknown  Unknown
+libc-2.17.so       00007F480979D555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408B29  Unknown               Unknown  Unknown
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_hlld_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006FD81B  Unknown               Unknown  Unknown
+dispatch.x         000000000071D6C0  Unknown               Unknown  Unknown
+dispatch.x         00000000004BFC9C  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062001D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408D1C  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408C22  Unknown               Unknown  Unknown
+libc-2.17.so       00007F2A939B2555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408B29  Unknown               Unknown  Unknown
+forrtl: severe (29): file not found, unit 1, file /var/lib/jenkins/workspace/Dispatch-Bifrost_develop/experiments/orszag-tang/ot_hlld_xy.nml
+Image              PC                Routine            Line        Source             
+dispatch.x         00000000006FD81B  Unknown               Unknown  Unknown
+dispatch.x         000000000071D6C0  Unknown               Unknown  Unknown
+dispatch.x         00000000004BFC9C  io_mod_mp_init_           196  io_mod.f90
+dispatch.x         000000000062001D  setup_mod_mp_init          40  setup_mod.f90
+dispatch.x         0000000000408D1C  MAIN__                     14  dispatch.f90
+dispatch.x         0000000000408C22  Unknown               Unknown  Unknown
+libc-2.17.so       00007FB23138D555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000408B29  Unknown               Unknown  Unknown
 
 ::: Running energy plots
-::: Runtime Warnings:
+::: Runtime Errors:
 
-/mn/stornext/u3/miko/anaconda3/lib/python3.8/_collections_abc.py:666: MatplotlibDeprecationWarning: The global colormaps dictionary is no longer considered public API.
-  self[key]
-yt : [INFO     ] 2022-02-17 04:40:44,539 Parameters: current_time              = 0.0
-yt : [INFO     ] 2022-02-17 04:40:44,539 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:44,539 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:44,539 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:44,540 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:45,373 Parameters: current_time              = 0.05
-yt : [INFO     ] 2022-02-17 04:40:45,373 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:45,373 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:45,373 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:45,374 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:46,092 Parameters: current_time              = 0.1
-yt : [INFO     ] 2022-02-17 04:40:46,092 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:46,093 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:46,093 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:46,093 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:46,772 Parameters: current_time              = 0.15
-yt : [INFO     ] 2022-02-17 04:40:46,772 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:46,773 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:46,773 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:46,773 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:47,572 Parameters: current_time              = 0.2
-yt : [INFO     ] 2022-02-17 04:40:47,572 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:47,572 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:47,572 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:47,572 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:48,280 Parameters: current_time              = 0.25
-yt : [INFO     ] 2022-02-17 04:40:48,280 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:48,280 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:48,281 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:48,281 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:48,967 Parameters: current_time              = 0.3
-yt : [INFO     ] 2022-02-17 04:40:48,967 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:48,968 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:48,968 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:48,968 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:49,766 Parameters: current_time              = 0.35
-yt : [INFO     ] 2022-02-17 04:40:49,766 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:49,766 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:49,766 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:49,766 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:50,434 Parameters: current_time              = 0.4
-yt : [INFO     ] 2022-02-17 04:40:50,435 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:50,435 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:50,435 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:50,435 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:51,127 Parameters: current_time              = 0.45
-yt : [INFO     ] 2022-02-17 04:40:51,128 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:51,128 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:51,128 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:51,128 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:51,802 Parameters: current_time              = 0.5
-yt : [INFO     ] 2022-02-17 04:40:51,802 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:51,802 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:51,802 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:51,803 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:52,573 Parameters: current_time              = 0.55
-yt : [INFO     ] 2022-02-17 04:40:52,573 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:52,574 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:52,574 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:52,574 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:53,255 Parameters: current_time              = 0.6
-yt : [INFO     ] 2022-02-17 04:40:53,255 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:53,255 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:53,256 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:53,256 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:53,928 Parameters: current_time              = 0.65
-yt : [INFO     ] 2022-02-17 04:40:53,929 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:53,929 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:53,929 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:53,929 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:54,680 Parameters: current_time              = 0.7
-yt : [INFO     ] 2022-02-17 04:40:54,680 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:54,681 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:54,681 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:54,681 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:55,342 Parameters: current_time              = 0.75
-yt : [INFO     ] 2022-02-17 04:40:55,342 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:55,342 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:55,342 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:55,343 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:56,024 Parameters: current_time              = 0.8
-yt : [INFO     ] 2022-02-17 04:40:56,024 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:56,024 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:56,024 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:56,025 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:56,789 Parameters: current_time              = 0.85
-yt : [INFO     ] 2022-02-17 04:40:56,789 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:56,790 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:56,790 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:56,790 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:57,458 Parameters: current_time              = 0.9
-yt : [INFO     ] 2022-02-17 04:40:57,458 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:57,458 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:57,458 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:57,458 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:58,126 Parameters: current_time              = 0.95
-yt : [INFO     ] 2022-02-17 04:40:58,126 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:58,127 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:58,127 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:58,127 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:58,791 Parameters: current_time              = 1.0
-yt : [INFO     ] 2022-02-17 04:40:58,791 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:58,792 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:58,792 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:58,792 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:40:59,523 Parameters: current_time              = 1.05
-yt : [INFO     ] 2022-02-17 04:40:59,523 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:40:59,523 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:40:59,524 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:40:59,524 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:00,337 Parameters: current_time              = 0.0
-yt : [INFO     ] 2022-02-17 04:41:00,337 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:00,337 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:00,337 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:00,338 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:00,978 Parameters: current_time              = 0.05
-yt : [INFO     ] 2022-02-17 04:41:00,978 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:00,978 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:00,979 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:00,979 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:01,749 Parameters: current_time              = 0.1
-yt : [INFO     ] 2022-02-17 04:41:01,749 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:01,749 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:01,749 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:01,750 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:02,398 Parameters: current_time              = 0.15
-yt : [INFO     ] 2022-02-17 04:41:02,398 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:02,398 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:02,398 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:02,399 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:03,050 Parameters: current_time              = 0.2
-yt : [INFO     ] 2022-02-17 04:41:03,050 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:03,050 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:03,050 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:03,051 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:03,767 Parameters: current_time              = 0.25
-yt : [INFO     ] 2022-02-17 04:41:03,768 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:03,768 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:03,768 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:03,768 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:04,410 Parameters: current_time              = 0.3
-yt : [INFO     ] 2022-02-17 04:41:04,410 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:04,410 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:04,410 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:04,410 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:05,046 Parameters: current_time              = 0.35
-yt : [INFO     ] 2022-02-17 04:41:05,046 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:05,046 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:05,047 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:05,047 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:05,767 Parameters: current_time              = 0.4
-yt : [INFO     ] 2022-02-17 04:41:05,767 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:05,768 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:05,768 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:05,768 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:06,406 Parameters: current_time              = 0.45
-yt : [INFO     ] 2022-02-17 04:41:06,406 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:06,406 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:06,407 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:06,407 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:07,043 Parameters: current_time              = 0.5
-yt : [INFO     ] 2022-02-17 04:41:07,043 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:07,043 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:07,044 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:07,044 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:07,694 Parameters: current_time              = 0.55
-yt : [INFO     ] 2022-02-17 04:41:07,694 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:07,694 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:07,694 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:07,695 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:08,410 Parameters: current_time              = 0.6
-yt : [INFO     ] 2022-02-17 04:41:08,410 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:08,410 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:08,411 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:08,411 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:09,051 Parameters: current_time              = 0.65
-yt : [INFO     ] 2022-02-17 04:41:09,051 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:09,051 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:09,051 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:09,052 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:09,721 Parameters: current_time              = 0.7
-yt : [INFO     ] 2022-02-17 04:41:09,722 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:09,722 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:09,722 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:09,722 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:10,471 Parameters: current_time              = 0.75
-yt : [INFO     ] 2022-02-17 04:41:10,471 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:10,471 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:10,471 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:10,471 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:11,128 Parameters: current_time              = 0.8
-yt : [INFO     ] 2022-02-17 04:41:11,128 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:11,128 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:11,128 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:11,129 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:11,773 Parameters: current_time              = 0.85
-yt : [INFO     ] 2022-02-17 04:41:11,773 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:11,773 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:11,773 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:11,773 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:12,483 Parameters: current_time              = 0.9
-yt : [INFO     ] 2022-02-17 04:41:12,483 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:12,483 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:12,483 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:12,483 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:13,125 Parameters: current_time              = 0.95
-yt : [INFO     ] 2022-02-17 04:41:13,125 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:13,125 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:13,125 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:13,126 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:13,765 Parameters: current_time              = 1.0
-yt : [INFO     ] 2022-02-17 04:41:13,765 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:13,766 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:13,766 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:13,766 Parameters: cosmological_simulation   = 0.0
-yt : [INFO     ] 2022-02-17 04:41:14,481 Parameters: current_time              = 1.05
-yt : [INFO     ] 2022-02-17 04:41:14,481 Parameters: domain_dimensions         = [6 6 1]
-yt : [INFO     ] 2022-02-17 04:41:14,481 Parameters: domain_left_edge          = [0. 0. 0.]
-yt : [INFO     ] 2022-02-17 04:41:14,482 Parameters: domain_right_edge         = [1.    1.    0.005]
-yt : [INFO     ] 2022-02-17 04:41:14,482 Parameters: cosmological_simulation   = 0.0
+python: can't open file 'python/plot_energy.py': [Errno 2] No such file or directory
+cp: cannot stat ‘*.png’: No such file or directory
 
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
@@ -307,26 +258,26 @@ yt : [INFO     ] 2022-02-17 04:41:14,482 Parameters: cosmological_simulation   =
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ WARNING ]
- 03 └──── y direction                                            [ WARNING ]
- 04 └──── z direction                                            [ WARNING ]
- 05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ WARNING ]
+ 02 └──── x direction                                            [ ERRORS! ]
+ 03 └──── y direction                                            [ ERRORS! ]
+ 04 └──── z direction                                            [ ERRORS! ]
+ 05 └──── plotting                                               [ ERRORS! ]
+ 06 └──── comparison                                             [ ERRORS! ]
+ 07 └──── sod + analytical                                       [ ERRORS! ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ WARNING ]
- 11 └──── yz plane                                               [ WARNING ]
- 12 └──── zx plane                                               [ WARNING ]
- 13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ALL  OK ]
+ 10 └──── xy plane                                               [ ERRORS! ]
+ 11 └──── yz plane                                               [ ERRORS! ]
+ 12 └──── zx plane                                               [ ERRORS! ]
+ 13 └──── plotting                                               [ ERRORS! ]
+ 14 └──── comparison                                             [ ERRORS! ]
  15 Orszag-Tang [stagger2/bifrost] - compilation                 [ ALL  OK ]
- 16 └──── xy plane with -np 4                                    [ WARNING ]
+ 16 └──── xy plane with -np 4                                    [ ERRORS! ]
  17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
- 18 └──── xy plane with -np 4                                    [ WARNING ]
- 19 └──── energy plots                                           [ WARNING ]
+ 18 └──── xy plane with -np 4                                    [ ERRORS! ]
+ 19 └──── energy plots                                           [ ERRORS! ]
                                                                  -----------
-                                                                 19   /   19
+                                                                 5    /   19
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
