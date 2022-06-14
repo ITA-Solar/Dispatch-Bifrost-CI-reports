@@ -1,0 +1,37 @@
+
+The repo hash for this run is: 5fcd4ec
+
+The branch on which it was run: develop
+
+
+::: Setting up enviroment for Intel Parallel Studio 2020
+
+::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
+::: Running x direction
+::: Running y direction
+::: Running z direction
+::: Running plotting
+::: Running comparison
+::: Running sod + analytical
+
+::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
+
+:: (env) Intel Parallel Studio 2020                              
+
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 └──── y direction                                            [ ALL  OK ]
+ 04 └──── z direction                                            [ ALL  OK ]
+ 05 └──── plotting                                               [ ALL  OK ]
+ 06 └──── comparison                                             [ ALL  OK ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+                                                                 -----------
+                                                                 8    /    8
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
