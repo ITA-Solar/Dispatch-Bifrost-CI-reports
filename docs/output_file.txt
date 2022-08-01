@@ -1,7 +1,7 @@
 
-The repo hash for this run is: fa16e2f
+The repo hash for this run is: c49a9cf
 
-The branch on which it was run: PR-18
+The branch on which it was run: develop-bc
 
 
 ::: Setting up enviroment for Intel Parallel Studio 2020
@@ -32,9 +32,9 @@ Traceback (most recent call last):
     write_table(run1, run2, snapnum)
   File "python/compare_quantities.py", line 49, in write_table
     ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_PR-18/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
     parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_PR-18/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
     p=s.patches[0]
 AttributeError: 'snapshot' object has no attribute 'patches'
 cp: cannot stat ‘*.md’: No such file or directory
@@ -74,9 +74,9 @@ Traceback (most recent call last):
     write_table(run1, run2, snapnum)
   File "python/compare_quantities.py", line 48, in write_table
     ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_PR-18/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
     parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_PR-18/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
     p=s.patches[0]
 AttributeError: 'snapshot' object has no attribute 'patches'
 cp: cannot stat ‘*.md’: No such file or directory
