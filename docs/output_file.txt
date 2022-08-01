@@ -1,5 +1,5 @@
 
-The repo hash for this run is: e4bc77e
+The repo hash for this run is: 164f010
 
 The branch on which it was run: develop-bc
 
@@ -25,20 +25,6 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 
 ::: Running plotting
 ::: Running comparison
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 49, in write_table
-    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.md’: No such file or directory
-
 ::: Running sod + analytical
 ::: Runtime Warnings:
 
@@ -67,20 +53,6 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 
 ::: Running plotting
 ::: Running comparison
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/compare_quantities.py", line 104, in <module>
-    write_table(run1, run2, snapnum)
-  File "python/compare_quantities.py", line 48, in write_table
-    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 129, in snapshot
-    parameters=dispatch.yt.parameters(s)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop-bc/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
-    p=s.patches[0]
-AttributeError: 'snapshot' object has no attribute 'patches'
-cp: cannot stat ‘*.md’: No such file or directory
-
 
 ::::::::::::::::::::::: Orszag-Tang [stagger2/bifrost] ::::::::::::::::::::::
 ::: Compilation
@@ -119,7 +91,7 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
  03 └──── y direction                                            [ WARNING ]
  04 └──── z direction                                            [ WARNING ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ERRORS! ]
+ 06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ WARNING ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
@@ -127,14 +99,14 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
  11 └──── yz plane                                               [ WARNING ]
  12 └──── zx plane                                               [ WARNING ]
  13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ERRORS! ]
+ 14 └──── comparison                                             [ ALL  OK ]
  15 Orszag-Tang [stagger2/bifrost] - compilation                 [ ALL  OK ]
  16 └──── xy plane with -np 4                                    [ WARNING ]
  17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
  18 └──── xy plane with -np 4                                    [ WARNING ]
  19 └──── energy plots                                           [ WARNING ]
                                                                  -----------
-                                                                 17   /   19
+                                                                 19   /   19
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
