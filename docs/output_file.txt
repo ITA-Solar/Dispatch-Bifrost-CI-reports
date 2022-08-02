@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 164f010
+The repo hash for this run is: 5278846
 
 The branch on which it was run: develop-bc
 
@@ -9,27 +9,11 @@ The branch on which it was run: develop-bc
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running y direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running z direction
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
 ::: Running sod + analytical
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
@@ -37,44 +21,18 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 :::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
 ::: Compilation
 ::: Running xy plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running yz plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running zx plane
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running plotting
 ::: Running comparison
 
 ::::::::::::::::::::::: Orszag-Tang [stagger2/bifrost] ::::::::::::::::::::::
 ::: Compilation
 ::: Running xy plane with -np 4
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 
 ::::::::::::::::::::::: Orszag-Tang [ramses/hlld_eos] :::::::::::::::::::::::
 ::: Compilation
 ::: Running xy plane with -np 4
-::: Runtime Warnings:
-
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
-
 ::: Running energy plots
 ::: Runtime Warnings:
 
@@ -87,23 +45,23 @@ OMP: Info #274: omp_set_nested routine deprecated, please use omp_set_max_active
 :: (env) Intel Parallel Studio 2020                              
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ WARNING ]
- 03 └──── y direction                                            [ WARNING ]
- 04 └──── z direction                                            [ WARNING ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 └──── y direction                                            [ ALL  OK ]
+ 04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ WARNING ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ WARNING ]
- 11 └──── yz plane                                               [ WARNING ]
- 12 └──── zx plane                                               [ WARNING ]
+ 10 └──── xy plane                                               [ ALL  OK ]
+ 11 └──── yz plane                                               [ ALL  OK ]
+ 12 └──── zx plane                                               [ ALL  OK ]
  13 └──── plotting                                               [ ALL  OK ]
  14 └──── comparison                                             [ ALL  OK ]
  15 Orszag-Tang [stagger2/bifrost] - compilation                 [ ALL  OK ]
- 16 └──── xy plane with -np 4                                    [ WARNING ]
+ 16 └──── xy plane with -np 4                                    [ ALL  OK ]
  17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
- 18 └──── xy plane with -np 4                                    [ WARNING ]
+ 18 └──── xy plane with -np 4                                    [ ALL  OK ]
  19 └──── energy plots                                           [ WARNING ]
                                                                  -----------
                                                                  19   /   19
