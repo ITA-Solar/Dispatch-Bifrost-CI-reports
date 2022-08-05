@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 2308a4f
+The repo hash for this run is: 34c177c
 
 The branch on which it was run: develop-bc
 
@@ -34,11 +34,6 @@ The branch on which it was run: develop-bc
 ::: Compilation
 ::: Running xy plane with -np 4
 ::: Running energy plots
-::: Runtime Warnings:
-
-/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/yt/units/yt_array.py:1416: RuntimeWarning: invalid value encountered in true_divide
-  out_arr = func(np.asarray(inps[0]), np.asarray(inps[1]),
-
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -62,7 +57,7 @@ The branch on which it was run: develop-bc
  16 └──── xy plane with -np 4                                    [ ALL  OK ]
  17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
  18 └──── xy plane with -np 4                                    [ ALL  OK ]
- 19 └──── energy plots                                           [ WARNING ]
+ 19 └──── energy plots                                           [ ALL  OK ]
                                                                  -----------
                                                                  19   /   19
 
