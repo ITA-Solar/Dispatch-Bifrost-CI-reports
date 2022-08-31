@@ -1,10 +1,10 @@
 
-The repo hash for this run is: 34c177c
+The repo hash for this run is: 2970358
 
-The branch on which it was run: develop-bc
+The branch on which it was run: develop
 
 
-::: Setting up enviroment for Intel Parallel Studio 2020
+::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
 
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
@@ -13,53 +13,39 @@ The branch on which it was run: develop-bc
 ::: Running z direction
 ::: Running plotting
 ::: Running comparison
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 49, in write_table
+    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
+    parameters=dispatch.yt.parameters(s)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+    p=s.patches[0]
+AttributeError: 'snapshot' object has no attribute 'patches'
+cp: cannot stat ‘*.md’: No such file or directory
+
 ::: Running sod + analytical
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
-:::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
-::: Compilation
-::: Running xy plane
-::: Running yz plane
-::: Running zx plane
-::: Running plotting
-::: Running comparison
-
-::::::::::::::::::::::: Orszag-Tang [stagger2/bifrost] ::::::::::::::::::::::
-::: Compilation
-::: Running xy plane with -np 4
-
-::::::::::::::::::::::: Orszag-Tang [ramses/hlld_eos] :::::::::::::::::::::::
-::: Compilation
-::: Running xy plane with -np 4
-::: Running energy plots
-
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
-:: (env) Intel Parallel Studio 2020                              
+:: (env) Intel oneAPI 2022 (ifort-classic)                       
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
  02 └──── x direction                                            [ ALL  OK ]
  03 └──── y direction                                            [ ALL  OK ]
  04 └──── z direction                                            [ ALL  OK ]
  05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
+ 06 └──── comparison                                             [ ERRORS! ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 10 └──── xy plane                                               [ ALL  OK ]
- 11 └──── yz plane                                               [ ALL  OK ]
- 12 └──── zx plane                                               [ ALL  OK ]
- 13 └──── plotting                                               [ ALL  OK ]
- 14 └──── comparison                                             [ ALL  OK ]
- 15 Orszag-Tang [stagger2/bifrost] - compilation                 [ ALL  OK ]
- 16 └──── xy plane with -np 4                                    [ ALL  OK ]
- 17 Orszag-Tang [ramses/hlld_eos] - compilation                  [ ALL  OK ]
- 18 └──── xy plane with -np 4                                    [ ALL  OK ]
- 19 └──── energy plots                                           [ ALL  OK ]
                                                                  -----------
-                                                                 19   /   19
+                                                                 7    /    8
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
