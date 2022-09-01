@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 3b534e2
+The repo hash for this run is: 0da4535
 
-The branch on which it was run: HEAD
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -9,14 +9,28 @@ The branch on which it was run: HEAD
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
 ::: Running x direction
+::: Running y direction
+::: Running z direction
+::: Running plotting
+::: Running comparison
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "python/compare_quantities.py", line 104, in <module>
+    write_table(run1, run2, snapnum)
+  File "python/compare_quantities.py", line 49, in write_table
+    ds2 = dispatch.yt.snapshot(snapnumber,run=run2,data=data2)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 121, in snapshot
+    parameters=dispatch.yt.parameters(s)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_develop/utilities/python/dispatch/yt/_yt.py", line 16, in parameters
+    p=s.patches[0]
+AttributeError: 'snapshot' object has no attribute 'patches'
+cp: cannot stat ‘*.md’: No such file or directory
+
+::: Running sod + analytical
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
-::: Running x direction
-
-:::::::::::::::::::: Advection MagLoop [stagger2/bifrost] :::::::::::::::::::
-::: Compilation
-::: Running xy plane
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -24,12 +38,14 @@ The branch on which it was run: HEAD
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
  02 └──── x direction                                            [ ALL  OK ]
- 03 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 04 └──── x direction                                            [ ALL  OK ]
- 05 Advection MagLoop [stagger2/bifrost] - compilation           [ ALL  OK ]
- 06 └──── xy plane                                               [ ALL  OK ]
+ 03 └──── y direction                                            [ ALL  OK ]
+ 04 └──── z direction                                            [ ALL  OK ]
+ 05 └──── plotting                                               [ ALL  OK ]
+ 06 └──── comparison                                             [ ERRORS! ]
+ 07 └──── sod + analytical                                       [ ALL  OK ]
+ 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
                                                                  -----------
-                                                                 6    /    6
+                                                                 7    /    8
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
