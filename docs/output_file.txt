@@ -1,7 +1,7 @@
 
-The repo hash for this run is: a7633f7
+The repo hash for this run is: 67dbe35
 
-The branch on which it was run: develop
+The branch on which it was run: field_solver
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
