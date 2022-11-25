@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 1d712f4
+The repo hash for this run is: d322157
 
 The branch on which it was run: develop
 
@@ -56,7 +56,7 @@ make: *** [fields_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
-:::::::::::::: PIC in patch - pic fields unit [ramses/hlld_eos] :::::::::::::
+:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
 ../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6405: The same named entity from different modules and/or program units cannot be referenced.   [STAGGER]
@@ -94,7 +94,7 @@ make: *** [fields_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
-::::::::::::::::: PIC in patch - pic unit [ramses/hlld_eos] :::::::::::::::::
+::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
 ../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6405: The same named entity from different modules and/or program units cannot be referenced.   [STAGGER]
@@ -184,10 +184,10 @@ make: *** [../../../config/Makefile:188: initial_conditions_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
-:::::::::::::: PIC in patch - pic fields unit [ramses/hlld_eos] :::::::::::::
+:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 
-::::::::::::::::: PIC in patch - pic unit [ramses/hlld_eos] :::::::::::::::::
+::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
@@ -203,8 +203,8 @@ make: *** Waiting for unfinished jobs....
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  09 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
- 10 PIC in patch - pic fields unit [ramses/hlld_eos] - compilation[ ERRORS! ]
- 11 PIC in patch - pic unit [ramses/hlld_eos] - compilation      [ ERRORS! ]
+ 10 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 11 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
                                                                  8    /   11
 
@@ -217,8 +217,8 @@ make: *** Waiting for unfinished jobs....
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
  06 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
- 07 PIC in patch - pic fields unit [ramses/hlld_eos] - compilation[ ALL  OK ]
- 08 PIC in patch - pic unit [ramses/hlld_eos] - compilation      [ ALL  OK ]
+ 07 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 08 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
                                                                  -----------
                                                                  7    /    8
 
