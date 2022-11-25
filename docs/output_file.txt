@@ -1,5 +1,5 @@
 
-The repo hash for this run is: ebff940
+The repo hash for this run is: 5902a22
 
 The branch on which it was run: field_solver
 
@@ -11,58 +11,7 @@ The branch on which it was run: field_solver
 ::: Running x direction
 ::: Running y direction
 ::: Running z direction
-::: Runtime Errors:
-
-Abort(1615247) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
-MPIR_Init_thread(176)........: 
-MPID_Init(1538)..............: 
-MPIDI_OFI_mpi_init_hook(1551): 
-create_vni_context(2136).....: OFI EP enable failed (ofi_init.c:2136:create_vni_context:Device or resource busy)
-[unset]: write_line error; fd=-1 buf=:cmd=abort exitcode=1615247
-:
-system msg for write_line failure : Bad file descriptor
-Abort(1615247) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
-MPIR_Init_thread(176)........: 
-MPID_Init(1538)..............: 
-MPIDI_OFI_mpi_init_hook(1551): 
-create_vni_context(2136).....: OFI EP enable failed (ofi_init.c:2136:create_vni_context:Device or resource busy)
-[unset]: write_line error; fd=-1 buf=:cmd=abort exitcode=1615247
-:
-system msg for write_line failure : Bad file descriptor
-[nekkar:4636 :0:4636] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
-==== backtrace ====
-    0  /usr/lib64/libucs.so.0(+0x17970) [0x7fa83784c970]
-    1  /usr/lib64/libucs.so.0(+0x17b22) [0x7fa83784cb22]
-    2  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/mpi/2021.7.0/lib/release/libmpi.so.12(MPIR_Err_return_comm+0x15d) [0x7fa83c5806ed]
-    3  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/mpi/2021.7.0/lib/release/libmpi.so.12(PMPI_Init_thread+0x280) [0x7fa83c715020]
-    4  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/mpi/2021.7.0/lib/libmpifort.so.12(pmpi_init_thread_+0x2c) [0x7fa83dba5a0c]
-    5  ./dispatch.x() [0x58f3c0]
-    6  ./dispatch.x() [0x58fbb4]
-    7  ./dispatch.x() [0x4bd223]
-    8  ./dispatch.x() [0x644e66]
-    9  ./dispatch.x() [0x40a181]
-   10  ./dispatch.x() [0x40a09d]
-   11  /lib64/libc.so.6(__libc_start_main+0xf5) [0x7fa83b16f555]
-   12  ./dispatch.x() [0x409fb6]
-===================
-
 ::: Running plotting
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "python/plot_test_suite.py", line 26, in <module>
-    dg.plot_values_along(ss[0],[0.00,0.000,0.000],dir=direction,iv='d', ls=lines[direction], label=run)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_field_solver/utilities/python/dispatch/graphics/_graphics.py", line 79, in plot_values_along
-    plot(ds.values_along(pp,pt,iv=kv['iv'],dir=kv['dir'],all=kv['all'],xlim=xlim),**kw)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_field_solver/utilities/python/dispatch/select/_select.py", line 267, in values_along
-    patches=patches_along(pp,point,dir=dir,xlim=xlim,verbose=verbose,**kw)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_field_solver/utilities/python/dispatch/select/_select.py", line 68, in patches_along
-    p=patch_at(pp,pt)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_field_solver/utilities/python/dispatch/select/_select.py", line 34, in patch_at
-    for p in pp:
-TypeError: 'snapshot' object is not iterable
-cp: cannot stat ‘*.png’: No such file or directory
-
 ::: Running comparison
 ::: Running sod + analytical
 
@@ -76,13 +25,13 @@ cp: cannot stat ‘*.png’: No such file or directory
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
  02 └──── x direction                                            [ ALL  OK ]
  03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ERRORS! ]
- 05 └──── plotting                                               [ ERRORS! ]
+ 04 └──── z direction                                            [ ALL  OK ]
+ 05 └──── plotting                                               [ ALL  OK ]
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
                                                                  -----------
-                                                                 6    /    8
+                                                                 8    /    8
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
