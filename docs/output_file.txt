@@ -1,5 +1,5 @@
 
-The repo hash for this run is: d322157
+The repo hash for this run is: 2c154e4
 
 The branch on which it was run: develop
 
@@ -17,44 +17,6 @@ The branch on which it was run: develop
 
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
-
-::::::::::::::::: PIC in patch - field upd [ramses/hlld_eos] ::::::::::::::::
-::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6405: The same named entity from different modules and/or program units cannot be referenced.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6463: This is not a derived type name.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [STAGGER]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
-------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [SET_PATCH_STAGGER_PREFACTORS]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(168): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_UP]
-  call self%stagger%curlx_up(ey,ez,bxm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(169): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_UP]
-  call self%stagger%curly_up(ex,ez,bym)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(170): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_UP]
-  call self%stagger%curlz_up(ex,ey,bzm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(217): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_DN]
-  call self%stagger%curlx_dn(by,bz,sx)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(218): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_DN]
-  call self%stagger%curly_dn(bx,bz,sy)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(219): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_DN]
-  call self%stagger%curlz_dn(bx,by,sz)
---------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/fields_mod.f90 (code 1)
-make: *** [fields_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
@@ -147,43 +109,6 @@ make: *** Waiting for unfinished jobs....
 ::: Compilation
 ::: Running one step only
 
-::::::::::::::::: PIC in patch - field upd [ramses/hlld_eos] ::::::::::::::::
-::: Compilation
-::: Compilation Errors:
-initial_conditions_mod.f90:128:15:
-
-  128 |     particles%q(1,:) = cents(1)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-initial_conditions_mod.f90:129:15:
-
-  129 |     particles%q(2,:) = cents(2)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-initial_conditions_mod.f90:130:15:
-
-  130 |     particles%q(3,:) = cents(3)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-initial_conditions_mod.f90:131:15:
-
-  131 |     particles%r(1,:) = decis(1)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-initial_conditions_mod.f90:132:15:
-
-  132 |     particles%r(2,:) = decis(2)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-initial_conditions_mod.f90:133:15:
-
-  133 |     particles%r(3,:) = decis(3)
-      |               1
-Error: Rank mismatch in array reference at (1) (2/3)
-make: *** [../../../config/Makefile:188: initial_conditions_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
-
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 
@@ -202,11 +127,10 @@ make: *** Waiting for unfinished jobs....
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
- 10 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
- 11 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 8    /   11
+                                                                 8    /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
@@ -216,11 +140,10 @@ make: *** Waiting for unfinished jobs....
  03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
- 07 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 08 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
                                                                  -----------
-                                                                 7    /    8
+                                                                 7    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
