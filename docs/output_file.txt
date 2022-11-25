@@ -1,5 +1,5 @@
 
-The repo hash for this run is: cabf070
+The repo hash for this run is: 9ca2ef2
 
 The branch on which it was run: develop
 
@@ -20,6 +20,10 @@ The branch on which it was run: develop
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
+::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
+::: Running x direction
+
 :::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
 ::: Compilation
 
@@ -32,12 +36,6 @@ The branch on which it was run: develop
 
 :::::::::::::::::::::::::: extended_disk [AN/hllc] ::::::::::::::::::::::::::
 ::: Compilation
-
-:::::::::::::::::::::::: photo_tr [stagger2/bifrost] ::::::::::::::::::::::::
-::: Compilation
-::: Compilation Errors:
-make: *** No rule to make target `cleanest'.  Stop.
-
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -57,14 +55,15 @@ make: *** No rule to make target `cleanest'.  Stop.
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
 
- 01 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
- 02 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
- 03 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
- 04 └──── one step only                                          [ ALL  OK ]
- 05 extended_disk [AN/hllc] - compilation                        [ ALL  OK ]
- 06 photo_tr [stagger2/bifrost] - compilation                    [ ERRORS! ]
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 └──── x direction                                            [ ALL  OK ]
+ 03 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
+ 04 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
+ 05 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 06 └──── one step only                                          [ ALL  OK ]
+ 07 extended_disk [AN/hllc] - compilation                        [ ALL  OK ]
                                                                  -----------
-                                                                 5    /    6
+                                                                 7    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
