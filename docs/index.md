@@ -1,7 +1,7 @@
 ## Welcome to Dispatch-Bifrost CI pages 
 
 Here are the results from the last run associated with 
-**Dispatch-Bifrost PR-20, build #2**
+**Dispatch-Bifrost develop, build #106**
 
 ## Brio & Wu results
 
