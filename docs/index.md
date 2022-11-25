@@ -1,7 +1,7 @@
 ## Welcome to Dispatch-Bifrost CI pages 
 
 Here are the results from the last run associated with 
-**Dispatch-Bifrost field_solver, build #4**
+**Dispatch-Bifrost PR-20, build #1**
 
 ## Brio & Wu results
 

@@ -1,7 +1,7 @@
 
 The repo hash for this run is: 5902a22
 
-The branch on which it was run: field_solver
+The branch on which it was run: PR-20
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
