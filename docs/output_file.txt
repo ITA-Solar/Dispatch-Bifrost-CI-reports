@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 40da4ec
+The repo hash for this run is: 1d712f4
 
 The branch on which it was run: develop
 
@@ -136,7 +136,6 @@ make: *** Waiting for unfinished jobs....
 
 ::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
-::: Running x direction
 
 :::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
 ::: Compilation
@@ -213,16 +212,15 @@ make: *** Waiting for unfinished jobs....
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
 
  01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
- 04 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
- 05 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
- 06 └──── one step only                                          [ ALL  OK ]
- 07 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
- 08 PIC in patch - pic fields unit [ramses/hlld_eos] - compilation[ ALL  OK ]
- 09 PIC in patch - pic unit [ramses/hlld_eos] - compilation      [ ALL  OK ]
+ 02 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
+ 03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
+ 04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 05 └──── one step only                                          [ ALL  OK ]
+ 06 PIC in patch - field upd [ramses/hlld_eos] - compilation     [ ERRORS! ]
+ 07 PIC in patch - pic fields unit [ramses/hlld_eos] - compilation[ ALL  OK ]
+ 08 PIC in patch - pic unit [ramses/hlld_eos] - compilation      [ ALL  OK ]
                                                                  -----------
-                                                                 8    /    9
+                                                                 7    /    8
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
