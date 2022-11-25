@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 21d950a
+The repo hash for this run is: cabf070
 
 The branch on which it was run: develop
 
@@ -18,6 +18,27 @@ The branch on which it was run: develop
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
+::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
+
+:::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] :::::::::::::::::::
+::: Compilation
+::: Running one step only
+
+:::::::::::::::::::::::::: extended_disk [AN/hllc] ::::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::::::::: photo_tr [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+make: *** No rule to make target `cleanest'.  Stop.
+
+
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                       
@@ -32,6 +53,18 @@ The branch on which it was run: develop
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
                                                                  -----------
                                                                  8    /    8
+
+
+:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
+
+ 01 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 04 └──── one step only                                          [ ALL  OK ]
+ 05 extended_disk [AN/hllc] - compilation                        [ ALL  OK ]
+ 06 photo_tr [stagger2/bifrost] - compilation                    [ ERRORS! ]
+                                                                 -----------
+                                                                 5    /    6
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
