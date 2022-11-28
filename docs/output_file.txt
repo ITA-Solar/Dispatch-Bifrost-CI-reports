@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 2c154e4
+The repo hash for this run is: 9399537
 
-The branch on which it was run: develop
+The branch on which it was run: merge_split
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -18,103 +18,6 @@ The branch on which it was run: develop
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
-:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
-::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6405: The same named entity from different modules and/or program units cannot be referenced.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6463: This is not a derived type name.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [STAGGER]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
-------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [SET_PATCH_STAGGER_PREFACTORS]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(168): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_UP]
-  call self%stagger%curlx_up(ey,ez,bxm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(169): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_UP]
-  call self%stagger%curly_up(ex,ez,bym)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(170): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_UP]
-  call self%stagger%curlz_up(ex,ey,bzm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(217): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_DN]
-  call self%stagger%curlx_dn(by,bz,sx)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(218): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_DN]
-  call self%stagger%curly_dn(bx,bz,sy)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(219): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_DN]
-  call self%stagger%curlz_dn(bx,by,sz)
---------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/fields_mod.f90 (code 1)
-make: *** [fields_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
-
-::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6405: The same named entity from different modules and/or program units cannot be referenced.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(17): error #6463: This is not a derived type name.   [STAGGER]
-    type(stagger) :: stagger
----------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [STAGGER]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
-------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(91): error #6460: This is not a component name that is defined in the encompassing structure.   [SET_PATCH_STAGGER_PREFACTORS]
-  call self%stagger%set_patch_stagger_prefactors(self%patch%ds,self%patch%mesh%lb,self%patch%mesh%ub)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(168): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_UP]
-  call self%stagger%curlx_up(ey,ez,bxm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(169): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_UP]
-  call self%stagger%curly_up(ex,ez,bym)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(170): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_UP]
-  call self%stagger%curlz_up(ex,ey,bzm)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(217): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLX_DN]
-  call self%stagger%curlx_dn(by,bz,sx)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(218): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLY_DN]
-  call self%stagger%curly_dn(bx,bz,sy)
---------------------^
-../../../solvers/particles/pic_in_patch/fields_mod.f90(219): error #6460: This is not a component name that is defined in the encompassing structure.   [CURLZ_DN]
-  call self%stagger%curlz_dn(bx,by,sz)
---------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/fields_mod.f90 (code 1)
-make: *** [fields_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
-
-::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
-
-::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
-::: Compilation
-
-::::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-::: Running one step only
-
-:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
-::: Compilation
-
-::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                       
@@ -127,23 +30,8 @@ make: *** Waiting for unfinished jobs....
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 8    /   10
-
-
-:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
-
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
- 03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
- 04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
- 05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
-                                                                 -----------
-                                                                 7    /    7
+                                                                 8    /    8
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
