@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 81e735d
+The repo hash for this run is: a31a04e
 
 The branch on which it was run: merge_split
 
@@ -18,6 +18,33 @@ The branch on which it was run: merge_split
 ::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
 
+:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
+::: Compilation
+
+::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
+::: Compilation
+
+::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
+
+::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] :::::::::::::::::::
+::: Compilation
+::: Running one step only
+
+:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
+::: Compilation
+
+::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
+::: Compilation
+
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                       
@@ -30,8 +57,23 @@ The branch on which it was run: merge_split
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
                                                                  -----------
-                                                                 8    /    8
+                                                                 10   /   10
+
+
+:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
+
+ 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
+ 03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
+ 04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 05 └──── one step only                                          [ ALL  OK ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+                                                                 -----------
+                                                                 7    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
