@@ -1,5 +1,5 @@
 
-The repo hash for this run is: a31a04e
+The repo hash for this run is: ae442d5
 
 The branch on which it was run: merge_split
 
@@ -20,9 +20,25 @@ The branch on which it was run: merge_split
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90(240): error #6404: This name does not have a type, and must have an explicit type.   [PATCH$ID]
+  self%id       = patch$id
+------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90(240): error #6404: This name does not have a type, and must have an explicit type.   [PATCH$ID]
+  self%id       = patch$id
+------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
@@ -41,9 +57,29 @@ The branch on which it was run: merge_split
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90:240:23:
+
+  240 |   self%id       = patch$id
+      |                       1
+Fatal Error: Invalid character ‘$’ at (1). Use ‘-fdollar-ok’ to allow it as an extension
+compilation terminated.
+make: *** [../../../config/Makefile:188: particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90:240:23:
+
+  240 |   self%id       = patch$id
+      |                       1
+Fatal Error: Invalid character ‘$’ at (1). Use ‘-fdollar-ok’ to allow it as an extension
+compilation terminated.
+make: *** [../../../config/Makefile:188: particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -57,10 +93,10 @@ The branch on which it was run: merge_split
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 10   /   10
+                                                                 8    /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
@@ -70,10 +106,10 @@ The branch on which it was run: merge_split
  03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 7    /    7
+                                                                 5    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
