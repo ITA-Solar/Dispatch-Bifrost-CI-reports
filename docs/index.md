@@ -1,7 +1,7 @@
 ## Welcome to Dispatch-Bifrost CI pages 
 
 Here are the results from the last run associated with 
-**Dispatch-Bifrost merge_split, build #8**
+**Dispatch-Bifrost merge_split, build #9**
 
 ## Brio & Wu results
 
