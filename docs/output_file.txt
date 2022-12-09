@@ -1,7 +1,7 @@
 
 The repo hash for this run is: 59cd275
 
-The branch on which it was run: merge_split
+The branch on which it was run: PR-21
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
