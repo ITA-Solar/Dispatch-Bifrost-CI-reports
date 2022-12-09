@@ -1,7 +1,7 @@
 ## Welcome to Dispatch-Bifrost CI pages 
 
 Here are the results from the last run associated with 
-**Dispatch-Bifrost develop, build #119**
+**Dispatch-Bifrost pic_sampling, build #1**
 
 ## Brio & Wu results
 
