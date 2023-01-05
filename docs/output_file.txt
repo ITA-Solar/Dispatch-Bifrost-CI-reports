@@ -1,5 +1,5 @@
 
-The repo hash for this run is: c128a85
+The repo hash for this run is: fd78d24
 
 The branch on which it was run: pic_sampling
 
