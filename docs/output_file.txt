@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 3748e84
+The repo hash for this run is: ad565cc
 
 The branch on which it was run: pic_sampling
 
@@ -20,9 +20,25 @@ The branch on which it was run: pic_sampling
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90(238): error #6460: This is not a component name that is defined in the encompassing structure.   [NUMBER_MASS_DENSITY_RATIO]
+        n_p = pic_scaling%number_mass_density_ratio * dens
+--------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/species_mod.f90 (code 1)
+make: *** [species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90(238): error #6460: This is not a component name that is defined in the encompassing structure.   [NUMBER_MASS_DENSITY_RATIO]
+        n_p = pic_scaling%number_mass_density_ratio * dens
+--------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/species_mod.f90 (code 1)
+make: *** [species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
@@ -41,9 +57,27 @@ The branch on which it was run: pic_sampling
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90:238:52:
+
+  238 |         n_p = pic_scaling%number_mass_density_ratio * dens
+      |                                                    1
+Error: ‘number_mass_density_ratio’ at (1) is not a member of the ‘units_t’ structure
+make: *** [../../../config/Makefile:187: species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90:238:52:
+
+  238 |         n_p = pic_scaling%number_mass_density_ratio * dens
+      |                                                    1
+Error: ‘number_mass_density_ratio’ at (1) is not a member of the ‘units_t’ structure
+make: *** [../../../config/Makefile:187: species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -57,10 +91,10 @@ The branch on which it was run: pic_sampling
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 10   /   10
+                                                                 8    /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
@@ -70,10 +104,10 @@ The branch on which it was run: pic_sampling
  03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 7    /    7
+                                                                 5    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
