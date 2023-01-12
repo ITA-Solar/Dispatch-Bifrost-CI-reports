@@ -1,7 +1,7 @@
 
 The repo hash for this run is: 13fa895
 
-The branch on which it was run: pic_sampling
+The branch on which it was run: PR-22
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
