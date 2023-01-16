@@ -1,7 +1,7 @@
 
-The repo hash for this run is: ed03bf3
+The repo hash for this run is: 17c5fbd
 
-The branch on which it was run: develop
+The branch on which it was run: pic_first_experiment
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
