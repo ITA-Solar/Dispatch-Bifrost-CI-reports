@@ -1,5 +1,5 @@
 
-The repo hash for this run is: ad78aee
+The repo hash for this run is: 2cc5273
 
 The branch on which it was run: pic_first_experiment
 
