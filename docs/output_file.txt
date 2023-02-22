@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 192c7a0
+The repo hash for this run is: ad45356
 
 The branch on which it was run: pic_first_experiment
 
@@ -81,7 +81,7 @@ make: *** Waiting for unfinished jobs....
  1146 |       write(stdlog, *) "self to export - patch", self%patch%id, "neighbohr", nbor%nbor_id, "particles in export", exports%m(1)
       |                                                                                                                           1
 Error: Symbol ‘exports’ at (1) has no IMPLICIT type
-make: *** [../../../config/Makefile:188: particles_mod.o] Error 1
+make: *** [../../../config/Makefile:187: particles_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
