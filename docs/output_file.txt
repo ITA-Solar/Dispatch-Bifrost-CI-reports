@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 99d1fe5
+The repo hash for this run is: da3290e
 
-The branch on which it was run: develop
+The branch on which it was run: pic_interpolation_options
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -20,9 +20,43 @@ The branch on which it was run: develop
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
+make: *** [field_interp_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
+make: *** [field_interp_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
@@ -57,10 +91,10 @@ The branch on which it was run: develop
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 10   /   10
+                                                                 8    /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
