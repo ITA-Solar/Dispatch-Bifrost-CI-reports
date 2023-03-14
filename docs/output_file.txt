@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 5956c57
+The repo hash for this run is: fcc79f2
 
-The branch on which it was run: pic_interpolation_options
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
