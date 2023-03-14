@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 33b1b05
+The repo hash for this run is: 5956c57
 
 The branch on which it was run: pic_interpolation_options
 
@@ -21,16 +21,16 @@ The branch on which it was run: pic_interpolation_options
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
     integer :: slb, sub
 ---------------^
-../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
     integer :: slb, sub
 --------------------^
-../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
     integer :: slb, sub
 ---------------^
-../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
     integer :: slb, sub
 --------------------^
 compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
@@ -41,16 +41,16 @@ make: *** Waiting for unfinished jobs....
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
     integer :: slb, sub
 ---------------^
-../../../interpolation/field_interp_mod.f90(71): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
     integer :: slb, sub
 --------------------^
-../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
     integer :: slb, sub
 ---------------^
-../../../interpolation/field_interp_mod.f90(94): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
     integer :: slb, sub
 --------------------^
 compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
