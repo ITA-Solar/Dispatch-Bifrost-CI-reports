@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 27b8b56
+The repo hash for this run is: 7a77b82
 
 The branch on which it was run: pic_harris_sheet
 
@@ -20,9 +20,25 @@ The branch on which it was run: pic_harris_sheet
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
+  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
+----------------------------------------------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
+  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
+----------------------------------------------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
@@ -41,9 +57,27 @@ The branch on which it was run: pic_harris_sheet
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90:302:140:
+
+  302 |             call pic_sampler%sample_cell_maxwell(T_ion,p_arr,r_arr,e_arr,w_arr,w_tot,pic_scaling%weight_pmass_ratio, pic_scaling%m_p_scaled,frac, mu_=ion_drift(ix,iy,iz,:))
+      |                                                                                                                                            1
+Error: ‘m_p_scaled’ at (1) is not a member of the ‘units_t’ structure
+make: *** [../../../config/Makefile:188: species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+../../../solvers/particles/pic_in_patch/species_mod.f90:302:140:
+
+  302 |             call pic_sampler%sample_cell_maxwell(T_ion,p_arr,r_arr,e_arr,w_arr,w_tot,pic_scaling%weight_pmass_ratio, pic_scaling%m_p_scaled,frac, mu_=ion_drift(ix,iy,iz,:))
+      |                                                                                                                                            1
+Error: ‘m_p_scaled’ at (1) is not a member of the ‘units_t’ structure
+make: *** [../../../config/Makefile:188: species_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -57,10 +91,10 @@ The branch on which it was run: pic_harris_sheet
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 10   /   10
+                                                                 8    /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
@@ -70,10 +104,10 @@ The branch on which it was run: pic_harris_sheet
  03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
                                                                  -----------
-                                                                 7    /    7
+                                                                 5    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
