@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 6f760bc
+The repo hash for this run is: 39acaa7
 
-The branch on which it was run: pic_harris_sheet
+The branch on which it was run: eloi_summer_proj
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -21,22 +21,40 @@ The branch on which it was run: pic_harris_sheet
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
-  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
-----------------------------------------------------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
-make: *** [particles_mod.o] Error 1
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
+make: *** [field_interp_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
-  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
-----------------------------------------------------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
-make: *** [particles_mod.o] Error 1
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
+    integer :: slb, sub
+---------------^
+../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
+    integer :: slb, sub
+--------------------^
+compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
+make: *** [field_interp_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
@@ -57,27 +75,9 @@ make: *** Waiting for unfinished jobs....
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/species_mod.f90:302:140:
-
-  302 |             call pic_sampler%sample_cell_maxwell(T_ion,p_arr,r_arr,e_arr,w_arr,w_tot,pic_scaling%weight_pmass_ratio, pic_scaling%m_p_scaled,frac, mu_=ion_drift(ix,iy,iz,:))
-      |                                                                                                                                            1
-Error: ‘m_p_scaled’ at (1) is not a member of the ‘units_t’ structure
-make: *** [../../../config/Makefile:188: species_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/species_mod.f90:302:140:
-
-  302 |             call pic_sampler%sample_cell_maxwell(T_ion,p_arr,r_arr,e_arr,w_arr,w_tot,pic_scaling%weight_pmass_ratio, pic_scaling%m_p_scaled,frac, mu_=ion_drift(ix,iy,iz,:))
-      |                                                                                                                                            1
-Error: ‘m_p_scaled’ at (1) is not a member of the ‘units_t’ structure
-make: *** [../../../config/Makefile:188: species_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 :::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
 
@@ -104,10 +104,10 @@ make: *** Waiting for unfinished jobs....
  03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
  04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
  05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
+ 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
                                                                  -----------
-                                                                 5    /    7
+                                                                 7    /    7
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
