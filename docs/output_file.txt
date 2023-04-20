@@ -1,7 +1,7 @@
 
-The repo hash for this run is: 39acaa7
+The repo hash for this run is: c4befdf
 
-The branch on which it was run: eloi_summer_proj
+The branch on which it was run: pic_harris_sheet
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -21,40 +21,22 @@ The branch on which it was run: eloi_summer_proj
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
-    integer :: slb, sub
----------------^
-../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
-    integer :: slb, sub
---------------------^
-../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
-    integer :: slb, sub
----------------^
-../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
-    integer :: slb, sub
---------------------^
-compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
-make: *** [field_interp_mod.o] Error 1
+../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
+  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
+----------------------------------------------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
-    integer :: slb, sub
----------------^
-../../../interpolation/field_interp_mod.f90(91): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
-    integer :: slb, sub
---------------------^
-../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SLB]
-    integer :: slb, sub
----------------^
-../../../interpolation/field_interp_mod.f90(114): error #6415: This name cannot be assigned this data type because it conflicts with prior uses of the name.   [SUB]
-    integer :: slb, sub
---------------------^
-compilation aborted for ../../../interpolation/field_interp_mod.f90 (code 1)
-make: *** [field_interp_mod.o] Error 1
+../../../solvers/particles/pic_in_patch/particles_mod.f90(286): error #7938: Character length argument mismatch.   ['ghosts']
+  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
+----------------------------------------------------------------^
+compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
+make: *** [particles_mod.o] Error 1
 make: *** Waiting for unfinished jobs....
 
 
