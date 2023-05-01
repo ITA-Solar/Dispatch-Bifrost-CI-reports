@@ -1,5 +1,5 @@
 
-The repo hash for this run is: b04e01e
+The repo hash for this run is: 23cb435
 
 The branch on which it was run: pic_harris_sheet
 
@@ -20,31 +20,9 @@ The branch on which it was run: pic_harris_sheet
 
 :::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/particles_mod.f90(287): error #7938: Character length argument mismatch.   ['ghosts']
-  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
-----------------------------------------------------------------^
-../../../solvers/particles/pic_in_patch/particles_mod.f90(2650): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [N_RESAMPLED]
-subroutine resample_threshold(self,min_threshold, max_threshold,n_resampled)
-----------------------------------------------------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
-make: *** [particles_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 ::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../../solvers/particles/pic_in_patch/particles_mod.f90(287): error #7938: Character length argument mismatch.   ['ghosts']
-  call init_nbor_buffer(self,patch,buff_size,nt,self%self_ghost,"ghosts")
-----------------------------------------------------------------^
-../../../solvers/particles/pic_in_patch/particles_mod.f90(2650): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [N_RESAMPLED]
-subroutine resample_threshold(self,min_threshold, max_threshold,n_resampled)
-----------------------------------------------------------------^
-compilation aborted for ../../../solvers/particles/pic_in_patch/particles_mod.f90 (code 1)
-make: *** [particles_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
 
@@ -79,10 +57,10 @@ make: *** Waiting for unfinished jobs....
  06 └──── comparison                                             [ ALL  OK ]
  07 └──── sod + analytical                                       [ ALL  OK ]
  08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ERRORS! ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ERRORS! ]
+ 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
+ 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
                                                                  -----------
-                                                                 8    /   10
+                                                                 10   /   10
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
