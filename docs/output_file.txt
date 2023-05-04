@@ -1,79 +1,14 @@
-
-The repo hash for this run is: 9146a40
-
-The branch on which it was run: pic_harris_sheet
-
-
-::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
-
-::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
-::: Compilation
-::: Running x direction
-::: Running y direction
-::: Running z direction
-::: Running plotting
-::: Running comparison
-::: Running sod + analytical
-
-::::::::::::::::::::::::: Brio&Wu [ramses/hlld_eos] :::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
-::: Compilation
-
-::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-
-::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1
-
-::::::::::::::::::::::::: Brio&Wu [stagger2/bifrost] ::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
-::: Compilation
-
-::::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-::: Running one step only
-
-:::::::::::::::: PIC in patch - fields unit [ramses/hlld_eos] :::::::::::::::
-::: Compilation
-
-::::::::::::::::::: PIC in patch - unit [ramses/hlld_eos] :::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
-
-:: (env) Intel oneAPI 2022 (ifort-classic)                       
-
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 └──── x direction                                            [ ALL  OK ]
- 03 └──── y direction                                            [ ALL  OK ]
- 04 └──── z direction                                            [ ALL  OK ]
- 05 └──── plotting                                               [ ALL  OK ]
- 06 └──── comparison                                             [ ALL  OK ]
- 07 └──── sod + analytical                                       [ ALL  OK ]
- 08 Brio&Wu [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 09 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 10 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
-                                                                 -----------
-                                                                 10   /   10
-
-
-:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 11.2.1                    
-
- 01 Brio&Wu [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 blast [stagger2/bifrost] - compilation                       [ ALL  OK ]
- 03 rt_shadow [ramses/hlls] - compilation                        [ ALL  OK ]
- 04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ALL  OK ]
- 05 └──── one step only                                          [ ALL  OK ]
- 06 PIC in patch - fields unit [ramses/hlld_eos] - compilation   [ ALL  OK ]
- 07 PIC in patch - unit [ramses/hlld_eos] - compilation          [ ALL  OK ]
-                                                                 -----------
-                                                                 7    /    7
-
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Traceback (most recent call last):
+  File "bifrost_test.py", line 251, in <module>
+    main()
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "bifrost_test.py", line 86, in main
+    with open(setup_file, "r") as ymlfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/tests_setup.yml'
