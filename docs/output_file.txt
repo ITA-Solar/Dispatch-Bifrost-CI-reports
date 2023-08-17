@@ -1,14 +1,292 @@
-Traceback (most recent call last):
-  File "bifrost_test.py", line 251, in <module>
-    main()
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
-    return self.main(*args, **kwargs)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
-    rv = self.invoke(ctx)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
-    return callback(*args, **kwargs)
-  File "bifrost_test.py", line 86, in main
-    with open(setup_file, "r") as ymlfile:
-FileNotFoundError: [Errno 2] No such file or directory: 'experiments/tests_setup.yml'
+
+The repo hash for this run is: 93db0ce
+
+The branch on which it was run: develop
+
+
+::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
+
+:::::::::::::::::::::::::: blast [ramses/hlld_eos] ::::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
+    if(offload%on) then
+-------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
+      do j = 1, offload%n_device
+------------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
+        call offload%bunches(j)%stall_update()
+---------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
+        call offload%bunches(j)%stall_update()
+--------------------------------^
+compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
+make: *** [dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
+    if(offload%on) then
+-------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
+      do j = 1, offload%n_device
+------------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
+        call offload%bunches(j)%stall_update()
+---------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
+        call offload%bunches(j)%stall_update()
+--------------------------------^
+compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
+make: *** [dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::: stellar_atmospheres [stagger2/e] :::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
+    if(offload%on) then
+-------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
+      do j = 1, offload%n_device
+------------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
+        call offload%bunches(j)%stall_update()
+---------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
+        call offload%bunches(j)%stall_update()
+--------------------------------^
+compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
+make: *** [dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+::::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] :::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
+    if(offload%on) then
+-------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
+      do j = 1, offload%n_device
+------------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
+        call offload%bunches(j)%stall_update()
+---------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
+        call offload%bunches(j)%stall_update()
+--------------------------------^
+compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
+make: *** [dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::::::: extended_disk [AN/hllc] ::::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
+    if(offload%on) then
+-------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
+    if(offload%on) then
+---------------^
+../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
+      do j = 1, offload%n_device
+------------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
+        call offload%bunches(j)%stall_update()
+---------------------^
+../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
+        call offload%bunches(j)%stall_update()
+--------------------------------^
+compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
+make: *** [dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3
+
+:::::::::::::::::::::::::: blast [stagger2/bifrost] :::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90:457:16:
+
+  457 |     if(offload%on) then
+      |                1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:458:25:
+
+  458 |       do j = 1, offload%n_device
+      |                         1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:459:21:
+
+  459 |         call offload%bunches(j)%stall_update()
+      |                     1
+Error: Syntax error in CALL statement at (1)
+../../dispatchers/dispatcher0_mod.f90:460:9:
+
+  460 |       end do
+      |         1
+Error: Expecting END IF statement at (1)
+../../dispatchers/dispatcher0_mod.f90:477:5:
+
+  477 |   end if
+      |     1
+Error: Expecting END SUBROUTINE statement at (1)
+make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::::::: rt_shadow [ramses/hlls] ::::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90:457:16:
+
+  457 |     if(offload%on) then
+      |                1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:458:25:
+
+  458 |       do j = 1, offload%n_device
+      |                         1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:459:21:
+
+  459 |         call offload%bunches(j)%stall_update()
+      |                     1
+Error: Syntax error in CALL statement at (1)
+../../dispatchers/dispatcher0_mod.f90:460:9:
+
+  460 |       end do
+      |         1
+Error: Expecting END IF statement at (1)
+../../dispatchers/dispatcher0_mod.f90:477:5:
+
+  477 |   end if
+      |     1
+Error: Expecting END SUBROUTINE statement at (1)
+make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::: stellar_atmospheres [stagger2/e] :::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90:457:16:
+
+  457 |     if(offload%on) then
+      |                1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:458:25:
+
+  458 |       do j = 1, offload%n_device
+      |                         1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:459:21:
+
+  459 |         call offload%bunches(j)%stall_update()
+      |                     1
+Error: Syntax error in CALL statement at (1)
+../../dispatchers/dispatcher0_mod.f90:460:9:
+
+  460 |       end do
+      |         1
+Error: Expecting END IF statement at (1)
+../../dispatchers/dispatcher0_mod.f90:477:5:
+
+  477 |   end if
+      |     1
+Error: Expecting END SUBROUTINE statement at (1)
+make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::::::: extended_disk [AN/hllc] ::::::::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+../../dispatchers/dispatcher0_mod.f90:457:16:
+
+  457 |     if(offload%on) then
+      |                1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:458:25:
+
+  458 |       do j = 1, offload%n_device
+      |                         1
+Error: Symbol ‘offload’ at (1) has no IMPLICIT type
+../../dispatchers/dispatcher0_mod.f90:459:21:
+
+  459 |         call offload%bunches(j)%stall_update()
+      |                     1
+Error: Syntax error in CALL statement at (1)
+../../dispatchers/dispatcher0_mod.f90:460:9:
+
+  460 |       end do
+      |         1
+Error: Expecting END IF statement at (1)
+../../dispatchers/dispatcher0_mod.f90:477:5:
+
+  477 |   end if
+      |     1
+Error: Expecting END SUBROUTINE statement at (1)
+make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+:::::::::::::::::::::::::::::::::: SUMMARY ::::::::::::::::::::::::::::::::::
+
+:: (env) Intel oneAPI 2022 (ifort-classic)                       
+
+ 01 blast [ramses/hlld_eos] - compilation                        [ ERRORS! ]
+ 02 rt_shadow [ramses/hlls] - compilation                        [ ERRORS! ]
+ 03 stellar_atmospheres [stagger2/e] - compilation               [ ERRORS! ]
+ 04 stellar_atmospheres [ramses/hlld_eos] - compilation          [ ERRORS! ]
+ 05 extended_disk [AN/hllc] - compilation                        [ ERRORS! ]
+                                                                 -----------
+                                                                 0    /    5
+
+
+:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                  
+
+ 01 blast [stagger2/bifrost] - compilation                       [ ERRORS! ]
+ 02 rt_shadow [ramses/hlls] - compilation                        [ ERRORS! ]
+ 03 stellar_atmospheres [stagger2/e] - compilation               [ ERRORS! ]
+ 04 extended_disk [AN/hllc] - compilation                        [ ERRORS! ]
+                                                                 -----------
+                                                                 0    /    4
+
+
+:::::::::::::::::::::::::::: Δt = 0:04:13.590007 ::::::::::::::::::::::::::::
