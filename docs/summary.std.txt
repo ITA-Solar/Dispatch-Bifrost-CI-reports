@@ -1,352 +1,398 @@
 
-The repo hash for this run is: 24d4f7b
+The repo hash for this run is: 689e73b
 
-The branch on which it was run: develop
+The branch on which it was run: pic_harris_sheet
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
 
 ::::::::::::::::::::::::: blast [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 ::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
 
-
-:::::::::::::::::::::::::::: ISM [ramses/hlld] ::::::::::::::::::::::::::::
+::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+::: Running single step (1x MPI 4x OpenMP)
+::: Runtime Errors:
+
+[nekkar:13496:0:13508] Caught signal 8 (Floating point exception: floating-point invalid operation)
+==== backtrace ====
+    0  /usr/lib64/libucs.so.0(+0x17970) [0x7fd14901e970]
+    1  /usr/lib64/libucs.so.0(+0x17c23) [0x7fd14901ec23]
+    2  ./dispatch.x() [0x8ca2a6]
+    3  ./dispatch.x() [0x736297]
+    4  ./dispatch.x() [0x72d84d]
+    5  ./dispatch.x() [0x7c1f4d]
+    6  ./dispatch.x() [0x48773d]
+    7  ./dispatch.x() [0x485316]
+    8  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/compiler/2022.2.0/linux/compiler/lib/intel64_lin/libiomp5.so(__kmp_invoke_microtask+0x93) [0x7fd1b0f3db13]
+    9  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/compiler/2022.2.0/linux/compiler/lib/intel64_lin/libiomp5.so(+0xca473) [0x7fd1b0ead473]
+   10  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/compiler/2022.2.0/linux/compiler/lib/intel64_lin/libiomp5.so(+0xc93b2) [0x7fd1b0eac3b2]
+   11  /net/alruba2.uio.no/mn/alruba2/astro/local/opt/intel/oneapi/compiler/2022.2.0/linux/compiler/lib/intel64_lin/libiomp5.so(+0x15b883) [0x7fd1b0f3e883]
+   12  /lib64/libpthread.so.0(+0x7ea5) [0x7fd1b152bea5]
+   13  /lib64/libc.so.6(clone+0x6d) [0x7fd1b0b13b0d]
+===================
+
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+Abort(1615247) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(176)........: 
+MPID_Init(1538)..............: 
+MPIDI_OFI_mpi_init_hook(1551): 
+create_vni_context(2136).....: OFI EP enable failed (ofi_init.c:2136:create_vni_context:Device or resource busy)
 
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+::: Running single step (1x MPI 4x OpenMP)
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         000000000046AAC6  cartesian_mod_mp_         246  cartesian_mod.f90
+dispatch.x         000000000040A361  MAIN__                     18  dispatch.f90
+dispatch.x         000000000040A09D  Unknown               Unknown  Unknown
+libc-2.17.so       00007FEB343F4555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000409FB6  Unknown               Unknown  Unknown
 
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
+../../solvers/ramses/hlls_eos/mhd_mod.f90(364): error #6460: This is not a component name that is defined in the encompassing structure.   [S_NORM]
+  S_norm = eos%S_norm/eos%mu
 ---------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
-
-::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
-::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90(457): error #6404: This name does not have a type, and must have an explicit type.   [OFFLOAD]
-    if(offload%on) then
--------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6460: This is not a component name that is defined in the encompassing structure.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(457): error #6341: A logical data type is required in this context.   [ON]
-    if(offload%on) then
----------------^
-../../dispatchers/dispatcher0_mod.f90(458): error #6460: This is not a component name that is defined in the encompassing structure.   [N_DEVICE]
-      do j = 1, offload%n_device
-------------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #6460: This is not a component name that is defined in the encompassing structure.   [BUNCHES]
-        call offload%bunches(j)%stall_update()
----------------------^
-../../dispatchers/dispatcher0_mod.f90(459): error #8469: This derived type component is not a procedure and cannot be called.   [STALL_UPDATE]
-        call offload%bunches(j)%stall_update()
---------------------------------^
-compilation aborted for ../../dispatchers/dispatcher0_mod.f90 (code 1)
-make: *** [dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+../../solvers/ramses/hlls_eos/mhd_mod.f90(364): error #6460: This is not a component name that is defined in the encompassing structure.   [MU]
+  S_norm = eos%S_norm/eos%mu
+--------------------------^
+compilation aborted for ../../solvers/ramses/hlls_eos/mhd_mod.f90 (code 1)
+make: *** [mhd_mod.o] Error 1
 
 
 ::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3
 
 ::::::::::::::::::::::::: blast [stagger2/bifrost] ::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90:457:16:
-
-  457 |     if(offload%on) then
-      |                1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:458:25:
-
-  458 |       do j = 1, offload%n_device
-      |                         1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:459:21:
-
-  459 |         call offload%bunches(j)%stall_update()
-      |                     1
-Error: Syntax error in CALL statement at (1)
-../../dispatchers/dispatcher0_mod.f90:460:9:
-
-  460 |       end do
-      |         1
-Error: Expecting END IF statement at (1)
-../../dispatchers/dispatcher0_mod.f90:477:5:
-
-  477 |   end if
-      |     1
-Error: Expecting END SUBROUTINE statement at (1)
-make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
 
 ::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90:457:16:
 
-  457 |     if(offload%on) then
-      |                1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:458:25:
-
-  458 |       do j = 1, offload%n_device
-      |                         1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:459:21:
-
-  459 |         call offload%bunches(j)%stall_update()
-      |                     1
-Error: Syntax error in CALL statement at (1)
-../../dispatchers/dispatcher0_mod.f90:460:9:
-
-  460 |       end do
-      |         1
-Error: Expecting END IF statement at (1)
-../../dispatchers/dispatcher0_mod.f90:477:5:
-
-  477 |   end if
-      |     1
-Error: Expecting END SUBROUTINE statement at (1)
-make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
-
-
-:::::::::::::::::::::::::::: ISM [ramses/hlld] ::::::::::::::::::::::::::::
+::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90:457:16:
+::: Running single step (1x MPI 4x OpenMP)
+::: Runtime Errors:
 
-  457 |     if(offload%on) then
-      |                1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:458:25:
+[nekkar:24501:0:24501] Caught signal 8 (Floating point exception: floating-point invalid operation)
 
-  458 |       do j = 1, offload%n_device
-      |                         1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:459:21:
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
-  459 |         call offload%bunches(j)%stall_update()
-      |                     1
-Error: Syntax error in CALL statement at (1)
-../../dispatchers/dispatcher0_mod.f90:460:9:
+Backtrace for this error:
 
-  460 |       end do
-      |         1
-Error: Expecting END IF statement at (1)
-../../dispatchers/dispatcher0_mod.f90:477:5:
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
-  477 |   end if
-      |     1
-Error: Expecting END SUBROUTINE statement at (1)
-make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+Backtrace for this error:
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x7f15e4c99d9d in ???
+#1  0x7f15e4c98fb3 in ???
+#0  0x7f15e4c99d9d in ???
+#1  0x7f15e4c98fb3 in ???
+#2  0x7f15e40f662f in ???
+#0  0x7f15e4c99d9d in ???
+#3  0x7f15e49ad0b1 in ???
+#1  0x7f15e4c98fb3 in ???
+#2  0x7f15e40f662f in ???
+#2  0x7f15e40f662f in ???
+#3  0x7f15e49ad0b1 in ???
+#3  0x7f15e49ad0b1 in ???
+#4  0x6acac9 in __rt_mod_MOD_rt_eos
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1013
+#5  0x6b7156 in __rt_mod_MOD_update
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:640
+#4  0x6acac9 in __rt_mod_MOD_rt_eos
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1013
+#4  0x6acac9 in __rt_mod_MOD_rt_eos
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1013
+#5  0x6b7156 in __rt_mod_MOD_update
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:640
+#5  0x6b7156 in __rt_mod_MOD_update
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:640
+#6  0x72d087 in __task_list_mod_MOD_update
+	at ../../lists/task_list_mod.f90:524
+#6  0x72d087 in __task_list_mod_MOD_update
+	at ../../lists/task_list_mod.f90:524
+#6  0x72d087 in __task_list_mod_MOD_update
+	at ../../lists/task_list_mod.f90:524
+#7  0x46df4a in __dispatcher0_mod_MOD_update
+#7  0x46df4a in __dispatcher0_mod_MOD_update
+	at ../../dispatchers/dispatcher0_mod.f90:412
+	at ../../dispatchers/dispatcher0_mod.f90:412
+#8  0x46eebd in __dispatcher0_mod_MOD_execute._omp_fn.0
+#8  0x46eebd in __dispatcher0_mod_MOD_execute._omp_fn.0
+	at ../../dispatchers/dispatcher0_mod.f90:108
+	at ../../dispatchers/dispatcher0_mod.f90:108
+#7  0x46df4a in __dispatcher0_mod_MOD_update
+	at ../../dispatchers/dispatcher0_mod.f90:412
+#8  0x46eebd in __dispatcher0_mod_MOD_execute._omp_fn.0
+#9  0x7f15e476b404 in ???
+	at ../../dispatchers/dispatcher0_mod.f90:108
+#9  0x7f15e476b404 in ???
+#9  0x7f15e476b404 in ???
+#10  0x7f15e40eeea4 in ???
+#10  0x7f15e40eeea4 in ???
+#11  0x7f15e3e17b0c in ???
+#12  0xffffffffffffffff in ???
+#11  0x7f15e3e17b0c in ???
+#12  0xffffffffffffffff in ???
+#10  0x7f15e40eeea4 in ???
+#11  0x7f15e3e17b0c in ???
+#12  0xffffffffffffffff in ???
+
+::: Running signle step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+[nekkar:24783:0:24783] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xfffffffffffffffb)
+[nekkar:24784:0:24784] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xfffffffffffffffb)
+[nekkar:24785:0:24785] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xfffffffffffffffb)
+==== backtrace (tid:  24783) ====
+ 0 0x0000000000085b7c __GI___libc_free()  :0
+ 1 0x00000000006aa0ec __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454b0f __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+=================================
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+==== backtrace (tid:  24785) ====
+ 0 0x0000000000085b7c __GI___libc_free()  :0
+ 1 0x00000000006aa0ec __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454b0f __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+=================================
+==== backtrace (tid:  24784) ====
+ 0 0x0000000000085b7c __GI___libc_free()  :0
+ 1 0x00000000006aa0ec __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454b0f __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+=================================
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x7f9daded1d9d in ???
+#1  0x7f9daded0fb3 in ???
+#2  0x7f9dad32e62f in ???
+#3  0x7f9dacfd6b7c in ???
+#4  0x6aa0eb in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#5  0x454b0e in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+#0  0x7ff578d3ed9d in ???
+#1  0x7ff578d3dfb3 in ???
+#2  0x7ff57819b62f in ???
+#3  0x7ff577e43b7c in ???
+#0  0x7fa53466ad9d in ???
+#1  0x7fa534669fb3 in ???
+#2  0x7fa533ac762f in ???
+#3  0x7fa53376fb7c in ???
+#4  0x6aa0eb in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#5  0x454b0e in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#4  0x6aa0eb in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+#5  0x454b0e in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node nekkar exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
 
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
-::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90:457:16:
+::: Running single step (1x MPI 4x OpenMP)
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
 
-  457 |     if(offload%on) then
-      |                1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:458:25:
+[nekkar:27647:0:27647] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7fde44000000)
+[nekkar:27648:0:27648] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7fd554000000)
+[nekkar:27649:0:27649] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7ff0b0000000)
+==== backtrace (tid:  27647) ====
+ 0 0x0000000000085b9c __GI___libc_free()  :0
+ 1 0x000000000067e306 __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454bdf __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+=================================
 
-  458 |       do j = 1, offload%n_device
-      |                         1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:459:21:
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
 
-  459 |         call offload%bunches(j)%stall_update()
-      |                     1
-Error: Syntax error in CALL statement at (1)
-../../dispatchers/dispatcher0_mod.f90:460:9:
+Backtrace for this error:
+==== backtrace (tid:  27649) ====
+ 0 0x0000000000085b9c __GI___libc_free()  :0
+ 1 0x000000000067e306 __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454bdf __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+=================================
 
-  460 |       end do
-      |         1
-Error: Expecting END IF statement at (1)
-../../dispatchers/dispatcher0_mod.f90:477:5:
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
 
-  477 |   end if
-      |     1
-Error: Expecting END SUBROUTINE statement at (1)
-make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+Backtrace for this error:
+==== backtrace (tid:  27648) ====
+ 0 0x0000000000085b9c __GI___libc_free()  :0
+ 1 0x000000000067e306 __rt_mod_MOD_dealloc()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../solvers/rt/short_characteristics/rt_mod.f90:1725
+ 2 0x0000000000454bdf __cartesian_mod_MOD_init()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../../components/cartesian_mod.f90:245
+ 3 0x0000000000404b8d dispatch()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:18
+ 4 0x0000000000404b8d main()  /var/lib/jenkins/workspace/ispatch-Bifrost_pic_harris_sheet/experiments/stellar_atmospheres/../deep_sun/dispatch.f90:5
+ 5 0x0000000000022555 __libc_start_main()  ???:0
+ 6 0x0000000000404a19 _start()  ???:0
+=================================
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x7fde47a96d9d in ???
+#1  0x7fde47a95fb3 in ???
+#2  0x7fde46ef362f in ???
+#3  0x7fde46b9bb9c in ???
+#4  0x67e305 in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#5  0x454bde in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+#0  0x7ff0b3946d9d in ???
+#1  0x7ff0b3945fb3 in ???
+#2  0x7ff0b2da362f in ???
+#3  0x7ff0b2a4bb9c in ???
+#4  0x67e305 in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#5  0x454bde in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+#0  0x7fd557bfed9d in ???
+#1  0x7fd557bfdfb3 in ???
+#2  0x7fd55705b62f in ???
+#3  0x7fd556d03b9c in ???
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+#4  0x67e305 in __rt_mod_MOD_dealloc
+	at ../../solvers/rt/short_characteristics/rt_mod.f90:1725
+#5  0x454bde in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:245
+#6  0x404b8c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#7  0x404b8c in main
+	at ../deep_sun/dispatch.f90:5
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node nekkar exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
 
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
 ::: Compilation
 ::: Compilation Errors:
-../../dispatchers/dispatcher0_mod.f90:457:16:
+../../solvers/ramses/hlls_eos/mhd_mod.f90:364:22:
 
-  457 |     if(offload%on) then
-      |                1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:458:25:
+  364 |   S_norm = eos%S_norm/eos%mu
+      |                      1
+Error: ‘s_norm’ at (1) is not a member of the ‘eos_t’ structure
+../../solvers/ramses/hlls_eos/mhd_mod.f90:463:74:
 
-  458 |       do j = 1, offload%n_device
-      |                         1
-Error: Symbol ‘offload’ at (1) has no IMPLICIT type
-../../dispatchers/dispatcher0_mod.f90:459:21:
+  463 |           s(i,j,k) = s(i,j,k) + d(i,j,k) * q_heat(i,j,k)/tg(i,j,k)*eos%mu*self%dtime
+      |                                                                          1
+Error: ‘mu’ at (1) is not a member of the ‘eos_t’ structure
+../../solvers/ramses/hlls_eos/mhd_mod.f90:478:63:
 
-  459 |         call offload%bunches(j)%stall_update()
-      |                     1
-Error: Syntax error in CALL statement at (1)
-../../dispatchers/dispatcher0_mod.f90:460:9:
+  478 |           s(i,j,k) = s(i,j,k) + q_heat(i,j,k)/tg(i,j,k)*eos%mu*self%dtime
+      |                                                               1
+Error: ‘mu’ at (1) is not a member of the ‘eos_t’ structure
+../../solvers/ramses/hlls_eos/mhd_mod.f90:1137:26:
 
-  460 |       end do
-      |         1
-Error: Expecting END IF statement at (1)
-../../dispatchers/dispatcher0_mod.f90:477:5:
-
-  477 |   end if
-      |     1
-Error: Expecting END SUBROUTINE statement at (1)
-make: *** [../../config/Makefile:204: dispatcher0_mod.o] Error 1
-make: *** Waiting for unfinished jobs....
+ 1137 |     tg=q(i,j,k,itg)*eos%mu
+      |                          1
+Error: ‘mu’ at (1) is not a member of the ‘eos_t’ structure
+make: *** [../../config/Makefile:204: mhd_mod.o] Error 1
 
 
 ::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                     
 
- 01 blast [ramses/hlld_eos] - compilation                      [ ERRORS! ]
- 02 rt_shadow [ramses/hlls] - compilation                      [ ERRORS! ]
- 03 ISM [ramses/hlld] - compilation                            [ ERRORS! ]
- 04 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ERRORS! ]
- 05 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ERRORS! ]
- 06 stellar_atmospheres [stagger2/e] - compilation             [ ERRORS! ]
+ 01 blast [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
+ 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 06 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 07 └──── single step (1x MPI 4x OpenMP)                       [ ALL  OK ]
+ 08 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 09 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ERRORS! ]
                                                                -----------
-                                                               0    /    6
+                                                               5    /    9
 
 
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
 
- 01 blast [stagger2/bifrost] - compilation                     [ ERRORS! ]
- 02 rt_shadow [ramses/hlls] - compilation                      [ ERRORS! ]
- 03 ISM [ramses/hlld] - compilation                            [ ERRORS! ]
- 04 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ERRORS! ]
- 05 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ERRORS! ]
+ 01 blast [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
+ 05 └──── signle step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 06 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 07 └──── single step (1x MPI 4x OpenMP)                       [ ALL  OK ]
+ 08 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 09 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ERRORS! ]
                                                                -----------
-                                                               0    /    5
+                                                               5    /    9
 
 
-::::::::::::::::::::::::::: Δt = 0:03:53.538137 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:05:25.074124 :::::::::::::::::::::::::::
