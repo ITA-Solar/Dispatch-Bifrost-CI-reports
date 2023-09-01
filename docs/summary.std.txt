@@ -1,0 +1,607 @@
+
+The repo hash for this run is: 4aa65e6
+
+The branch on which it was run: development
+
+
+::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
+
+::::::::::::::::::::::::: blast [ramses/hlld_eos] :::::::::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
+::: Compilation
+::: Running single step (1x MPI 4x OpenMP)
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000463FEB  cartesian_mod_mp_         246  cartesian_mod.f90
+dispatch.x         000000000040A321  MAIN__                     18  dispatch.f90
+dispatch.x         000000000040A05D  Unknown               Unknown  Unknown
+libc-2.17.so       00002AFF2F11F555  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000409F76  Unknown               Unknown  Unknown
+
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
+::: Compilation
+
+::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3
+
+::::::::::::::::::::::::: blast [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
+::: Compilation
+::: Running single step (1x MPI 4x OpenMP)
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+*** Error in `./dispatch.x': free(): invalid pointer: 0x0000000002b6a880 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x81329)[0x7f4edc766329]
+./dispatch.x[0x4507e9]
+./dispatch.x[0x404b7d]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7f4edc707555]
+./dispatch.x[0x404a09]
+======= Memory map: ========
+00400000-00404000 r--p 00000000 fd:18c 115482637                         /var/lib/jenkins/workspace/Dispatch-Bifrost_development/experiments/stellar_atmospheres/dispatch.x
+00404000-0074a000 r-xp 00004000 fd:18c 115482637                         /var/lib/jenkins/workspace/Dispatch-Bifrost_development/experiments/stellar_atmospheres/dispatch.x
+0074a000-00807000 r--p 0034a000 fd:18c 115482637                         /var/lib/jenkins/workspace/Dispatch-Bifrost_development/experiments/stellar_atmospheres/dispatch.x
+00807000-00808000 r--p 00406000 fd:18c 115482637                         /var/lib/jenkins/workspace/Dispatch-Bifrost_development/experiments/stellar_atmospheres/dispatch.x
+00808000-00825000 rw-p 00407000 fd:18c 115482637                         /var/lib/jenkins/workspace/Dispatch-Bifrost_development/experiments/stellar_atmospheres/dispatch.x
+00825000-00829000 rw-p 00000000 00:00 0 
+014b3000-042fa000 rw-p 00000000 00:00 0                                  [heap]
+7f4ec43ff000-7f4ec8000000 rw-p 00000000 00:00 0 
+7f4ec8000000-7f4ec8021000 rw-p 00000000 00:00 0 
+7f4ec8021000-7f4ecc000000 ---p 00000000 00:00 0 
+7f4ecc000000-7f4ecc021000 rw-p 00000000 00:00 0 
+7f4ecc021000-7f4ed0000000 ---p 00000000 00:00 0 
+7f4ed270b000-7f4ed2bfc000 rw-p 00000000 00:00 0 
+7f4ed2bfc000-7f4ed2ffd000 rw-s 00000000 00:13 70469137                   /dev/shm/vader_segment.nekkar.299319.d0630001.3
+7f4ed2ffd000-7f4ed33fe000 rw-s 00000000 00:13 70472337                   /dev/shm/vader_segment.nekkar.299319.d0630001.2
+7f4ed33fe000-7f4ed37ff000 rw-s 00000000 00:13 70473389                   /dev/shm/vader_segment.nekkar.299319.d0630001.1
+7f4ed37ff000-7f4ed3800000 ---p 00000000 00:00 0 
+7f4ed3800000-7f4ed4000000 rw-p 00000000 00:00 0 
+7f4ed4000000-7f4ed4021000 rw-p 00000000 00:00 0 
+7f4ed4021000-7f4ed8000000 ---p 00000000 00:00 0 
+7f4ed8301000-7f4ed8382000 rw-p 00000000 00:00 0 
+7f4ed8382000-7f4ed8388000 r--p 00000000 00:32 10884010508                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_treematch.so
+7f4ed8388000-7f4ed839d000 r-xp 00006000 00:32 10884010508                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_treematch.so
+7f4ed839d000-7f4ed83a3000 r--p 0001b000 00:32 10884010508                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_treematch.so
+7f4ed83a3000-7f4ed83a4000 r--p 00020000 00:32 10884010508                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_treematch.so
+7f4ed83a4000-7f4ed83a5000 rw-p 00021000 00:32 10884010508                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_treematch.so
+7f4ed83a5000-7f4ed83cc000 rw-p 00000000 00:00 0 
+7f4ed83cc000-7f4ed83ce000 r--p 00000000 00:32 10883806450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_sm.so
+7f4ed83ce000-7f4ed83d1000 r-xp 00002000 00:32 10883806450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_sm.so
+7f4ed83d1000-7f4ed83d2000 r--p 00005000 00:32 10883806450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_sm.so
+7f4ed83d2000-7f4ed83d3000 r--p 00005000 00:32 10883806450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_sm.so
+7f4ed83d3000-7f4ed83d5000 rw-p 00006000 00:32 10883806450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_sm.so
+7f4ed83d5000-7f4ed83d8000 r--p 00000000 00:32 10883806458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_ucx.so
+7f4ed83d8000-7f4ed83e5000 r-xp 00003000 00:32 10883806458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_ucx.so
+7f4ed83e5000-7f4ed83e7000 r--p 00010000 00:32 10883806458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_ucx.so
+7f4ed83e7000-7f4ed83e8000 r--p 00011000 00:32 10883806458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_ucx.so
+7f4ed83e8000-7f4ed83f1000 rw-p 00012000 00:32 10883806458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_ucx.so
+7f4ed83ff000-7f4ed8403000 r--p 00000000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed8403000-7f4ed841c000 r-xp 00004000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed841c000-7f4ed841f000 r--p 0001d000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed841f000-7f4ed8420000 ---p 00020000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed8420000-7f4ed8421000 r--p 00020000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed8421000-7f4ed8422000 rw-p 00021000 00:32 10883806456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_rdma.so
+7f4ed8422000-7f4ed8426000 r--p 00000000 00:32 10883806454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_pt2pt.so
+7f4ed8426000-7f4ed843b000 r-xp 00004000 00:32 10883806454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_pt2pt.so
+7f4ed843b000-7f4ed843e000 r--p 00019000 00:32 10883806454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_pt2pt.so
+7f4ed843e000-7f4ed843f000 r--p 0001b000 00:32 10883806454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_pt2pt.so
+7f4ed843f000-7f4ed8440000 rw-p 0001c000 00:32 10883806454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_osc_pt2pt.so
+7f4ed8440000-7f4ed8442000 r--p 00000000 00:32 10883806420                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_self.so
+7f4ed8442000-7f4ed8443000 r-xp 00002000 00:32 10883806420                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_self.so
+7f4ed8443000-7f4ed8444000 r--p 00003000 00:32 10883806420                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_self.so
+7f4ed8444000-7f4ed8445000 r--p 00003000 00:32 10883806420                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_self.so
+7f4ed8445000-7f4ed8446000 rw-p 00004000 00:32 10883806420                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_self.so
+7f4ed8446000-7f4ed8449000 r--p 00000000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed8449000-7f4ed845b000 r-xp 00003000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed845b000-7f4ed8460000 r--p 00015000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed8460000-7f4ed8461000 ---p 0001a000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed8461000-7f4ed8462000 r--p 0001a000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed8462000-7f4ed8463000 rw-p 0001b000 00:32 10883806414                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_han.so
+7f4ed8463000-7f4ed8465000 r--p 00000000 00:32 10883806410                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_adapt.so
+7f4ed8465000-7f4ed846d000 r-xp 00002000 00:32 10883806410                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_adapt.so
+7f4ed846d000-7f4ed846f000 r--p 0000a000 00:32 10883806410                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_adapt.so
+7f4ed846f000-7f4ed8470000 r--p 0000b000 00:32 10883806410                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_adapt.so
+7f4ed8470000-7f4ed8471000 rw-p 0000c000 00:32 10883806410                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_adapt.so
+7f4ed8482000-7f4ed8483000 r--p 00000000 00:32 10883806416                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_inter.so
+7f4ed8483000-7f4ed8485000 r-xp 00001000 00:32 10883806416                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_inter.so
+7f4ed8485000-7f4ed8486000 r--p 00003000 00:32 10883806416                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_inter.so
+7f4ed8486000-7f4ed8487000 r--p 00003000 00:32 10883806416                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_inter.so
+7f4ed8487000-7f4ed8488000 rw-p 00004000 00:32 10883806416                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_inter.so
+7f4ed8488000-7f4ed848a000 r--p 00000000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed848a000-7f4ed8490000 r-xp 00002000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed8490000-7f4ed8491000 r--p 00008000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed8491000-7f4ed8492000 ---p 00009000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed8492000-7f4ed8493000 r--p 00009000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed8493000-7f4ed8494000 rw-p 0000a000 00:32 10883806422                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sm.so
+7f4ed8494000-7f4ed8499000 r--p 00000000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed8499000-7f4ed84a0000 r-xp 00005000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed84a0000-7f4ed84a5000 r--p 0000c000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed84a5000-7f4ed84a6000 ---p 00011000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed84a6000-7f4ed84a7000 r--p 00011000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed84a7000-7f4ed84a8000 rw-p 00012000 00:32 10883806426                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_tuned.so
+7f4ed84a8000-7f4ed84ab000 r--p 00000000 00:32 10883806412                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_basic.so
+7f4ed84ab000-7f4ed84b8000 r-xp 00003000 00:32 10883806412                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_basic.so
+7f4ed84b8000-7f4ed84ba000 r--p 00010000 00:32 10883806412                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_basic.so
+7f4ed84ba000-7f4ed84bb000 r--p 00011000 00:32 10883806412                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_basic.so
+7f4ed84bb000-7f4ed84bc000 rw-p 00012000 00:32 10883806412                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_basic.so
+7f4ed84bc000-7f4ed84c1000 r--p 00000000 00:32 10883806418                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_libnbc.so
+7f4ed84c1000-7f4ed84d9000 r-xp 00005000 00:32 10883806418                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_libnbc.so
+7f4ed84d9000-7f4ed84de000 r--p 0001d000 00:32 10883806418                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_libnbc.so
+7f4ed84de000-7f4ed84df000 r--p 00021000 00:32 10883806418                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_libnbc.so
+7f4ed84df000-7f4ed84e0000 rw-p 00022000 00:32 10883806418                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_libnbc.so
+7f4ed84e0000-7f4ed84e3000 r--p 00000000 00:32 10876284102                /mn/stornext/u3/miko/from_sources/ucx/lib/ucx/libuct_cma.so.0.0.0
+7f4ed84e3000-7f4ed84e5000 r-xp 00003000 00:32 10876284102                /mn/stornext/u3/miko/from_sources/ucx/lib/ucx/libuct_cma.so.0.0.0
+7f4ed84e5000-7f4ed84e6000 r--p 00005000 00:32 10876284102                /mn/stornext/u3/miko/from_sources/ucx/lib/ucx/libuct_cma.so.0.0.0
+7f4ed84e6000-7f4ed84e7000 r--p 00005000 00:32 10876284102                /mn/stornext/u3/miko/from_sources/ucx/lib/ucx/libuct_cma.so.0.0.0
+7f4ed84e7000-7f4ed84e8000 rw-p 00006000 00:32 10876284102                /mn/stornext/u3/miko/from_sources/ucx/lib/ucx/libuct_cma.so.0.0.0
+7f4ed84e8000-7f4ed84e9000 r--p 00000000 00:32 10883738324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_patcher_overwrite.so
+7f4ed84e9000-7f4ed84ea000 r-xp 00001000 00:32 10883738324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_patcher_overwrite.so
+7f4ed84ea000-7f4ed84eb000 r--p 00002000 00:32 10883738324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_patcher_overwrite.so
+7f4ed84eb000-7f4ed84ec000 r--p 00002000 00:32 10883738324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_patcher_overwrite.so
+7f4ed84ec000-7f4ed84ed000 rw-p 00003000 00:32 10883738324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_patcher_overwrite.so
+7f4ed84ed000-7f4ed84f1000 r--p 00000000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed84f1000-7f4ed850c000 r-xp 00004000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed850c000-7f4ed850f000 r--p 0001f000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed850f000-7f4ed8510000 ---p 00022000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed8510000-7f4ed8511000 r--p 00022000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed8511000-7f4ed8512000 rw-p 00023000 00:32 10884010496                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pml_ob1.so
+7f4ed8512000-7f4ed8535000 rw-p 00000000 00:00 0 
+7f4ed8535000-7f4ed853a000 r--p 00000000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed853a000-7f4ed854a000 r-xp 00005000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed854a000-7f4ed854f000 r--p 00015000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed854f000-7f4ed8550000 ---p 0001a000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed8550000-7f4ed8551000 r--p 0001a000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed8551000-7f4ed8552000 rw-p 0001b000 00:32 10876078433                /mn/stornext/u3/miko/from_sources/ucx/lib/libucm.so.0.0.0
+7f4ed8552000-7f4ed8553000 rw-p 00000000 00:00 0 
+7f4ed8553000-7f4ed855d000 r-xp 00000000 fd:02 1110159                    /usr/lib64/libnuma.so.1.0.0
+7f4ed855d000-7f4ed875d000 ---p 0000a000 fd:02 1110159                    /usr/lib64/libnuma.so.1.0.0
+7f4ed875d000-7f4ed875e000 r--p 0000a000 fd:02 1110159                    /usr/lib64/libnuma.so.1.0.0
+7f4ed875e000-7f4ed875f000 rw-p 0000b000 fd:02 1110159                    /usr/lib64/libnuma.so.1.0.0
+7f4ed8763000-7f4ed8764000 r--p 00000000 00:32 10883738244                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_sm.so.40.30.0
+7f4ed8764000-7f4ed8765000 r-xp 00001000 00:32 10883738244                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_sm.so.40.30.0
+7f4ed8765000-7f4ed8766000 r--p 00002000 00:32 10883738244                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_sm.so.40.30.0
+7f4ed8766000-7f4ed8767000 r--p 00002000 00:32 10883738244                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_sm.so.40.30.0
+7f4ed8767000-7f4ed8768000 rw-p 00003000 00:32 10883738244                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_sm.so.40.30.0
+7f4ed8768000-7f4ed8769000 r--p 00000000 00:32 10883806424                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sync.so
+7f4ed8769000-7f4ed876b000 r-xp 00001000 00:32 10883806424                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sync.so
+7f4ed876b000-7f4ed876c000 r--p 00003000 00:32 10883806424                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sync.so
+7f4ed876c000-7f4ed876d000 r--p 00003000 00:32 10883806424                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sync.so
+7f4ed876d000-7f4ed876e000 rw-p 00004000 00:32 10883806424                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_coll_sync.so
+7f4ed877d000-7f4ed87be000 r--p 00000000 00:32 10876078439                /mn/stornext/u3/miko/from_sources/ucx/lib/libucs.so.0.0.0
+7f4ed87be000-7f4ed889e000 r-xp 00041000 00:32 10876078439                /mn/stornext/u3/miko/from_sources/ucx/lib/libucs.so.0.0.0
+7f4ed889e000-7f4ed88ea000 r--p 00121000 00:32 10876078439                /mn/stornext/u3/miko/from_sources/ucx/lib/libucs.so.0.0.0
+7f4ed88ea000-7f4ed88fd000 r--p 0016c000 00:32 10876078439                /mn/stornext/u3/miko/from_sources/ucx/lib/libucs.so.0.0.0
+7f4ed88fd000-7f4ed8905000 rw-p 0017f000 00:32 10876078439                /mn/stornext/u3/miko/from_sources/ucx/lib/libucs.so.0.0.0
+7f4ed8905000-7f4ed890e000 rw-p 00000000 00:00 0 
+7f4ed890e000-7f4ed891f000 r--p 00000000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed891f000-7f4ed893c000 r-xp 00011000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed893c000-7f4ed894e000 r--p 0002e000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed894e000-7f4ed894f000 ---p 00040000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed894f000-7f4ed8950000 r--p 00040000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed8950000-7f4ed8954000 rw-p 00041000 00:32 10876078451                /mn/stornext/u3/miko/from_sources/ucx/lib/libuct.so.0.0.0
+7f4ed8954000-7f4ed896d000 r--p 00000000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed896d000-7f4ed8a39000 r-xp 00019000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed8a39000-7f4ed8a8c000 r--p 000e5000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed8a8c000-7f4ed8a8d000 ---p 00138000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed8a8d000-7f4ed8a8e000 r--p 00138000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed8a8e000-7f4ed8a94000 rw-p 00139000 00:32 10876078457                /mn/stornext/u3/miko/from_sources/ucx/lib/libucp.so.0.0.0
+7f4ed8a94000-7f4ed8a96000 r--p 00000000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8a96000-7f4ed8a98000 r-xp 00002000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8a98000-7f4ed8a99000 r--p 00004000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8a99000-7f4ed8a9a000 ---p 00005000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8a9a000-7f4ed8a9b000 r--p 00005000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8a9b000-7f4ed8a9c000 rw-p 00006000 00:32 10883738248                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_ucx.so.40.30.2
+7f4ed8aa4000-7f4ed8aa5000 r--p 00000000 00:32 10884010506                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_basic.so
+7f4ed8aa5000-7f4ed8aa6000 r-xp 00001000 00:32 10884010506                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_basic.so
+7f4ed8aa6000-7f4ed8aa7000 r--p 00002000 00:32 10884010506                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_basic.so
+7f4ed8aa7000-7f4ed8aa8000 r--p 00002000 00:32 10884010506                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_basic.so
+7f4ed8aa8000-7f4ed8aa9000 rw-p 00003000 00:32 10884010506                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_topo_basic.so
+7f4ed8aa9000-7f4ed8eaa000 rw-s 00000000 00:13 70461440                   /dev/shm/vader_segment.nekkar.299319.d0630001.0
+7f4ed8eaa000-7f4ed902c000 rw-p 00000000 00:00 0 
+7f4ed902c000-7f4ed902d000 r--p 00000000 00:32 10883738310                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_sm.so
+7f4ed902d000-7f4ed902e000 r-xp 00001000 00:32 10883738310                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_sm.so
+7f4ed902e000-7f4ed902f000 r--p 00002000 00:32 10883738310                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_sm.so
+7f4ed902f000-7f4ed9030000 r--p 00002000 00:32 10883738310                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_sm.so
+7f4ed9030000-7f4ed9031000 rw-p 00003000 00:32 10883738310                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_sm.so
+7f4ed9031000-7f4ed9033000 r--p 00000000 00:32 10883738314                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_vader.so
+7f4ed9033000-7f4ed903a000 r-xp 00002000 00:32 10883738314                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_vader.so
+7f4ed903a000-7f4ed903c000 r--p 00009000 00:32 10883738314                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_vader.so
+7f4ed903c000-7f4ed903d000 r--p 0000a000 00:32 10883738314                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_vader.so
+7f4ed903d000-7f4ed903f000 rw-p 0000b000 00:32 10883738314                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_vader.so
+7f4ed903f000-7f4ed9040000 r--p 00000000 00:32 10883738308                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_self.so
+7f4ed9040000-7f4ed9042000 r-xp 00001000 00:32 10883738308                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_self.so
+7f4ed9042000-7f4ed9043000 r--p 00003000 00:32 10883738308                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_self.so
+7f4ed9043000-7f4ed9044000 r--p 00003000 00:32 10883738308                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_self.so
+7f4ed9044000-7f4ed9045000 rw-p 00004000 00:32 10883738308                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_self.so
+7f4ed9045000-7f4ed9049000 r--p 00000000 00:32 10883738312                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_tcp.so
+7f4ed9049000-7f4ed9053000 r-xp 00004000 00:32 10883738312                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_tcp.so
+7f4ed9053000-7f4ed9056000 r--p 0000e000 00:32 10883738312                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_tcp.so
+7f4ed9056000-7f4ed9057000 r--p 00010000 00:32 10883738312                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_tcp.so
+7f4ed9057000-7f4ed9059000 rw-p 00011000 00:32 10883738312                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_btl_tcp.so
+7f4ed9059000-7f4ed905b000 r--p 00000000 00:32 10883806408                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_bml_r2.so
+7f4ed905b000-7f4ed905e000 r-xp 00002000 00:32 10883806408                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_bml_r2.so
+7f4ed905e000-7f4ed905f000 r--p 00005000 00:32 10883806408                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_bml_r2.so
+7f4ed905f000-7f4ed9060000 r--p 00005000 00:32 10883806408                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_bml_r2.so
+7f4ed9060000-7f4ed9061000 rw-p 00006000 00:32 10883806408                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_bml_r2.so
+7f4ed9061000-7f4ed9063000 r--p 00000000 00:32 10883738322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_mpool_hugepage.so
+7f4ed9063000-7f4ed9065000 r-xp 00002000 00:32 10883738322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_mpool_hugepage.so
+7f4ed9065000-7f4ed9066000 r--p 00004000 00:32 10883738322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_mpool_hugepage.so
+7f4ed9066000-7f4ed9067000 r--p 00004000 00:32 10883738322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_mpool_hugepage.so
+7f4ed9067000-7f4ed9068000 rw-p 00005000 00:32 10883738322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_mpool_hugepage.so
+7f4ed9068000-7f4ed906b000 r--p 00000000 00:32 10883806448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_op_avx.so
+7f4ed906b000-7f4ed9090000 r-xp 00003000 00:32 10883806448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_op_avx.so
+7f4ed9090000-7f4ed9096000 r--p 00028000 00:32 10883806448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_op_avx.so
+7f4ed9096000-7f4ed9097000 r--p 0002d000 00:32 10883806448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_op_avx.so
+7f4ed9097000-7f4ed909f000 rw-p 0002e000 00:32 10883806448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_op_avx.so
+7f4ed909f000-7f4ed90a1000 r--p 00000000 00:32 10883738344                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_errmgr_default_app.so
+7f4ed90a1000-7f4ed90a2000 r-xp 00002000 00:32 10883738344                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_errmgr_default_app.so
+7f4ed90a2000-7f4ed90a3000 r--p 00003000 00:32 10883738344                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_errmgr_default_app.so
+7f4ed90a3000-7f4ed90a4000 r--p 00003000 00:32 10883738344                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_errmgr_default_app.so
+7f4ed90a4000-7f4ed90a5000 rw-p 00004000 00:32 10883738344                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_errmgr_default_app.so
+7f4ed90a5000-7f4ed90a6000 rw-p 00000000 00:00 0 
+7f4ed90a6000-7f4ed90a7000 rw-s 00000000 00:13 70471018                   /dev/shm/osc_rdma.nekkar.d0630001.7 (deleted)
+7f4ed90a7000-7f4ed90a8000 rw-s 00000000 00:13 70471017                   /dev/shm/osc_rdma.nekkar.d0630001.6 (deleted)
+7f4ed90a8000-7f4ed90a9000 rw-s 00000000 00:13 70471016                   /dev/shm/osc_rdma.nekkar.d0630001.5 (deleted)
+7f4ed90a9000-7f4ed90aa000 r--p 00000000 00:32 10883738334                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_rcache_grdma.so
+7f4ed90aa000-7f4ed90ac000 r-xp 00001000 00:32 10883738334                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_rcache_grdma.so
+7f4ed90ac000-7f4ed90ad000 r--p 00003000 00:32 10883738334                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_rcache_grdma.so
+7f4ed90ad000-7f4ed90ae000 r--p 00003000 00:32 10883738334                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_rcache_grdma.so
+7f4ed90ae000-7f4ed90af000 rw-p 00004000 00:32 10883738334                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_rcache_grdma.so
+7f4ed90af000-7f4ed90b0000 r--p 00000000 00:32 10883738304                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_basic.so
+7f4ed90b0000-7f4ed90b1000 r-xp 00001000 00:32 10883738304                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_basic.so
+7f4ed90b1000-7f4ed90b2000 r--p 00002000 00:32 10883738304                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_basic.so
+7f4ed90b2000-7f4ed90b3000 r--p 00002000 00:32 10883738304                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_basic.so
+7f4ed90b3000-7f4ed90b4000 rw-p 00003000 00:32 10883738304                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_basic.so
+7f4ed90b4000-7f4ed90b5000 r--p 00000000 00:32 10883806332                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_state_app.so
+7f4ed90b5000-7f4ed90b6000 r-xp 00001000 00:32 10883806332                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_state_app.so
+7f4ed90b6000-7f4ed90b7000 r--p 00002000 00:32 10883806332                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_state_app.so
+7f4ed90b7000-7f4ed90b8000 r--p 00002000 00:32 10883806332                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_state_app.so
+7f4ed90b8000-7f4ed90b9000 rw-p 00003000 00:32 10883806332                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_state_app.so
+7f4ed90b9000-7f4ed90ba000 r--p 00000000 00:32 10883738306                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_bucket.so
+7f4ed90ba000-7f4ed90bb000 r-xp 00001000 00:32 10883738306                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_bucket.so
+7f4ed90bb000-7f4ed90bc000 r--p 00002000 00:32 10883738306                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_bucket.so
+7f4ed90bc000-7f4ed90bd000 r--p 00002000 00:32 10883738306                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_bucket.so
+7f4ed90bd000-7f4ed90be000 rw-p 00003000 00:32 10883738306                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_allocator_bucket.so
+7f4ed90be000-7f4ed94be000 r--s 00000000 fd:18a 8963524                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds21_18187/smdataseg-3496148993-0
+7f4ed94be000-7f4ed98be000 r--s 00000000 fd:18a 8963523                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds21_18187/smseg-3496148993-0
+7f4ed98be000-7f4ed98bf000 ---p 00000000 00:00 0 
+7f4ed98bf000-7f4eda0bf000 rw-p 00000000 00:00 0 
+7f4eda0bf000-7f4eda0c0000 r--p 00000000 00:32 10883738448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_default.so
+7f4eda0c0000-7f4eda0c2000 r-xp 00001000 00:32 10883738448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_default.so
+7f4eda0c2000-7f4eda0c3000 r--p 00003000 00:32 10883738448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_default.so
+7f4eda0c3000-7f4eda0c4000 r--p 00003000 00:32 10883738448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_default.so
+7f4eda0c4000-7f4eda0c5000 rw-p 00004000 00:32 10883738448                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_default.so
+7f4eda0c5000-7f4eda0c6000 r--p 00000000 00:32 10883738450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_stdfd.so
+7f4eda0c6000-7f4eda0c7000 r-xp 00001000 00:32 10883738450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_stdfd.so
+7f4eda0c7000-7f4eda0c8000 r--p 00002000 00:32 10883738450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_stdfd.so
+7f4eda0c8000-7f4eda0c9000 r--p 00002000 00:32 10883738450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_stdfd.so
+7f4eda0c9000-7f4eda0ca000 rw-p 00003000 00:32 10883738450                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_stdfd.so
+7f4eda0ca000-7f4eda0cb000 r--p 00000000 00:32 10883738452                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_syslog.so
+7f4eda0cb000-7f4eda0cc000 r-xp 00001000 00:32 10883738452                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_syslog.so
+7f4eda0cc000-7f4eda0cd000 r--p 00002000 00:32 10883738452                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_syslog.so
+7f4eda0cd000-7f4eda0ce000 r--p 00002000 00:32 10883738452                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_syslog.so
+7f4eda0ce000-7f4eda0cf000 rw-p 00003000 00:32 10883738452                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_plog_syslog.so
+7f4eda0cf000-7f4eda0d0000 r--p 00000000 00:32 10883738454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_compress.so
+7f4eda0d0000-7f4eda0d1000 r-xp 00001000 00:32 10883738454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_compress.so
+7f4eda0d1000-7f4eda0d2000 r--p 00002000 00:32 10883738454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_compress.so
+7f4eda0d2000-7f4eda0d3000 r--p 00002000 00:32 10883738454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_compress.so
+7f4eda0d3000-7f4eda0d4000 rw-p 00003000 00:32 10883738454                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_compress.so
+7f4eda0d4000-7f4eda0d5000 r--p 00000000 00:32 10883738456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_native.so
+7f4eda0d5000-7f4eda0d8000 r-xp 00001000 00:32 10883738456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_native.so
+7f4eda0d8000-7f4eda0d9000 r--p 00004000 00:32 10883738456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_native.so
+7f4eda0d9000-7f4eda0da000 r--p 00004000 00:32 10883738456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_native.so
+7f4eda0da000-7f4eda0db000 rw-p 00005000 00:32 10883738456                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_preg_native.so
+7f4eda0db000-7f4eda0dc000 r--p 00000000 00:32 10883738466                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pshmem_mmap.so
+7f4eda0dc000-7f4eda0dd000 r-xp 00001000 00:32 10883738466                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pshmem_mmap.so
+7f4eda0dd000-7f4eda0de000 r--p 00002000 00:32 10883738466                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pshmem_mmap.so
+7f4eda0de000-7f4eda0df000 r--p 00002000 00:32 10883738466                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pshmem_mmap.so
+7f4eda0df000-7f4eda0e0000 rw-p 00003000 00:32 10883738466                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pshmem_mmap.so
+7f4eda0e0000-7f4eda0e2000 r--p 00000000 00:32 10883738442                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds12.so
+7f4eda0e2000-7f4eda0e4000 r-xp 00002000 00:32 10883738442                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds12.so
+7f4eda0e4000-7f4eda0e5000 r--p 00004000 00:32 10883738442                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds12.so
+7f4eda0e5000-7f4eda0e6000 r--p 00004000 00:32 10883738442                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds12.so
+7f4eda0e6000-7f4eda0e7000 rw-p 00005000 00:32 10883738442                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds12.so
+7f4eda0e7000-7f4eda0e9000 r--p 00000000 00:32 10883738440                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_hash.so
+7f4eda0e9000-7f4eda0f9000 r-xp 00002000 00:32 10883738440                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_hash.so
+7f4eda0f9000-7f4eda0fb000 r--p 00012000 00:32 10883738440                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_hash.so
+7f4eda0fb000-7f4eda0fc000 r--p 00013000 00:32 10883738440                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_hash.so
+7f4eda0fc000-7f4eda0fd000 rw-p 00014000 00:32 10883738440                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_hash.so
+7f4eda0fd000-7f4eda0ff000 r--p 00000000 00:32 10883738253                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_dstore.so.1.0.2
+7f4eda0ff000-7f4eda10a000 r-xp 00002000 00:32 10883738253                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_dstore.so.1.0.2
+7f4eda10a000-7f4eda10c000 r--p 0000d000 00:32 10883738253                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_dstore.so.1.0.2
+7f4eda10c000-7f4eda10d000 r--p 0000e000 00:32 10883738253                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_dstore.so.1.0.2
+7f4eda10d000-7f4eda10e000 rw-p 0000f000 00:32 10883738253                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmca_common_dstore.so.1.0.2
+7f4eda10e000-7f4eda110000 r--p 00000000 00:32 10883738444                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds21.so
+7f4eda110000-7f4eda112000 r-xp 00002000 00:32 10883738444                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds21.so
+7f4eda112000-7f4eda113000 r--p 00004000 00:32 10883738444                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds21.so
+7f4eda113000-7f4eda114000 r--p 00004000 00:32 10883738444                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds21.so
+7f4eda114000-7f4eda115000 rw-p 00005000 00:32 10883738444                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_gds_ds21.so
+7f4eda115000-7f4eda116000 r--p 00000000 00:32 10883738458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psec_native.so
+7f4eda116000-7f4eda117000 r-xp 00001000 00:32 10883738458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psec_native.so
+7f4eda117000-7f4eda118000 r--p 00002000 00:32 10883738458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psec_native.so
+7f4eda118000-7f4eda119000 r--p 00002000 00:32 10883738458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psec_native.so
+7f4eda119000-7f4eda11a000 rw-p 00003000 00:32 10883738458                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psec_native.so
+7f4eda11a000-7f4eda11c000 r--p 00000000 00:32 10883738474                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_usock.so
+7f4eda11c000-7f4eda122000 r-xp 00002000 00:32 10883738474                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_usock.so
+7f4eda122000-7f4eda124000 r--p 00008000 00:32 10883738474                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_usock.so
+7f4eda124000-7f4eda125000 r--p 00009000 00:32 10883738474                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_usock.so
+7f4eda125000-7f4eda126000 rw-p 0000a000 00:32 10883738474                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_usock.so
+7f4eda126000-7f4eda129000 r--p 00000000 00:32 10883738472                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_tcp.so
+7f4eda129000-7f4eda136000 r-xp 00003000 00:32 10883738472                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_tcp.so
+7f4eda136000-7f4eda139000 r--p 00010000 00:32 10883738472                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_tcp.so
+7f4eda139000-7f4eda13a000 r--p 00012000 00:32 10883738472                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_tcp.so
+7f4eda13a000-7f4eda13b000 rw-p 00013000 00:32 10883738472                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_ptl_tcp.so
+7f4eda13b000-7f4eda13c000 r--p 00000000 00:32 10883738446                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pcompress_zlib.so
+7f4eda13c000-7f4eda13d000 r-xp 00001000 00:32 10883738446                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pcompress_zlib.so
+7f4eda13d000-7f4eda13e000 r--p 00002000 00:32 10883738446                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pcompress_zlib.so
+7f4eda13e000-7f4eda13f000 r--p 00002000 00:32 10883738446                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pcompress_zlib.so
+7f4eda13f000-7f4eda140000 rw-p 00003000 00:32 10883738446                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_pcompress_zlib.so
+7f4eda140000-7f4eda144000 r--p 00000000 00:32 10883738436                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v21.so
+7f4eda144000-7f4eda148000 r-xp 00004000 00:32 10883738436                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v21.so
+7f4eda148000-7f4eda149000 r--p 00008000 00:32 10883738436                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v21.so
+7f4eda149000-7f4eda14a000 r--p 00008000 00:32 10883738436                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v21.so
+7f4eda14a000-7f4eda14b000 rw-p 00009000 00:32 10883738436                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v21.so
+7f4eda14b000-7f4eda14f000 r--p 00000000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda14f000-7f4eda159000 r-xp 00004000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda159000-7f4eda15d000 r--p 0000e000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda15d000-7f4eda15e000 ---p 00012000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda15e000-7f4eda15f000 r--p 00012000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda15f000-7f4eda160000 rw-p 00013000 00:32 10883738432                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v12.so
+7f4eda160000-7f4eda164000 r--p 00000000 00:32 10883738438                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v3.so
+7f4eda164000-7f4eda168000 r-xp 00004000 00:32 10883738438                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v3.so
+7f4eda168000-7f4eda169000 r--p 00008000 00:32 10883738438                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v3.so
+7f4eda169000-7f4eda16a000 r--p 00008000 00:32 10883738438                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v3.so
+7f4eda16a000-7f4eda16b000 rw-p 00009000 00:32 10883738438                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v3.so
+7f4eda16b000-7f4eda170000 r--p 00000000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda170000-7f4eda17e000 r-xp 00005000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda17e000-7f4eda183000 r--p 00013000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda183000-7f4eda184000 ---p 00018000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda184000-7f4eda185000 r--p 00018000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda185000-7f4eda186000 rw-p 00019000 00:32 10883738434                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_bfrops_v20.so
+7f4eda186000-7f4eda187000 r--p 00000000 00:32 10883738470                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_native.so
+7f4eda187000-7f4eda188000 r-xp 00001000 00:32 10883738470                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_native.so
+7f4eda188000-7f4eda189000 r--p 00002000 00:32 10883738470                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_native.so
+7f4eda189000-7f4eda18a000 r--p 00002000 00:32 10883738470                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_native.so
+7f4eda18a000-7f4eda18b000 rw-p 00003000 00:32 10883738470                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_native.so
+7f4eda18b000-7f4eda18c000 r--p 00000000 00:32 10883738468                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_flex128.so
+7f4eda18c000-7f4eda18d000 r-xp 00001000 00:32 10883738468                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_flex128.so
+7f4eda18d000-7f4eda18e000 r--p 00002000 00:32 10883738468                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_flex128.so
+7f4eda18e000-7f4eda18f000 r--p 00002000 00:32 10883738468                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_flex128.so
+7f4eda18f000-7f4eda190000 rw-p 00003000 00:32 10883738468                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/pmix/mca_psquash_flex128.so
+7f4eda190000-7f4eda1a9000 r--p 00000000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda1a9000-7f4eda26c000 r-xp 00019000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda26c000-7f4eda298000 r--p 000dc000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda298000-7f4eda299000 ---p 00108000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda299000-7f4eda29a000 r--p 00108000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda29a000-7f4eda29f000 rw-p 00109000 00:32 10883738330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_pmix_pmix3x.so
+7f4eda29f000-7f4eda2a2000 rw-p 00000000 00:00 0 
+7f4eda2a2000-7f4eda2a3000 ---p 00000000 00:00 0 
+7f4eda2a3000-7f4edaaa3000 rw-p 00000000 00:00 0 
+7f4edaaa3000-7f4edaaa5000 r--p 00000000 00:32 10883738356                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_ess_pmi.so
+7f4edaaa5000-7f4edaaa8000 r-xp 00002000 00:32 10883738356                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_ess_pmi.so
+7f4edaaa8000-7f4edaaa9000 r--p 00005000 00:32 10883738356                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_ess_pmi.so
+7f4edaaa9000-7f4edaaaa000 r--p 00005000 00:32 10883738356                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_ess_pmi.so
+7f4edaaaa000-7f4edaaab000 rw-p 00006000 00:32 10883738356                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_ess_pmi.so
+7f4edaaab000-7f4edaaac000 r--p 00000000 00:32 10883806330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_slurm.so
+7f4edaaac000-7f4edaaad000 r-xp 00001000 00:32 10883806330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_slurm.so
+7f4edaaad000-7f4edaaae000 r--p 00002000 00:32 10883806330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_slurm.so
+7f4edaaae000-7f4edaaaf000 r--p 00002000 00:32 10883806330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_slurm.so
+7f4edaaaf000-7f4edaab0000 rw-p 00003000 00:32 10883806330                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_slurm.so
+7f4edaab0000-7f4edaab1000 r--p 00000000 00:32 10883806322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_flux.so
+7f4edaab1000-7f4edaab2000 r-xp 00001000 00:32 10883806322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_flux.so
+7f4edaab2000-7f4edaab3000 r--p 00002000 00:32 10883806322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_flux.so
+7f4edaab3000-7f4edaab4000 r--p 00002000 00:32 10883806322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_flux.so
+7f4edaab4000-7f4edaab5000 rw-p 00003000 00:32 10883806322                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_flux.so
+7f4edaab5000-7f4edaab6000 r--p 00000000 00:32 10883806328                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_jsm.so
+7f4edaab6000-7f4edaab7000 r-xp 00001000 00:32 10883806328                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_jsm.so
+7f4edaab7000-7f4edaab8000 r--p 00002000 00:32 10883806328                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_jsm.so
+7f4edaab8000-7f4edaab9000 r--p 00002000 00:32 10883806328                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_jsm.so
+7f4edaab9000-7f4edaaba000 rw-p 00003000 00:32 10883806328                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_jsm.so
+7f4edaaba000-7f4edac08000 r-xp 00000000 fd:02 1114073                    /usr/lib64/libnvidia-ml.so.515.43.04
+7f4edac08000-7f4edae08000 ---p 0014e000 fd:02 1114073                    /usr/lib64/libnvidia-ml.so.515.43.04
+7f4edae08000-7f4edae54000 r--p 0014e000 fd:02 1114073                    /usr/lib64/libnvidia-ml.so.515.43.04
+7f4edae54000-7f4edae55000 rw-p 0019a000 fd:02 1114073                    /usr/lib64/libnvidia-ml.so.515.43.04
+7f4edae55000-7f4edba3c000 rw-p 00000000 00:00 0 
+7f4edba3c000-7f4edbad7000 r-xp 00000000 fd:02 39846720                   /usr/local/cuda-11.5/targets/x86_64-linux/lib/libcudart.so.11.5.50
+7f4edbad7000-7f4edbcd7000 ---p 0009b000 fd:02 39846720                   /usr/local/cuda-11.5/targets/x86_64-linux/lib/libcudart.so.11.5.50
+7f4edbcd7000-7f4edbcdc000 r--p 0009b000 fd:02 39846720                   /usr/local/cuda-11.5/targets/x86_64-linux/lib/libcudart.so.11.5.50
+7f4edbcdc000-7f4edbcdd000 rw-p 000a0000 fd:02 39846720                   /usr/local/cuda-11.5/targets/x86_64-linux/lib/libcudart.so.11.5.50
+7f4edbcdd000-7f4edbcde000 rw-p 00000000 00:00 0 
+7f4edbcde000-7f4edbce4000 r--p 00000000 00:32 10240114249                /mn/stornext/u3/miko/from_sources/hwloc/lib/libhwloc.so.15.6.1
+7f4edbce4000-7f4edbd24000 r-xp 00006000 00:32 10240114249                /mn/stornext/u3/miko/from_sources/hwloc/lib/libhwloc.so.15.6.1
+7f4edbd24000-7f4edbd39000 r--p 00046000 00:32 10240114249                /mn/stornext/u3/miko/from_sources/hwloc/lib/libhwloc.so.15.6.1
+7f4edbd39000-7f4edbd3a000 r--p 0005a000 00:32 10240114249                /mn/stornext/u3/miko/from_sources/hwloc/lib/libhwloc.so.15.6.1
+7f4edbd3a000-7f4edbd3b000 rw-p 0005b000 00:32 10240114249                /mn/stornext/u3/miko/from_sources/hwloc/lib/libhwloc.so.15.6.1
+7f4edbd3b000-7f4edbd50000 r-xp 00000000 fd:02 1084978                    /usr/lib64/libz.so.1.2.7
+7f4edbd50000-7f4edbf4f000 ---p 00015000 fd:02 1084978                    /usr/lib64/libz.so.1.2.7
+7f4edbf4f000-7f4edbf50000 r--p 00014000 fd:02 1084978                    /usr/lib64/libz.so.1.2.7
+7f4edbf50000-7f4edbf51000 rw-p 00015000 fd:02 1084978                    /usr/lib64/libz.so.1.2.7
+7f4edbf51000-7f4edbf53000 r-xp 00000000 fd:02 1067037                    /usr/lib64/libutil-2.17.so
+7f4edbf53000-7f4edc152000 ---p 00002000 fd:02 1067037                    /usr/lib64/libutil-2.17.so
+7f4edc152000-7f4edc153000 r--p 00001000 fd:02 1067037                    /usr/lib64/libutil-2.17.so
+7f4edc153000-7f4edc154000 rw-p 00002000 fd:02 1067037                    /usr/lib64/libutil-2.17.so
+7f4edc154000-7f4edc15b000 r-xp 00000000 fd:02 1067033                    /usr/lib64/librt-2.17.so
+7f4edc15b000-7f4edc35a000 ---p 00007000 fd:02 1067033                    /usr/lib64/librt-2.17.so
+7f4edc35a000-7f4edc35b000 r--p 00006000 fd:02 1067033                    /usr/lib64/librt-2.17.so
+7f4edc35b000-7f4edc35c000 rw-p 00007000 fd:02 1067033                    /usr/lib64/librt-2.17.so
+7f4edc35c000-7f4edc35e000 r-xp 00000000 fd:02 1067009                    /usr/lib64/libdl-2.17.so
+7f4edc35e000-7f4edc55e000 ---p 00002000 fd:02 1067009                    /usr/lib64/libdl-2.17.so
+7f4edc55e000-7f4edc55f000 r--p 00002000 fd:02 1067009                    /usr/lib64/libdl-2.17.so
+7f4edc55f000-7f4edc560000 rw-p 00003000 fd:02 1067009                    /usr/lib64/libdl-2.17.so
+7f4edc560000-7f4edc584000 r--p 00000000 00:32 10883738240                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-pal.so.40.30.2
+7f4edc584000-7f4edc5f5000 r-xp 00024000 00:32 10883738240                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-pal.so.40.30.2
+7f4edc5f5000-7f4edc61a000 r--p 00095000 00:32 10883738240                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-pal.so.40.30.2
+7f4edc61a000-7f4edc61e000 r--p 000b9000 00:32 10883738240                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-pal.so.40.30.2
+7f4edc61e000-7f4edc624000 rw-p 000bd000 00:32 10883738240                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-pal.so.40.30.2
+7f4edc624000-7f4edc62b000 rw-p 00000000 00:00 0 
+7f4edc62b000-7f4edc643000 r--p 00000000 00:32 10883738259                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-rte.so.40.30.2
+7f4edc643000-7f4edc6be000 r-xp 00018000 00:32 10883738259                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-rte.so.40.30.2
+7f4edc6be000-7f4edc6dd000 r--p 00093000 00:32 10883738259                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-rte.so.40.30.2
+7f4edc6dd000-7f4edc6df000 r--p 000b1000 00:32 10883738259                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-rte.so.40.30.2
+7f4edc6df000-7f4edc6e3000 rw-p 000b3000 00:32 10883738259                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libopen-rte.so.40.30.2
+7f4edc6e3000-7f4edc6e5000 rw-p 00000000 00:00 0 
+7f4edc6e5000-7f4edc7da000 r-xp 00000000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7da000-7f4edc7db000 r-xp 000f5000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7db000-7f4edc7dd000 r-xp 000f6000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7dd000-7f4edc7df000 r-xp 000f8000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7df000-7f4edc7e4000 r-xp 000fa000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7e4000-7f4edc7e6000 r-xp 000ff000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc7e6000-7f4edc8a9000 r-xp 00101000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edc8a9000-7f4edcaa8000 ---p 001c4000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edcaa8000-7f4edcaac000 r--p 001c3000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edcaac000-7f4edcaae000 rw-p 001c7000 fd:02 1051293                    /usr/lib64/libc-2.17.so
+7f4edcaae000-7f4edcab3000 rw-p 00000000 00:00 0 
+7f4edcab3000-7f4edcaca000 r-xp 00000000 fd:02 1067029                    /usr/lib64/libpthread-2.17.so
+7f4edcaca000-7f4edccc9000 ---p 00017000 fd:02 1067029                    /usr/lib64/libpthread-2.17.so
+7f4edccc9000-7f4edccca000 r--p 00016000 fd:02 1067029                    /usr/lib64/libpthread-2.17.so
+7f4edccca000-7f4edcccb000 rw-p 00017000 fd:02 1067029                    /usr/lib64/libpthread-2.17.so
+7f4edcccb000-7f4edcccf000 rw-p 00000000 00:00 0 
+7f4edcccf000-7f4edcd0a000 r-xp 00000000 fd:02 1654283                    /usr/lib64/libquadmath.so.0.0.0
+7f4edcd0a000-7f4edcf09000 ---p 0003b000 fd:02 1654283                    /usr/lib64/libquadmath.so.0.0.0
+7f4edcf09000-7f4edcf0a000 r--p 0003a000 fd:02 1654283                    /usr/lib64/libquadmath.so.0.0.0
+7f4edcf0a000-7f4edcf0b000 rw-p 0003b000 fd:02 1654283                    /usr/lib64/libquadmath.so.0.0.0
+7f4edcf0b000-7f4edcf20000 r-xp 00000000 fd:02 1049090                    /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7f4edcf20000-7f4edd11f000 ---p 00015000 fd:02 1049090                    /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7f4edd11f000-7f4edd120000 r--p 00014000 fd:02 1049090                    /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7f4edd120000-7f4edd121000 rw-p 00015000 fd:02 1049090                    /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7f4edd121000-7f4edd146000 r-xp 00000000 fd:02 1109659                    /usr/lib64/libgomp.so.1.0.0
+7f4edd146000-7f4edd345000 ---p 00025000 fd:02 1109659                    /usr/lib64/libgomp.so.1.0.0
+7f4edd345000-7f4edd346000 r--p 00024000 fd:02 1109659                    /usr/lib64/libgomp.so.1.0.0
+7f4edd346000-7f4edd347000 rw-p 00025000 fd:02 1109659                    /usr/lib64/libgomp.so.1.0.0
+7f4edd347000-7f4edd448000 r-xp 00000000 fd:02 1067011                    /usr/lib64/libm-2.17.so
+7f4edd448000-7f4edd647000 ---p 00101000 fd:02 1067011                    /usr/lib64/libm-2.17.so
+7f4edd647000-7f4edd648000 r--p 00100000 fd:02 1067011                    /usr/lib64/libm-2.17.so
+7f4edd648000-7f4edd649000 rw-p 00101000 fd:02 1067011                    /usr/lib64/libm-2.17.so
+7f4edd649000-7f4edd8bf000 r-xp 00000000 fd:02 1814644                    /usr/lib64/libgfortran.so.5.0.0
+7f4edd8bf000-7f4eddabe000 ---p 00276000 fd:02 1814644                    /usr/lib64/libgfortran.so.5.0.0
+7f4eddabe000-7f4eddabf000 r--p 00275000 fd:02 1814644                    /usr/lib64/libgfortran.so.5.0.0
+7f4eddabf000-7f4eddac1000 rw-p 00276000 fd:02 1814644                    /usr/lib64/libgfortran.so.5.0.0
+7f4eddac1000-7f4eddac2000 rw-s 00000000 00:13 70471015                   /dev/shm/osc_rdma.nekkar.d0630001.4 (deleted)
+7f4eddac2000-7f4eddac3000 r--s 00000000 fd:18a 9227266                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds12_18187/initial-pmix_shared-segment-0
+7f4eddac3000-7f4eddac4000 rw-s 00000000 fd:18a 9227267                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds12_18187/dstore_sm.lock
+7f4eddac4000-7f4eddac8000 r--p 00000000 00:32 10883806324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_ompi.so
+7f4eddac8000-7f4eddaca000 r-xp 00004000 00:32 10883806324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_ompi.so
+7f4eddaca000-7f4eddacd000 r--p 00006000 00:32 10883806324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_ompi.so
+7f4eddacd000-7f4eddace000 r--p 00008000 00:32 10883806324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_ompi.so
+7f4eddace000-7f4eddad0000 rw-p 00009000 00:32 10883806324                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_ompi.so
+7f4eddad0000-7f4eddad1000 r--p 00000000 00:32 10883806326                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_orte.so
+7f4eddad1000-7f4eddad2000 r-xp 00001000 00:32 10883806326                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_orte.so
+7f4eddad2000-7f4eddad3000 r--p 00002000 00:32 10883806326                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_orte.so
+7f4eddad3000-7f4eddad4000 r--p 00002000 00:32 10883806326                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_orte.so
+7f4eddad4000-7f4eddad5000 rw-p 00003000 00:32 10883806326                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_schizo_orte.so
+7f4eddad5000-7f4eddad6000 r--p 00000000 00:32 10883738338                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_shmem_mmap.so
+7f4eddad6000-7f4eddad7000 r-xp 00001000 00:32 10883738338                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_shmem_mmap.so
+7f4eddad7000-7f4eddad8000 r--p 00002000 00:32 10883738338                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_shmem_mmap.so
+7f4eddad8000-7f4eddad9000 r--p 00002000 00:32 10883738338                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_shmem_mmap.so
+7f4eddad9000-7f4eddada000 rw-p 00003000 00:32 10883738338                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_shmem_mmap.so
+7f4eddada000-7f4eddadb000 r--p 00000000 00:32 10883738336                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_reachable_weighted.so
+7f4eddadb000-7f4eddadc000 r-xp 00001000 00:32 10883738336                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_reachable_weighted.so
+7f4eddadc000-7f4eddadd000 r--p 00002000 00:32 10883738336                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_reachable_weighted.so
+7f4eddadd000-7f4eddade000 r--p 00002000 00:32 10883738336                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_reachable_weighted.so
+7f4eddade000-7f4eddadf000 rw-p 00003000 00:32 10883738336                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/openmpi/mca_reachable_weighted.so
+7f4eddadf000-7f4eddb01000 r-xp 00000000 fd:02 1051285                    /usr/lib64/ld-2.17.so
+7f4eddb01000-7f4eddb02000 r--s 00000000 fd:18a 8963521                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds21_18187/initial-pmix_shared-segment-0
+7f4eddb02000-7f4eddb03000 rw-s 00000000 fd:18a 8963522                   /tmp/ompi.nekkar.299319/pid.18187/pmix_dstor_ds21_18187/smlockseg-3496148993
+7f4eddb03000-7f4eddb0f000 rw-p 00000000 00:00 0 
+7f4eddb0f000-7f4eddb38000 r--p 00000000 00:32 10883738263                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi.so.40.30.4
+7f4eddb38000-7f4eddbfb000 r-xp 00029000 00:32 10883738263                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi.so.40.30.4
+7f4eddbfb000-7f4eddc24000 r--p 000ec000 00:32 10883738263                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi.so.40.30.4
+7f4eddc24000-7f4eddc26000 r--p 00114000 00:32 10883738263                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi.so.40.30.4
+7f4eddc26000-7f4eddc37000 rw-p 00116000 00:32 10883738263                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi.so.40.30.4
+7f4eddc37000-7f4eddc4a000 rw-p 00000000 00:00 0 
+7f4eddc4a000-7f4eddc8e000 r--p 00000000 00:32 10883738267                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_mpifh.so.40.30.0
+7f4eddc8e000-7f4eddca1000 r-xp 00044000 00:32 10883738267                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_mpifh.so.40.30.0
+7f4eddca1000-7f4eddcad000 r--p 00057000 00:32 10883738267                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_mpifh.so.40.30.0
+7f4eddcad000-7f4eddcae000 r--p 00062000 00:32 10883738267                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_mpifh.so.40.30.0
+7f4eddcae000-7f4eddcaf000 rw-p 00063000 00:32 10883738267                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_mpifh.so.40.30.0
+7f4eddcaf000-7f4eddcb4000 r--p 00000000 00:32 10883738271                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempi_ignore_tkr.so.40.30.0
+7f4eddcb4000-7f4eddcb8000 r-xp 00005000 00:32 10883738271                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempi_ignore_tkr.so.40.30.0
+7f4eddcb8000-7f4eddcbc000 r--p 00009000 00:32 10883738271                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempi_ignore_tkr.so.40.30.0
+7f4eddcbc000-7f4eddcbd000 r--p 0000c000 00:32 10883738271                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempi_ignore_tkr.so.40.30.0
+7f4eddcbd000-7f4eddcbe000 rw-p 0000d000 00:32 10883738271                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempi_ignore_tkr.so.40.30.0
+7f4eddcbe000-7f4eddcd7000 r--p 00000000 00:32 10883738282                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempif08.so.40.30.0
+7f4eddcd7000-7f4eddcef000 r-xp 00019000 00:32 10883738282                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempif08.so.40.30.0
+7f4eddcef000-7f4eddcfb000 r--p 00031000 00:32 10883738282                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempif08.so.40.30.0
+7f4eddcfb000-7f4eddcfc000 r--p 0003c000 00:32 10883738282                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempif08.so.40.30.0
+7f4eddcfc000-7f4eddcfe000 rw-p 0003d000 00:32 10883738282                /mn/stornext/u3/miko/from_sources/ompi.gcc.12.ghex/lib/libmpi_usempif08.so.40.30.0
+7f4eddcfe000-7f4eddd00000 rw-p 00000000 00:00 0 
+7f4eddd00000-7f4eddd01000 r--p 00021000 fd:02 1051285                    /usr/lib64/ld-2.17.so
+7f4eddd01000-7f4eddd02000 rw-p 00022000 fd:02 1051285                    /usr/lib64/ld-2.17.so
+7f4eddd02000-7f4eddd03000 rw-p 00000000 00:00 0 
+7ffdbe4c7000-7ffdbe4e9000 rw-p 00000000 00:00 0                          [stack]
+7ffdbe53a000-7ffdbe53c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7f4edd665d9d in ???
+#1  0x7f4edd664fb3 in ???
+#2  0x7f4edc71b3ff in ???
+#3  0x7f4edc71b387 in ???
+#4  0x7f4edc71ca77 in ???
+#5  0x7f4edc75df66 in ???
+#6  0x7f4edc766328 in ???
+#7  0x4507e8 in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:246
+#8  0x404b7c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#9  0x404b7c in main
+	at ../deep_sun/dispatch.f90:5
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node nekkar exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
+::: Compilation
+
+::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
+
+:: (env) Intel oneAPI 2022 (ifort-classic)                     
+
+ 01 blast [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ALL  OK ]
+ 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
+ 07 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
+                                                               -----------
+                                                               6    /    7
+
+
+:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
+
+ 01 blast [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ALL  OK ]
+ 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
+                                                               -----------
+                                                               5    /    6
+
+
+::::::::::::::::::::::::::: Δt = 0:03:36.031941 :::::::::::::::::::::::::::
