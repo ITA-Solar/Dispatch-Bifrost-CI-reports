@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 5f2e49c55
+The repo hash for this run is: d7f0060a3
 
 The branch on which it was run: pic_michael
 
@@ -78,4 +78,4 @@ make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
 :: (env) setup failed ... all tests skipped
 
-::::::::::::::::::::::::::: Δt = 0:00:01.756011 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:00:01.737447 :::::::::::::::::::::::::::
