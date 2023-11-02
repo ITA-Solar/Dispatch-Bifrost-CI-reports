@@ -1,7 +1,7 @@
 
-The repo hash for this run is: d7f0060a3
+The repo hash for this run is: 58fdece9a
 
-The branch on which it was run: pic_michael
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -56,11 +56,178 @@ make: *** Waiting for unfinished jobs....
 make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
 
 
-::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3
-::: Enviroment setup errors:
+::: Setting up enviroment for OpenMPI 5.0 + GNU GCC 13.2 (+offload)
 
-/bin/sh: line 2: /opt/rh/devtoolset-12/enable: No such file or directory
+::::::::::::::::::::::::: blast [stagger2/bifrost] ::::::::::::::::::::::::
+::: Compilation
 
+::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
+::: Compilation
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
+::: Compilation
+::: Running single step (1x MPI 4x OpenMP)
+::: Runtime Errors:
+
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+
+Backtrace for this error:
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x7fd6f035ddef in ???
+#0  0x7fd6f035ddef in ???
+#0  0x7fd6f035ddef in ???
+#0  0x7fd6f035ddef in ???
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+	at ../../interpolation/lagrange_mod.f90:69
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
+	at ../../interpolation/lagrange_mod.f90:495
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+	at ../../interpolation/lagrange_mod.f90:69
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
+	at ../../interpolation/lagrange_mod.f90:495
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+	at ../../interpolation/lagrange_mod.f90:69
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
+	at ../../interpolation/lagrange_mod.f90:495
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+	at ../../interpolation/lagrange_mod.f90:69
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
+	at ../../interpolation/lagrange_mod.f90:495
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
+#4  0x62fa04 in interpolate
+	at ../../components/read_snapshot_mod.f90:843
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+	at ../../components/read_snapshot_mod.f90:674
+#4  0x62fa04 in interpolate
+	at ../../components/read_snapshot_mod.f90:843
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+	at ../../components/read_snapshot_mod.f90:674
+#4  0x62fa04 in interpolate
+	at ../../components/read_snapshot_mod.f90:843
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+	at ../../components/read_snapshot_mod.f90:674
+#4  0x62fa04 in interpolate
+	at ../../components/read_snapshot_mod.f90:843
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+	at ../../components/read_snapshot_mod.f90:674
+#6  0x7fd6f0553648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#6  0x7fd6f0553648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#6  0x7fd6f0553648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7fd6f055c5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#7  0x7fd6f055c5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#6  0x7fd6f0553648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7fd6f055c5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#7  0x7fd6f055c665 in gomp_team_barrier_wait_end
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../../gcc-src/libgomp/config/linux/bar.c:95
+	at ../../components/read_snapshot_mod.f90:651
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#9  0x7fd6f0550175 in GOMP_parallel
+	at ../../../gcc-src/libgomp/parallel.c:178
+#10  0x63664b in read_stagger_snap
+	at ../../components/read_snapshot_mod.f90:651
+#11  0x639b33 in __read_snapshot_mod_MOD_init
+	at ../../components/read_snapshot_mod.f90:80
+#12  0x404b46 in dispatch
+	at ../deep_sun/dispatch.f90:19
+#13  0x404b46 in main
+	at ../deep_sun/dispatch.f90:5
+
+::: Running single step (4x MPI 1x OpenMP)
+::: Runtime Errors:
+
+double free or corruption (out)
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7fc3d023bdef in ???
+#1  0x7fc3d028854c in ???
+#2  0x7fc3d023bd45 in ???
+#3  0x7fc3d020f7f2 in ???
+#4  0x7fc3d021012f in ???
+#5  0x7fc3d0292616 in ???
+#6  0x7fc3d02942ff in ???
+#7  0x7fc3d0296954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
+#9  0x404b3c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#10  0x404b3c in main
+	at ../deep_sun/dispatch.f90:5
+double free or corruption (out)
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7f9c62b5edef in ???
+#1  0x7f9c62bab54c in ???
+#2  0x7f9c62b5ed45 in ???
+#3  0x7f9c62b327f2 in ???
+#4  0x7f9c62b3312f in ???
+#5  0x7f9c62bb5616 in ???
+#6  0x7f9c62bb72ff in ???
+#7  0x7f9c62bb9954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
+#9  0x404b3c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#10  0x404b3c in main
+	at ../deep_sun/dispatch.f90:5
+ task kind: rtdouble free or corruption (out)
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7f764d02fdef in ???
+#1  0x7f764d07c54c in ???
+#2  0x7f764d02fd45 in ???
+#3  0x7f764d0037f2 in ???
+#4  0x7f764d00412f in ???
+#5  0x7f764d086616 in ???
+#6  0x7f764d0882ff in ???
+#7  0x7f764d08a954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
+#9  0x404b3c in dispatch
+	at ../deep_sun/dispatch.f90:18
+#10  0x404b3c in main
+	at ../deep_sun/dispatch.f90:5
+
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
+::: Compilation
 
 ::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
 
@@ -75,7 +242,16 @@ make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
                                                                0    /    5
 
 
-:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
-:: (env) setup failed ... all tests skipped
+:: (env) OpenMPI 5.0 + GNU GCC 13.2 (+offload)                 
 
-::::::::::::::::::::::::::: Δt = 0:00:01.737447 :::::::::::::::::::::::::::
+ 01 blast [stagger2/bifrost] - compilation                     [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
+ 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
+ 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
+                                                               -----------
+                                                               4    /    6
+
+
+::::::::::::::::::::::::::: Δt = 0:01:29.169741 :::::::::::::::::::::::::::
