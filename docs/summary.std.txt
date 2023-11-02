@@ -1,7 +1,7 @@
 
-The repo hash for this run is: fe76f1fe7
+The repo hash for this run is: a69216d2a
 
-The branch on which it was run: pic_michael
+The branch on which it was run: develop
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
@@ -15,46 +15,16 @@ The branch on which it was run: pic_michael
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
 ::: Running single step (1x MPI 4x OpenMP)
-::: Runtime Errors:
-
-forrtl: No such file or directory
-forrtl: severe (29): file not found, unit -137, file /var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/stellar_atmospheres/data/single-step/00002/snapshot_00000.dat
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000802442  Unknown               Unknown  Unknown
-dispatch.x         0000000000415904  background_io_mod          99  background_io_mod.f90
-dispatch.x         0000000000473E31  data_io_mod_mp_ou         285  data_io_mod.f90
-dispatch.x         00000000004C6A83  gpatch_mod_mp_out         250  gpatch_mod.f90
-dispatch.x         00000000004BF0FF  extras_mod_mp_out         194  extras_mod.f90
-dispatch.x         00000000005A7583  mhd_mod_mp_update         260  mhd_mod.f90
-dispatch.x         000000000070F281  solver_mod_mp_upd         148  solver_mod.f90
-dispatch.x         00000000004B665B  experiment_mod_mp         160  experiment_mod.f90
-dispatch.x         000000000077416D  task_list_mod_mp_         524  task_list_mod.f90
-dispatch.x         0000000000485611  dispatcher0_mod_m         412  dispatcher0_mod.f90
-dispatch.x         00000000004831EA  dispatcher0_mod_m         108  dispatcher0_mod.f90
-libiomp5.so        000014A426C04B13  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        000014A426B74473  Unknown               Unknown  Unknown
-libiomp5.so        000014A426B7573D  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        000014A426B30565  __kmpc_fork_call      Unknown  Unknown
-dispatch.x         0000000000482B8D  dispatcher0_mod_m         105  dispatcher0_mod.f90
-dispatch.x         0000000000487D26  dispatcher_mod_mp         145  dispatcher_mod.f90
-dispatch.x         0000000000487ACA  dispatcher_mod_mp         123  dispatcher_mod.f90
-dispatch.x         00000000004083F0  MAIN__                     20  dispatch.f90
-dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          000014A4268DEEB0  Unknown               Unknown  Unknown
-libc.so.6          000014A4268DEF60  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
-forrtl: severe (32): invalid logical unit number, unit -130, file unknown
-
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
 
 forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
 Image              PC                Routine            Line        Source             
-dispatch.x         00000000004689EA  cartesian_mod_mp_         246  cartesian_mod.f90
+dispatch.x         00000000004693E7  cartesian_mod_mp_         247  cartesian_mod.f90
 dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
 dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          0000148C562DEEB0  Unknown               Unknown  Unknown
-libc.so.6          0000148C562DEF60  __libc_start_main     Unknown  Unknown
+libc.so.6          000014B094AA8EB0  Unknown               Unknown  Unknown
+libc.so.6          000014B094AA8F60  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
 
 
@@ -93,79 +63,79 @@ Backtrace for this error:
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
 Backtrace for this error:
-#0  0x7fe8b34f2def in ???
-#0  0x7fe8b34f2def in ???
-#0  0x7fe8b34f2def in ???
-#0  0x7fe8b34f2def in ???
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
+#0  0x7fa02ee6cdef in ???
+#0  0x7fa02ee6cdef in ???
+#0  0x7fa02ee6cdef in ???
+#0  0x7fa02ee6cdef in ???
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
+	at ../../interpolation/lagrange_mod.f90:495
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#4  0x62f0a6 in interpolate
+#4  0x62fa04 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
+#4  0x62fa04 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
+#4  0x62fa04 in interpolate
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+	at ../../components/read_snapshot_mod.f90:674
+#4  0x62fa04 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
+#6  0x7fa02f062648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
+#6  0x7fa02f062648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7fe8b36f1665 in gomp_team_barrier_wait_end
+#6  0x7fa02f062648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7fa02f06b5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#7  0x7fa02f06b5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#7  0x7fa02f06b665 in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:95
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
-	at ../../components/read_snapshot_mod.f90:651
-#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#9  0x7fe8b36e5175 in GOMP_parallel
+#9  0x7fa02f05f175 in GOMP_parallel
 	at ../../../gcc-src/libgomp/parallel.c:178
-#10  0x635ced in read_stagger_snap
+#10  0x63664b in read_stagger_snap
 	at ../../components/read_snapshot_mod.f90:651
-#11  0x6391d5 in __read_snapshot_mod_MOD_init
+#11  0x639b33 in __read_snapshot_mod_MOD_init
 	at ../../components/read_snapshot_mod.f90:80
-#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
-#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#6  0x7fa02f062648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
-	at ../../components/read_snapshot_mod.f90:651
-#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
+#7  0x7fa02f06b5cf in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
 #12  0x404b46 in dispatch
 	at ../deep_sun/dispatch.f90:19
@@ -175,59 +145,59 @@ Backtrace for this error:
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
 
-free(): invalid pointer
+double free or corruption (out)
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fa368931def in ???
-#1  0x7fa36897e54c in ???
-#2  0x7fa368931d45 in ???
-#3  0x7fa3689057f2 in ???
-#4  0x7fa36890612f in ???
-#5  0x7fa368988616 in ???
-#6  0x7fa368989ecb in ???
-#7  0x7fa36898c954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
+#0  0x7f99ff2e7def in ???
+#1  0x7f99ff33454c in ???
+#2  0x7f99ff2e7d45 in ???
+#3  0x7f99ff2bb7f2 in ???
+#4  0x7f99ff2bc12f in ???
+#5  0x7f99ff33e616 in ???
+#6  0x7f99ff3402ff in ???
+#7  0x7f99ff342954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
 	at ../deep_sun/dispatch.f90:5
-free(): invalid pointer
+ task kind: rtdouble free or corruption (out)
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f0a192f8def in ???
-#1  0x7f0a1934554c in ???
-#2  0x7f0a192f8d45 in ???
-#3  0x7f0a192cc7f2 in ???
-#4  0x7f0a192cd12f in ???
-#5  0x7f0a1934f616 in ???
-#6  0x7f0a19350ecb in ???
-#7  0x7f0a19353954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
+#0  0x7f50e9f5adef in ???
+#1  0x7f50e9fa754c in ???
+#2  0x7f50e9f5ad45 in ???
+#3  0x7f50e9f2e7f2 in ???
+#4  0x7f50e9f2f12f in ???
+#5  0x7f50e9fb1616 in ???
+#6  0x7f50e9fb32ff in ???
+#7  0x7f50e9fb5954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
 	at ../deep_sun/dispatch.f90:5
-free(): invalid pointer
+double free or corruption (out)
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7feb9dde4def in ???
-#1  0x7feb9de3154c in ???
-#2  0x7feb9dde4d45 in ???
-#3  0x7feb9ddb87f2 in ???
-#4  0x7feb9ddb912f in ???
-#5  0x7feb9de3b616 in ???
-#6  0x7feb9de3cecb in ???
-#7  0x7feb9de3f954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
+#0  0x7f293a3ffdef in ???
+#1  0x7f293a44c54c in ???
+#2  0x7f293a3ffd45 in ???
+#3  0x7f293a3d37f2 in ???
+#4  0x7f293a3d412f in ???
+#5  0x7f293a456616 in ???
+#6  0x7f293a4582ff in ???
+#7  0x7f293a45a954 in ???
+#8  0x4549be in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
@@ -237,58 +207,6 @@ Backtrace for this error:
 :::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
 ::: Compilation
 
-:::::::::::::::: particle_movement_no_fields [ramses/hlld] ::::::::::::::::
-::: Compilation
-::: Running Run experiment
-::: Running python test
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/python/test_output.py", line 70, in <module>
-    q, r, pos, vel, e, w, nr = get_all_vals(data, patch_indices,nr_particles, i_start, i_end, stride, species=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 125, in get_all_vals
-    q, r, pos, vel, e, w, nr = get_snapshot_vals(dis.snapshot(i,data=data,aux=True),indices,nr_particles,species)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 78, in get_snapshot_vals
-    q, r, pos, vel, e, w, nr = get_nonnegative_vals(p,species)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 38, in get_nonnegative_vals
-    q_pos   = p.var('part_i_q' )-3 #Need to subtract the 3 ghost zones
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_dispatch.py", line 600, in var
-    v=expression_parser(patch,iv,all=True,eos=eos)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 118, in expression_parser
-    results=E.evaluate(all=all,eos=eos)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 102, in evaluate
-    ll[lhs]=eval(rhs)
-  File "<string>", line 1, in <module>
-NameError: name 'part_i_q' is not defined
-
-
-::::::::::::: particle_movement_static_E_fields [ramses/hlld] :::::::::::::
-::: Compilation
-::: Running Run experiment with electric field in x-direction
-::: Running Run experiment with electric field in y-direction
-::: Running Run experiment with electric field in z-direction
-::: Running python test for all tests
-::: Runtime Errors:
-
-Traceback (most recent call last):
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/python/test_output.py", line 88, in <module>
-    q_elec, r_elec, pos_elec, vel_elec, e_elec, w_elec, nr_elec = get_all_vals(data, patch_indices,nr_particles, i_start, i_end, stride, species=0)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 125, in get_all_vals
-    q, r, pos, vel, e, w, nr = get_snapshot_vals(dis.snapshot(i,data=data,aux=True),indices,nr_particles,species)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 78, in get_snapshot_vals
-    q, r, pos, vel, e, w, nr = get_nonnegative_vals(p,species)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 38, in get_nonnegative_vals
-    q_pos   = p.var('part_i_q' )-3 #Need to subtract the 3 ghost zones
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_dispatch.py", line 600, in var
-    v=expression_parser(patch,iv,all=True,eos=eos)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 118, in expression_parser
-    results=E.evaluate(all=all,eos=eos)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 102, in evaluate
-    ll[lhs]=eval(rhs)
-  File "<string>", line 1, in <module>
-NameError: name 'part_i_q' is not defined
-
-
 ::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                     
@@ -296,12 +214,12 @@ NameError: name 'part_i_q' is not defined
  01 blast [ramses/hlld_eos] - compilation                      [ ALL  OK ]
  02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
  03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
- 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ALL  OK ]
  05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
  06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
  07 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
                                                                -----------
-                                                               5    /    7
+                                                               6    /    7
 
 
 :: (env) OpenMPI 5.0 + GNU GCC 13.2 (+offload)                 
@@ -312,16 +230,8 @@ NameError: name 'part_i_q' is not defined
  04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
  05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
  06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
- 07 particle_movement_no_fields [ramses/hlld] - compilation    [ ALL  OK ]
- 08 └──── Run experiment                                       [ ALL  OK ]
- 09 └──── python test                                          [ ERRORS! ]
- 10 particle_movement_static_E_fields [ramses/hlld] - compilation[ ALL  OK ]
- 11 └──── Run experiment with electric field in x-direction    [ ALL  OK ]
- 12 └──── Run experiment with electric field in y-direction    [ ALL  OK ]
- 13 └──── Run experiment with electric field in z-direction    [ ALL  OK ]
- 14 └──── python test for all tests                            [ ERRORS! ]
                                                                -----------
-                                                               10   /   14
+                                                               4    /    6
 
 
-::::::::::::::::::::::::::: Δt = 0:07:16.056303 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:03:29.577030 :::::::::::::::::::::::::::
