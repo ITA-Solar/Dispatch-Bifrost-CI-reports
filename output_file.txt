@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "bifrost_test.py", line 251, in <module>
+    main()
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/mn/stornext/u3/miko/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "bifrost_test.py", line 86, in main
+    with open(setup_file, "r") as ymlfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/tests_setup.yml'
