@@ -1,9 +1,9 @@
 site_name: Dispatch-Bifrost-CI Reports
-site_url: https://ita-solar.github.io/Dispatch-Bifrost-CI-reports/
+site_url: https://ita-solar.github.io/Dispatch-Bifrost/
 
 # Repository
-repo_name: ita-solar/Dispatch-Bifrost-CI-reports
-repo_url: https://github.com/ita-solar/Dispatch-Bifrost-CI-reports
+repo_name: ita-solar/Dispatch-Bifrost
+repo_url: https://github.com/ita-solar/Dispatch-Bifrost
 edit_uri: ""
 theme:
     name: 'material'
@@ -15,12 +15,10 @@ theme:
         alert: octicons/alert-16
 nav:
     - Home: 'index.md'
-    - 'Closer look': 'failinfo.md'
-    - 'Weekly': 'weekly.md'
-    - 'Reference': 'reference.md'
     
 # Extensions
 markdown_extensions:
+  - git-revision-date
   - attr_list
   - tables
   - pymdownx.highlight:
