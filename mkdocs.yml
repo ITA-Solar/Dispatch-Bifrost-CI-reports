@@ -14,11 +14,10 @@ theme:
       admonition:
         alert: octicons/alert-16
 nav:
-    - Home: 'index.md'
+    - Last report: 'index.md'
     
 # Extensions
 markdown_extensions:
-  - git-revision-date
   - attr_list
   - tables
   - pymdownx.highlight:
@@ -44,6 +43,9 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.tabbed:
       alternate_style: true
+plugins:
+  - search
+  - git-revision-date
 
 # For mathjax
 extra_javascript:
