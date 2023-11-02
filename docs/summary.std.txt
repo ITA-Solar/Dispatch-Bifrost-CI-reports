@@ -1,112 +1,68 @@
 
-The repo hash for this run is: 9434059f1
+The repo hash for this run is: fe76f1fe7
 
-The branch on which it was run: develop
+The branch on which it was run: pic_michael
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
 
 ::::::::::::::::::::::::: blast [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Warnings:
-
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
-
 
 ::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
 ::: Compilation
-::: Compilation Warnings:
-
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
-
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
-::: Compilation Warnings:
-
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
-
 ::: Running single step (1x MPI 4x OpenMP)
-::: Runtime Warnings:
+::: Runtime Errors:
 
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
+forrtl: No such file or directory
+forrtl: severe (29): file not found, unit -137, file /var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/stellar_atmospheres/data/single-step/00002/snapshot_00000.dat
+Image              PC                Routine            Line        Source             
+dispatch.x         0000000000802442  Unknown               Unknown  Unknown
+dispatch.x         0000000000415904  background_io_mod          99  background_io_mod.f90
+dispatch.x         0000000000473E31  data_io_mod_mp_ou         285  data_io_mod.f90
+dispatch.x         00000000004C6A83  gpatch_mod_mp_out         250  gpatch_mod.f90
+dispatch.x         00000000004BF0FF  extras_mod_mp_out         194  extras_mod.f90
+dispatch.x         00000000005A7583  mhd_mod_mp_update         260  mhd_mod.f90
+dispatch.x         000000000070F281  solver_mod_mp_upd         148  solver_mod.f90
+dispatch.x         00000000004B665B  experiment_mod_mp         160  experiment_mod.f90
+dispatch.x         000000000077416D  task_list_mod_mp_         524  task_list_mod.f90
+dispatch.x         0000000000485611  dispatcher0_mod_m         412  dispatcher0_mod.f90
+dispatch.x         00000000004831EA  dispatcher0_mod_m         108  dispatcher0_mod.f90
+libiomp5.so        000014A426C04B13  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        000014A426B74473  Unknown               Unknown  Unknown
+libiomp5.so        000014A426B7573D  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        000014A426B30565  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000482B8D  dispatcher0_mod_m         105  dispatcher0_mod.f90
+dispatch.x         0000000000487D26  dispatcher_mod_mp         145  dispatcher_mod.f90
+dispatch.x         0000000000487ACA  dispatcher_mod_mp         123  dispatcher_mod.f90
+dispatch.x         00000000004083F0  MAIN__                     20  dispatch.f90
+dispatch.x         000000000040809D  Unknown               Unknown  Unknown
+libc.so.6          000014A4268DEEB0  Unknown               Unknown  Unknown
+libc.so.6          000014A4268DEF60  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
+forrtl: severe (32): invalid logical unit number, unit -130, file unknown
 
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
 
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
 forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
 Image              PC                Routine            Line        Source             
-dispatch.x         00000000004693E7  cartesian_mod_mp_         247  cartesian_mod.f90
+dispatch.x         00000000004689EA  cartesian_mod_mp_         246  cartesian_mod.f90
 dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
 dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          00001476CF2CEEB0  Unknown               Unknown  Unknown
-libc.so.6          00001476CF2CEF60  __libc_start_main     Unknown  Unknown
+libc.so.6          0000148C562DEEB0  Unknown               Unknown  Unknown
+libc.so.6          0000148C562DEF60  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
 
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
 ::: Compilation
-::: Compilation Warnings:
-
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
-
 
 ::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
 ::: Compilation
-::: Compilation Warnings:
-
-Loading mpi version 2021.7.0
-Loading compiler version 2022.2.0
-Loading tbb version 2021.7.0
-Loading compiler-rt version 2022.2.0
-Loading oclfpga version 2022.2.0
-  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
-  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
-Loading mkl version 2022.2.0
-
 
 ::: Setting up enviroment for OpenMPI 5.0 + GNU GCC 13.2 (+offload)
 
@@ -137,129 +93,141 @@ Backtrace for this error:
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
 Backtrace for this error:
-#0  0x7f8b7e55bdef in ???
-#0  0x7f8b7e55bdef in ???
-#0  0x7f8b7e55bdef in ???
-#0  0x7f8b7e55bdef in ???
-#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+#0  0x7fe8b34f2def in ???
+#0  0x7fe8b34f2def in ???
+#0  0x7fe8b34f2def in ???
+#0  0x7fe8b34f2def in ???
+#1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x523d06 in __lagrange_mod_MOD_sequence4
+#2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+#1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x523d06 in __lagrange_mod_MOD_sequence4
+#2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+#1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x523d06 in __lagrange_mod_MOD_sequence4
+#2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
+#1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x523d06 in __lagrange_mod_MOD_sequence4
+#2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
-#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
-#4  0x62fa04 in interpolate
+#4  0x62f0a6 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#4  0x62fa04 in interpolate
+#4  0x62f0a6 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#4  0x62fa04 in interpolate
+#4  0x62f0a6 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#4  0x62fa04 in interpolate
+#4  0x62f0a6 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
-#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
+#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#6  0x7f8b7e751648 in gomp_barrier_handle_tasks
+#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#6  0x7f8b7e751648 in gomp_barrier_handle_tasks
+#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7f8b7e75a5cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+#7  0x7fe8b36f1665 in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:95
+#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#7  0x7f8b7e75a5cf in gomp_team_barrier_wait_end
+#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#9  0x7f8b7e757a3d in gomp_thread_start
-	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7f8b7e5a6801 in ???
-#11  0x7f8b7e54644f in ???
-#12  0xffffffffffffffff in ???
-#9  0x7f8b7e757a3d in gomp_thread_start
-	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7f8b7e5a6801 in ???
-#11  0x7f8b7e54644f in ???
-#12  0xffffffffffffffff in ???
+#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#9  0x7fe8b36e5175 in GOMP_parallel
+	at ../../../gcc-src/libgomp/parallel.c:178
+#10  0x635ced in read_stagger_snap
+	at ../../components/read_snapshot_mod.f90:651
+#11  0x6391d5 in __read_snapshot_mod_MOD_init
+	at ../../components/read_snapshot_mod.f90:80
+#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
+#6  0x7fe8b36e8648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+	at ../../../gcc-src/libgomp/task.c:1650
+#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#7  0x7fe8b36f15cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#12  0x404b46 in dispatch
+	at ../deep_sun/dispatch.f90:19
+#13  0x404b46 in main
+	at ../deep_sun/dispatch.f90:5
 
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
 
-double free or corruption (out)
+free(): invalid pointer
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fae73c8ddef in ???
-#1  0x7fae73cda54c in ???
-#2  0x7fae73c8dd45 in ???
-#3  0x7fae73c617f2 in ???
-#4  0x7fae73c6212f in ???
-#5  0x7fae73ce4616 in ???
-#6  0x7fae73ce62ff in ???
-#7  0x7fae73ce8954 in ???
-#8  0x4549be in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:247
+#0  0x7fa368931def in ???
+#1  0x7fa36897e54c in ???
+#2  0x7fa368931d45 in ???
+#3  0x7fa3689057f2 in ???
+#4  0x7fa36890612f in ???
+#5  0x7fa368988616 in ???
+#6  0x7fa368989ecb in ???
+#7  0x7fa36898c954 in ???
+#8  0x4542b5 in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
 	at ../deep_sun/dispatch.f90:5
- task kind: rtdouble free or corruption (out)
+free(): invalid pointer
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f0c4744fdef in ???
-#1  0x7f0c4749c54c in ???
-#2  0x7f0c4744fd45 in ???
-#3  0x7f0c474237f2 in ???
-#4  0x7f0c4742412f in ???
-#5  0x7f0c474a6616 in ???
-#6  0x7f0c474a82ff in ???
-#7  0x7f0c474aa954 in ???
-#8  0x4549be in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:247
+#0  0x7f0a192f8def in ???
+#1  0x7f0a1934554c in ???
+#2  0x7f0a192f8d45 in ???
+#3  0x7f0a192cc7f2 in ???
+#4  0x7f0a192cd12f in ???
+#5  0x7f0a1934f616 in ???
+#6  0x7f0a19350ecb in ???
+#7  0x7f0a19353954 in ???
+#8  0x4542b5 in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
 	at ../deep_sun/dispatch.f90:5
-double free or corruption (out)
+free(): invalid pointer
 
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fc5d92dcdef in ???
-#1  0x7fc5d932954c in ???
-#2  0x7fc5d92dcd45 in ???
-#3  0x7fc5d92b07f2 in ???
-#4  0x7fc5d92b112f in ???
-#5  0x7fc5d9333616 in ???
-#6  0x7fc5d93352ff in ???
-#7  0x7fc5d9337954 in ???
-#8  0x4549be in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:247
+#0  0x7feb9dde4def in ???
+#1  0x7feb9de3154c in ???
+#2  0x7feb9dde4d45 in ???
+#3  0x7feb9ddb87f2 in ???
+#4  0x7feb9ddb912f in ???
+#5  0x7feb9de3b616 in ???
+#6  0x7feb9de3cecb in ???
+#7  0x7feb9de3f954 in ???
+#8  0x4542b5 in __cartesian_mod_MOD_init
+	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
 	at ../deep_sun/dispatch.f90:18
 #10  0x404b3c in main
@@ -269,19 +237,71 @@ Backtrace for this error:
 :::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
 ::: Compilation
 
+:::::::::::::::: particle_movement_no_fields [ramses/hlld] ::::::::::::::::
+::: Compilation
+::: Running Run experiment
+::: Running python test
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/python/test_output.py", line 70, in <module>
+    q, r, pos, vel, e, w, nr = get_all_vals(data, patch_indices,nr_particles, i_start, i_end, stride, species=0)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 125, in get_all_vals
+    q, r, pos, vel, e, w, nr = get_snapshot_vals(dis.snapshot(i,data=data,aux=True),indices,nr_particles,species)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 78, in get_snapshot_vals
+    q, r, pos, vel, e, w, nr = get_nonnegative_vals(p,species)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_no_fields/../python_functions/particle_func.py", line 38, in get_nonnegative_vals
+    q_pos   = p.var('part_i_q' )-3 #Need to subtract the 3 ghost zones
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_dispatch.py", line 600, in var
+    v=expression_parser(patch,iv,all=True,eos=eos)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 118, in expression_parser
+    results=E.evaluate(all=all,eos=eos)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 102, in evaluate
+    ll[lhs]=eval(rhs)
+  File "<string>", line 1, in <module>
+NameError: name 'part_i_q' is not defined
+
+
+::::::::::::: particle_movement_static_E_fields [ramses/hlld] :::::::::::::
+::: Compilation
+::: Running Run experiment with electric field in x-direction
+::: Running Run experiment with electric field in y-direction
+::: Running Run experiment with electric field in z-direction
+::: Running python test for all tests
+::: Runtime Errors:
+
+Traceback (most recent call last):
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/python/test_output.py", line 88, in <module>
+    q_elec, r_elec, pos_elec, vel_elec, e_elec, w_elec, nr_elec = get_all_vals(data, patch_indices,nr_particles, i_start, i_end, stride, species=0)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 125, in get_all_vals
+    q, r, pos, vel, e, w, nr = get_snapshot_vals(dis.snapshot(i,data=data,aux=True),indices,nr_particles,species)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 78, in get_snapshot_vals
+    q, r, pos, vel, e, w, nr = get_nonnegative_vals(p,species)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/pic_in_patch/particle_movement_static_E_fields/../python_functions/particle_func.py", line 38, in get_nonnegative_vals
+    q_pos   = p.var('part_i_q' )-3 #Need to subtract the 3 ghost zones
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_dispatch.py", line 600, in var
+    v=expression_parser(patch,iv,all=True,eos=eos)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 118, in expression_parser
+    results=E.evaluate(all=all,eos=eos)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/dispatch/_expr.py", line 102, in evaluate
+    ll[lhs]=eval(rhs)
+  File "<string>", line 1, in <module>
+NameError: name 'part_i_q' is not defined
+
+
 ::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
 
 :: (env) Intel oneAPI 2022 (ifort-classic)                     
 
- 01 blast [ramses/hlld_eos] - compilation                      [ WARNING ]
- 02 rt_shadow [ramses/hlls] - compilation                      [ WARNING ]
- 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ WARNING ]
- 04 └──── single step (1x MPI 4x OpenMP)                       [ WARNING ]
+ 01 blast [ramses/hlld_eos] - compilation                      [ ALL  OK ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
+ 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
  05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
- 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ WARNING ]
- 07 stellar_atmospheres [stagger2/e] - compilation             [ WARNING ]
+ 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
+ 07 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
                                                                -----------
-                                                               6    /    7
+                                                               5    /    7
 
 
 :: (env) OpenMPI 5.0 + GNU GCC 13.2 (+offload)                 
@@ -292,8 +312,16 @@ Backtrace for this error:
  04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
  05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
  06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
+ 07 particle_movement_no_fields [ramses/hlld] - compilation    [ ALL  OK ]
+ 08 └──── Run experiment                                       [ ALL  OK ]
+ 09 └──── python test                                          [ ERRORS! ]
+ 10 particle_movement_static_E_fields [ramses/hlld] - compilation[ ALL  OK ]
+ 11 └──── Run experiment with electric field in x-direction    [ ALL  OK ]
+ 12 └──── Run experiment with electric field in y-direction    [ ALL  OK ]
+ 13 └──── Run experiment with electric field in z-direction    [ ALL  OK ]
+ 14 └──── python test for all tests                            [ ERRORS! ]
                                                                -----------
-                                                               4    /    6
+                                                               10   /   14
 
 
-::::::::::::::::::::::::::: Δt = 0:03:34.511090 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:07:16.056303 :::::::::::::::::::::::::::
