@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 0ed559d69
+The repo hash for this run is: 1f6dfd4a6
 
 The branch on which it was run: develop
 
@@ -23,8 +23,8 @@ Image              PC                Routine            Line        Source
 dispatch.x         00000000004693E7  cartesian_mod_mp_         247  cartesian_mod.f90
 dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
 dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          00001459FF21AEB0  Unknown               Unknown  Unknown
-libc.so.6          00001459FF21AF60  __libc_start_main     Unknown  Unknown
+libc.so.6          000014AAB9E2AEB0  Unknown               Unknown  Unknown
+libc.so.6          000014AAB9E2AF60  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
 
 
@@ -63,10 +63,10 @@ Backtrace for this error:
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
 Backtrace for this error:
-#0  0x7fbb2e1ffdef in ???
-#0  0x7fbb2e1ffdef in ???
-#0  0x7fbb2e1ffdef in ???
-#0  0x7fbb2e1ffdef in ???
+#0  0x7f0fb3cfedef in ???
+#0  0x7f0fb3cfedef in ???
+#0  0x7f0fb3cfedef in ???
+#0  0x7f0fb3cfedef in ???
 #1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
 #2  0x523d06 in __lagrange_mod_MOD_sequence4
@@ -74,21 +74,21 @@ Backtrace for this error:
 #3  0x520670 in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
 #1  0x51ef0b in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:69
-#2  0x523d06 in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x520670 in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
 #1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
+	at ../../interpolation/lagrange_mod.f90:69
+#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 #2  0x523d06 in __lagrange_mod_MOD_sequence4
+#2  0x523d06 in __lagrange_mod_MOD_sequence4
+	at ../../interpolation/lagrange_mod.f90:69
+	at ../../interpolation/lagrange_mod.f90:495
 	at ../../interpolation/lagrange_mod.f90:495
 #3  0x520670 in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51ef0b in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:69
 #2  0x523d06 in __lagrange_mod_MOD_sequence4
+#3  0x520670 in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:683
 	at ../../interpolation/lagrange_mod.f90:495
+	at ../../interpolation/lagrange_mod.f90:683
 #3  0x520670 in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
 #4  0x62fa04 in interpolate
@@ -100,30 +100,29 @@ Backtrace for this error:
 #5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
 #4  0x62fa04 in interpolate
-	at ../../components/read_snapshot_mod.f90:843
-#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
 #4  0x62fa04 in interpolate
 	at ../../components/read_snapshot_mod.f90:843
+	at ../../components/read_snapshot_mod.f90:843
+#5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 #5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#6  0x7fbb2e3f5648 in gomp_barrier_handle_tasks
+	at ../../components/read_snapshot_mod.f90:674
+#6  0x7f0fb3ef4648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#6  0x7fbb2e3f5648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7fbb2e3fe5cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#7  0x7f0fb3efd665 in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:95
 #8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#7  0x7fbb2e3fe5cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+#9  0x7f0fb3ef1175 in GOMP_parallel
+	at ../../../gcc-src/libgomp/parallel.c:178
+#10  0x63664b in read_stagger_snap
 	at ../../components/read_snapshot_mod.f90:651
-#9  0x7fbb2e3fba3d in gomp_thread_start
-	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7fbb2e24a801 in ???
-#11  0x7fbb2e1ea44f in ???
-#12  0xffffffffffffffff in ???
+#11  0x639b33 in __read_snapshot_mod_MOD_init
+	at ../../components/read_snapshot_mod.f90:80
+#12  0x404b46 in dispatch
+	at ../deep_sun/dispatch.f90:19
+#13  0x404b46 in main
+	at ../deep_sun/dispatch.f90:5
 
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
@@ -133,14 +132,14 @@ double free or corruption (out)
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f47df885def in ???
-#1  0x7f47df8d254c in ???
-#2  0x7f47df885d45 in ???
-#3  0x7f47df8597f2 in ???
-#4  0x7f47df85a12f in ???
-#5  0x7f47df8dc616 in ???
-#6  0x7f47df8de2ff in ???
-#7  0x7f47df8e0954 in ???
+#0  0x7fe2da8badef in ???
+#1  0x7fe2da90754c in ???
+#2  0x7fe2da8bad45 in ???
+#3  0x7fe2da88e7f2 in ???
+#4  0x7fe2da88f12f in ???
+#5  0x7fe2da911616 in ???
+#6  0x7fe2da9132ff in ???
+#7  0x7fe2da915954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -152,14 +151,14 @@ double free or corruption (out)
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fbb18678def in ???
-#1  0x7fbb186c554c in ???
-#2  0x7fbb18678d45 in ???
-#3  0x7fbb1864c7f2 in ???
-#4  0x7fbb1864d12f in ???
-#5  0x7fbb186cf616 in ???
-#6  0x7fbb186d12ff in ???
-#7  0x7fbb186d3954 in ???
+#0  0x7f5149cb7def in ???
+#1  0x7f5149d0454c in ???
+#2  0x7f5149cb7d45 in ???
+#3  0x7f5149c8b7f2 in ???
+#4  0x7f5149c8c12f in ???
+#5  0x7f5149d0e616 in ???
+#6  0x7f5149d102ff in ???
+#7  0x7f5149d12954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -171,14 +170,14 @@ Backtrace for this error:
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fc3af610def in ???
-#1  0x7fc3af65d54c in ???
-#2  0x7fc3af610d45 in ???
-#3  0x7fc3af5e47f2 in ???
-#4  0x7fc3af5e512f in ???
-#5  0x7fc3af667616 in ???
-#6  0x7fc3af6692ff in ???
-#7  0x7fc3af66b954 in ???
+#0  0x7fa036511def in ???
+#1  0x7fa03655e54c in ???
+#2  0x7fa036511d45 in ???
+#3  0x7fa0364e57f2 in ???
+#4  0x7fa0364e612f in ???
+#5  0x7fa036568616 in ???
+#6  0x7fa03656a2ff in ???
+#7  0x7fa03656c954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -217,4 +216,4 @@ Backtrace for this error:
                                                                4    /    6
 
 
-::::::::::::::::::::::::::: Δt = 0:03:32.530274 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:03:30.574716 :::::::::::::::::::::::::::
