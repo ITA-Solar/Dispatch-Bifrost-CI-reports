@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 22e2289d4
+The repo hash for this run is: 7f8fa7daa
 
 The branch on which it was run: pic_michael
 
@@ -31,13 +31,19 @@ dispatch.x         00000000004B665B  experiment_mod_mp         160  experiment_m
 dispatch.x         000000000077416D  task_list_mod_mp_         524  task_list_mod.f90
 dispatch.x         0000000000485611  dispatcher0_mod_m         412  dispatcher0_mod.f90
 dispatch.x         00000000004831EA  dispatcher0_mod_m         108  dispatcher0_mod.f90
-libiomp5.so        0000154FF8886B13  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        0000154FF87F6473  Unknown               Unknown  Unknown
-libiomp5.so        0000154FF87F53B2  Unknown               Unknown  Unknown
-libiomp5.so        0000154FF8887883  Unknown               Unknown  Unknown
-libc.so.6          0000154FF85C0802  Unknown               Unknown  Unknown
-libc.so.6          0000154FF8560450  Unknown               Unknown  Unknown
-forrtl: severe (32): invalid logical unit number, unit -129, file unknown
+libiomp5.so        00001503D5F94B13  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00001503D5F04473  Unknown               Unknown  Unknown
+libiomp5.so        00001503D5F0573D  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00001503D5EC0565  __kmpc_fork_call      Unknown  Unknown
+dispatch.x         0000000000482B8D  dispatcher0_mod_m         105  dispatcher0_mod.f90
+dispatch.x         0000000000487D26  dispatcher_mod_mp         145  dispatcher_mod.f90
+dispatch.x         0000000000487ACA  dispatcher_mod_mp         123  dispatcher_mod.f90
+dispatch.x         00000000004083F0  MAIN__                     20  dispatch.f90
+dispatch.x         000000000040809D  Unknown               Unknown  Unknown
+libc.so.6          00001503D5C6EEB0  Unknown               Unknown  Unknown
+libc.so.6          00001503D5C6EF60  __libc_start_main     Unknown  Unknown
+dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
+forrtl: severe (40): recursive I/O operation, unit -131, file unknown
 
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
@@ -47,8 +53,8 @@ Image              PC                Routine            Line        Source
 dispatch.x         00000000004689EA  cartesian_mod_mp_         246  cartesian_mod.f90
 dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
 dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          000014D82022EEB0  Unknown               Unknown  Unknown
-libc.so.6          000014D82022EF60  __libc_start_main     Unknown  Unknown
+libc.so.6          0000154C70BADEB0  Unknown               Unknown  Unknown
+libc.so.6          0000154C70BADF60  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
 
 
@@ -78,19 +84,19 @@ Backtrace for this error:
 
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Backtrace for this error:
-
 Backtrace for this error:
 
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
 Backtrace for this error:
-#0  0x7f1a57cbbdef in ???
-#0  0x7f1a57cbbdef in ???
-#0  0x7f1a57cbbdef in ???
-#0  0x7f1a57cbbdef in ???
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x7f4d61298def in ???
+#0  0x7f4d61298def in ???
+#0  0x7f4d61298def in ???
+#0  0x7f4d61298def in ???
 #1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
 #2  0x52334a in __lagrange_mod_MOD_sequence4
@@ -99,14 +105,14 @@ Backtrace for this error:
 	at ../../interpolation/lagrange_mod.f90:683
 #1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
 #1  0x51e555 in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
 #2  0x52334a in __lagrange_mod_MOD_sequence4
 	at ../../interpolation/lagrange_mod.f90:495
+#2  0x52334a in __lagrange_mod_MOD_sequence4
+#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
+	at ../../interpolation/lagrange_mod.f90:495
+	at ../../interpolation/lagrange_mod.f90:683
 #3  0x51fcba in __lagrange_mod_MOD_interpolate3d
 	at ../../interpolation/lagrange_mod.f90:683
 #1  0x51e555 in __lagrange_mod_MOD_interpolation4
@@ -131,22 +137,35 @@ Backtrace for this error:
 	at ../../components/read_snapshot_mod.f90:843
 #5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#6  0x7f1a57eb1648 in gomp_barrier_handle_tasks
+#6  0x7f4d6148e648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7f1a57eba5cf in gomp_team_barrier_wait_end
+#6  0x7f4d6148e648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7f4d614975cf in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:116
 #8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#6  0x7f1a57eb1648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7f1a57eba5cf in gomp_team_barrier_wait_end
+#7  0x7f4d614975cf in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:116
 #8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#9  0x7f1a57eb7a3d in gomp_thread_start
+#6  0x7f4d6148e648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#6  0x7f4d6148e648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7f4d61497665 in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:95
+#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#9  0x7f4d61494a3d in gomp_thread_start
+#9  0x7f4d61494a3d in gomp_thread_start
 	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7f1a57d06801 in ???
-#11  0x7f1a57ca644f in ???
+	at ../../../gcc-src/libgomp/team.c:129
+#10  0x7f4d612e3801 in ???
+#10  0x7f4d612e3801 in ???
+#11  0x7f4d6128344f in ???
+#12  0xffffffffffffffff in ???
+#11  0x7f4d6128344f in ???
 #12  0xffffffffffffffff in ???
 
 ::: Running single step (4x MPI 1x OpenMP)
@@ -157,14 +176,14 @@ free(): invalid pointer
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f8005217def in ???
-#1  0x7f800526454c in ???
-#2  0x7f8005217d45 in ???
-#3  0x7f80051eb7f2 in ???
-#4  0x7f80051ec12f in ???
-#5  0x7f800526e616 in ???
-#6  0x7f800526fecb in ???
-#7  0x7f8005272954 in ???
+#0  0x7f2dc4528def in ???
+#1  0x7f2dc457554c in ???
+#2  0x7f2dc4528d45 in ???
+#3  0x7f2dc44fc7f2 in ???
+#4  0x7f2dc44fd12f in ???
+#5  0x7f2dc457f616 in ???
+#6  0x7f2dc4580ecb in ???
+#7  0x7f2dc4583954 in ???
 #8  0x4542b5 in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
@@ -176,14 +195,14 @@ free(): invalid pointer
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f67a67efdef in ???
-#1  0x7f67a683c54c in ???
-#2  0x7f67a67efd45 in ???
-#3  0x7f67a67c37f2 in ???
-#4  0x7f67a67c412f in ???
-#5  0x7f67a6846616 in ???
-#6  0x7f67a6847ecb in ???
-#7  0x7f67a684a954 in ???
+#0  0x7f6a4ff89def in ???
+#1  0x7f6a4ffd654c in ???
+#2  0x7f6a4ff89d45 in ???
+#3  0x7f6a4ff5d7f2 in ???
+#4  0x7f6a4ff5e12f in ???
+#5  0x7f6a4ffe0616 in ???
+#6  0x7f6a4ffe1ecb in ???
+#7  0x7f6a4ffe4954 in ???
 #8  0x4542b5 in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
@@ -195,14 +214,14 @@ free(): invalid pointer
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7f12747b6def in ???
-#1  0x7f127480354c in ???
-#2  0x7f12747b6d45 in ???
-#3  0x7f127478a7f2 in ???
-#4  0x7f127478b12f in ???
-#5  0x7f127480d616 in ???
-#6  0x7f127480eecb in ???
-#7  0x7f1274811954 in ???
+#0  0x7f93a4d9bdef in ???
+#1  0x7f93a4de854c in ???
+#2  0x7f93a4d9bd45 in ???
+#3  0x7f93a4d6f7f2 in ???
+#4  0x7f93a4d7012f in ???
+#5  0x7f93a4df2616 in ???
+#6  0x7f93a4df3ecb in ???
+#7  0x7f93a4df6954 in ???
 #8  0x4542b5 in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:246
 #9  0x404b3c in dispatch
@@ -218,10 +237,6 @@ Backtrace for this error:
 ::: Compilation
 ::: Running Run experiment
 ::: Running julia test
-::: Runtime Errors:
-
-/bin/sh: line 4: julia: command not found
-
 
 ::::::::::::::::::::: PIC Unit Static E [ramses/hlld] :::::::::::::::::::::
 ::: Compilation
@@ -275,14 +290,14 @@ NameError: name 'part_i_q' is not defined
  06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
  07 PIC Unit no fields [ramses/hlld] - compilation             [ ALL  OK ]
  08 └──── Run experiment                                       [ ALL  OK ]
- 09 └──── julia test                                           [ ERRORS! ]
+ 09 └──── julia test                                           [ ALL  OK ]
  10 PIC Unit Static E [ramses/hlld] - compilation              [ ALL  OK ]
  11 └──── Run experiment Ex                                    [ ALL  OK ]
  12 └──── Run experiment Ey                                    [ ALL  OK ]
  13 └──── Run experiment Ez                                    [ ALL  OK ]
  14 └──── python test for all tests                            [ ERRORS! ]
                                                                -----------
-                                                               10   /   14
+                                                               11   /   14
 
 
-::::::::::::::::::::::::::: Δt = 0:07:11.803906 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:07:20.946917 :::::::::::::::::::::::::::
