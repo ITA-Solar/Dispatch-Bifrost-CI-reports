@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 1d0c46e6b
+The repo hash for this run is: a829d3ea5
 
 The branch on which it was run: develop
 
@@ -23,8 +23,8 @@ Image              PC                Routine            Line        Source
 dispatch.x         00000000004693E7  cartesian_mod_mp_         247  cartesian_mod.f90
 dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
 dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          000014F8AE10CEB0  Unknown               Unknown  Unknown
-libc.so.6          000014F8AE10CF60  __libc_start_main     Unknown  Unknown
+libc.so.6          0000152EF12E6EB0  Unknown               Unknown  Unknown
+libc.so.6          0000152EF12E6F60  __libc_start_main     Unknown  Unknown
 dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
 
 
@@ -54,19 +54,19 @@ Backtrace for this error:
 
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+
 Backtrace for this error:
 
 Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
 
 Backtrace for this error:
-
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Backtrace for this error:
-#0  0x7ff228ec5def in ???
-#0  0x7ff228ec5def in ???
-#0  0x7ff228ec5def in ???
-#0  0x7ff228ec5def in ???
+#0  0x7efdc62fbdef in ???
+#0  0x7efdc62fbdef in ???
+#0  0x7efdc62fbdef in ???
+#0  0x7efdc62fbdef in ???
 #1  0x51ef0b in __lagrange_mod_MOD_interpolation4
 	at ../../interpolation/lagrange_mod.f90:69
 #2  0x523d06 in __lagrange_mod_MOD_sequence4
@@ -107,25 +107,45 @@ Backtrace for this error:
 	at ../../components/read_snapshot_mod.f90:843
 #5  0x6313ec in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
 	at ../../components/read_snapshot_mod.f90:674
-#6  0x7ff2290bb648 in gomp_barrier_handle_tasks
+#6  0x7efdc64f1648 in gomp_barrier_handle_tasks
 	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7ff2290c45cf in gomp_team_barrier_wait_end
+#6  0x7efdc64f1648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7efdc64fa5cf in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+#7  0x7efdc64fa5cf in gomp_team_barrier_wait_end
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../../gcc-src/libgomp/config/linux/bar.c:116
+	at ../../components/read_snapshot_mod.f90:651
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#6  0x7efdc64f1648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7efdc64fa665 in gomp_team_barrier_wait_end
+	at ../../../gcc-src/libgomp/config/linux/bar.c:95
+#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
+	at ../../components/read_snapshot_mod.f90:651
+#6  0x7efdc64f1648 in gomp_barrier_handle_tasks
+	at ../../../gcc-src/libgomp/task.c:1650
+#7  0x7efdc64fa5cf in gomp_team_barrier_wait_end
 	at ../../../gcc-src/libgomp/config/linux/bar.c:116
 #8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
 	at ../../components/read_snapshot_mod.f90:651
-#6  0x7ff2290bb648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7ff2290c45cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x631544 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
-	at ../../components/read_snapshot_mod.f90:651
-#6  0x7ff2290bb648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#9  0x7ff2290c1a3d in gomp_thread_start
+#9  0x7efdc64f7a3d in gomp_thread_start
 	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7ff228f10801 in ???
-#11  0x7ff228eb044f in ???
+#9  0x7efdc64f7a3d in gomp_thread_start
+#10  0x7efdc6346801 in ???
+	at ../../../gcc-src/libgomp/team.c:129
+#10  0x7efdc6346801 in ???
+#11  0x7efdc62e644f in ???
 #12  0xffffffffffffffff in ???
+#11  0x7efdc62e644f in ???
+#12  0xffffffffffffffff in ???
+#9  0x7efdc64ee175 in GOMP_parallel
+	at ../../../gcc-src/libgomp/parallel.c:178
+#10  0x63664b in read_stagger_snap
+	at ../../components/read_snapshot_mod.f90:651
+#11  0x639b33 in __read_snapshot_mod_MOD_init
 
 ::: Running single step (4x MPI 1x OpenMP)
 ::: Runtime Errors:
@@ -135,14 +155,14 @@ double free or corruption (out)
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fe2267f2def in ???
-#1  0x7fe22683f54c in ???
-#2  0x7fe2267f2d45 in ???
-#3  0x7fe2267c67f2 in ???
-#4  0x7fe2267c712f in ???
-#5  0x7fe226849616 in ???
-#6  0x7fe22684b2ff in ???
-#7  0x7fe22684d954 in ???
+#0  0x7fdc270dddef in ???
+#1  0x7fdc2712a54c in ???
+#2  0x7fdc270ddd45 in ???
+#3  0x7fdc270b17f2 in ???
+#4  0x7fdc270b212f in ???
+#5  0x7fdc27134616 in ???
+#6  0x7fdc271362ff in ???
+#7  0x7fdc27138954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -154,14 +174,14 @@ Backtrace for this error:
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fc18ac7fdef in ???
-#1  0x7fc18accc54c in ???
-#2  0x7fc18ac7fd45 in ???
-#3  0x7fc18ac537f2 in ???
-#4  0x7fc18ac5412f in ???
-#5  0x7fc18acd6616 in ???
-#6  0x7fc18acd82ff in ???
-#7  0x7fc18acda954 in ???
+#0  0x7f4e91b27def in ???
+#1  0x7f4e91b7454c in ???
+#2  0x7f4e91b27d45 in ???
+#3  0x7f4e91afb7f2 in ???
+#4  0x7f4e91afc12f in ???
+#5  0x7f4e91b7e616 in ???
+#6  0x7f4e91b802ff in ???
+#7  0x7f4e91b82954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -173,14 +193,14 @@ double free or corruption (out)
 Program received signal SIGABRT: Process abort signal.
 
 Backtrace for this error:
-#0  0x7fad9fe92def in ???
-#1  0x7fad9fedf54c in ???
-#2  0x7fad9fe92d45 in ???
-#3  0x7fad9fe667f2 in ???
-#4  0x7fad9fe6712f in ???
-#5  0x7fad9fee9616 in ???
-#6  0x7fad9feeb2ff in ???
-#7  0x7fad9feed954 in ???
+#0  0x7f2e2a198def in ???
+#1  0x7f2e2a1e554c in ???
+#2  0x7f2e2a198d45 in ???
+#3  0x7f2e2a16c7f2 in ???
+#4  0x7f2e2a16d12f in ???
+#5  0x7f2e2a1ef616 in ???
+#6  0x7f2e2a1f12ff in ???
+#7  0x7f2e2a1f3954 in ???
 #8  0x4549be in __cartesian_mod_MOD_init
 	at ../../components/cartesian_mod.f90:247
 #9  0x404b3c in dispatch
@@ -219,4 +239,4 @@ Backtrace for this error:
                                                                4    /    6
 
 
-::::::::::::::::::::::::::: Δt = 0:03:32.349300 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:03:30.260450 :::::::::::::::::::::::::::
