@@ -1,5 +1,5 @@
 
-The repo hash for this run is: f5631e84a
+The repo hash for this run is: 6ab3bbcb3
 
 The branch on which it was run: pic_michael
 
@@ -15,256 +15,25 @@ The branch on which it was run: pic_michael
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
 ::: Running single step (1x MPI 4x OpenMP)
-::: Runtime Errors:
-
-forrtl: No such file or directory
-forrtl: severe (29): file not found, unit -137, file /var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/experiments/stellar_atmospheres/data/single-step/00002/snapshot_00000.dat
-Image              PC                Routine            Line        Source             
-dispatch.x         0000000000802442  Unknown               Unknown  Unknown
-dispatch.x         0000000000415904  background_io_mod          99  background_io_mod.f90
-dispatch.x         0000000000473E31  data_io_mod_mp_ou         285  data_io_mod.f90
-dispatch.x         00000000004C6A83  gpatch_mod_mp_out         250  gpatch_mod.f90
-dispatch.x         00000000004BF0FF  extras_mod_mp_out         194  extras_mod.f90
-dispatch.x         00000000005A7583  mhd_mod_mp_update         260  mhd_mod.f90
-dispatch.x         000000000070F281  solver_mod_mp_upd         148  solver_mod.f90
-dispatch.x         00000000004B665B  experiment_mod_mp         160  experiment_mod.f90
-dispatch.x         000000000077416D  task_list_mod_mp_         524  task_list_mod.f90
-dispatch.x         0000000000485611  dispatcher0_mod_m         412  dispatcher0_mod.f90
-dispatch.x         00000000004831EA  dispatcher0_mod_m         108  dispatcher0_mod.f90
-libiomp5.so        00001534D44C3B13  __kmp_invoke_micr     Unknown  Unknown
-libiomp5.so        00001534D4433473  Unknown               Unknown  Unknown
-libiomp5.so        00001534D443473D  __kmp_fork_call       Unknown  Unknown
-libiomp5.so        00001534D43EF565  __kmpc_fork_call      Unknown  Unknown
-dispatch.x         0000000000482B8D  dispatcher0_mod_m         105  dispatcher0_mod.f90
-dispatch.x         0000000000487D26  dispatcher_mod_mp         145  dispatcher_mod.f90
-dispatch.x         0000000000487ACA  dispatcher_mod_mp         123  dispatcher_mod.f90
-dispatch.x         00000000004083F0  MAIN__                     20  dispatch.f90
-dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          00001534D419DEB0  Unknown               Unknown  Unknown
-libc.so.6          00001534D419DF60  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
-forrtl: severe (40): recursive I/O operation, unit -130, file unknown
-
-::: Running single step (4x MPI 1x OpenMP)
-::: Runtime Errors:
-
-forrtl: severe (173): A pointer passed to DEALLOCATE points to an object that cannot be deallocated
-Image              PC                Routine            Line        Source             
-dispatch.x         00000000004689EA  cartesian_mod_mp_         246  cartesian_mod.f90
-dispatch.x         0000000000408361  MAIN__                     18  dispatch.f90
-dispatch.x         000000000040809D  Unknown               Unknown  Unknown
-libc.so.6          0000149D5A99BEB0  Unknown               Unknown  Unknown
-libc.so.6          0000149D5A99BF60  __libc_start_main     Unknown  Unknown
-dispatch.x         0000000000407FB5  Unknown               Unknown  Unknown
-
-
-:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
-::: Compilation
-
-::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
-::: Compilation
-
-::: Setting up enviroment for OpenMPI 5.0 + GNU GCC 13.2 (+offload)
-
-::::::::::::::::::::::::: blast [stagger2/bifrost] ::::::::::::::::::::::::
-::: Compilation
-
-::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
-::: Compilation
-
-:::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
-::: Compilation
-::: Running single step (1x MPI 4x OpenMP)
-::: Runtime Errors:
-
-
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Backtrace for this error:
-
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Backtrace for this error:
-
-Backtrace for this error:
-
-Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
-
-Backtrace for this error:
-#0  0x7fb3d2ab8def in ???
-#0  0x7fb3d2ab8def in ???
-#0  0x7fb3d2ab8def in ???
-#0  0x7fb3d2ab8def in ???
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:495
-	at ../../interpolation/lagrange_mod.f90:69
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:683
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
-#1  0x51e555 in __lagrange_mod_MOD_interpolation4
-	at ../../interpolation/lagrange_mod.f90:69
-#2  0x52334a in __lagrange_mod_MOD_sequence4
-	at ../../interpolation/lagrange_mod.f90:495
-#3  0x51fcba in __lagrange_mod_MOD_interpolate3d
-	at ../../interpolation/lagrange_mod.f90:683
-#4  0x62f0a6 in interpolate
-	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
-	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
-	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
-#4  0x62f0a6 in interpolate
-	at ../../components/read_snapshot_mod.f90:843
-#5  0x630a8e in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.1
-	at ../../components/read_snapshot_mod.f90:674
-#6  0x7fb3d2cae648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7fb3d2cb75cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
-	at ../../components/read_snapshot_mod.f90:651
-#6  0x7fb3d2cae648 in gomp_barrier_handle_tasks
-	at ../../../gcc-src/libgomp/task.c:1650
-#7  0x7fb3d2cb75cf in gomp_team_barrier_wait_end
-	at ../../../gcc-src/libgomp/config/linux/bar.c:116
-#8  0x630be6 in __read_snapshot_mod_MOD_read_stagger_snap._omp_fn.0
-	at ../../components/read_snapshot_mod.f90:651
-#9  0x7fb3d2cb4a3d in gomp_thread_start
-	at ../../../gcc-src/libgomp/team.c:129
-#10  0x7fb3d2b03801 in ???
-#11  0x7fb3d2aa344f in ???
-#12  0xffffffffffffffff in ???
-
-::: Running single step (4x MPI 1x OpenMP)
-::: Runtime Errors:
-
-free(): invalid pointer
-
-Program received signal SIGABRT: Process abort signal.
-
-Backtrace for this error:
-#0  0x7f527236fdef in ???
-#1  0x7f52723bc54c in ???
-#2  0x7f527236fd45 in ???
-#3  0x7f52723437f2 in ???
-#4  0x7f527234412f in ???
-#5  0x7f52723c6616 in ???
-#6  0x7f52723c7ecb in ???
-#7  0x7f52723ca954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
-#9  0x404b3c in dispatch
-	at ../deep_sun/dispatch.f90:18
-#10  0x404b3c in main
-	at ../deep_sun/dispatch.f90:5
-free(): invalid pointer
-
-Program received signal SIGABRT: Process abort signal.
-
-Backtrace for this error:
-#0  0x7f3510013def in ???
-#1  0x7f351006054c in ???
-#2  0x7f3510013d45 in ???
-#3  0x7f350ffe77f2 in ???
-#4  0x7f350ffe812f in ???
-#5  0x7f351006a616 in ???
-#6  0x7f351006becb in ???
-#7  0x7f351006e954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
-#9  0x404b3c in dispatch
-	at ../deep_sun/dispatch.f90:18
-#10  0x404b3c in main
-	at ../deep_sun/dispatch.f90:5
-free(): invalid pointer
-
-Program received signal SIGABRT: Process abort signal.
-
-Backtrace for this error:
-#0  0x7f3e7e3f7def in ???
-#1  0x7f3e7e44454c in ???
-#2  0x7f3e7e3f7d45 in ???
-#3  0x7f3e7e3cb7f2 in ???
-#4  0x7f3e7e3cc12f in ???
-#5  0x7f3e7e44e616 in ???
-#6  0x7f3e7e44fecb in ???
-#7  0x7f3e7e452954 in ???
-#8  0x4542b5 in __cartesian_mod_MOD_init
-	at ../../components/cartesian_mod.f90:246
-#9  0x404b3c in dispatch
-	at ../deep_sun/dispatch.f90:18
-#10  0x404b3c in main
-	at ../deep_sun/dispatch.f90:5
-
-
-:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
-::: Compilation
-
-::::::::::::::::::::: PIC Unit no fields [ramses/hlld] ::::::::::::::::::::
-::: Compilation
-::: Running Run experiment
-::: Running julia test
-
-::::::::::::::::::::: PIC Unit Static E [ramses/hlld] :::::::::::::::::::::
-::: Compilation
-::: Running Run experiment Ex
-::: Running Run experiment Ey
-::: Running Run experiment Ez
-::: Running check output in julia
-
-::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
-
-:: (env) Intel oneAPI 2022 (ifort-classic)                     
-
- 01 blast [ramses/hlld_eos] - compilation                      [ ALL  OK ]
- 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
- 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
- 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
- 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
- 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
- 07 stellar_atmospheres [stagger2/e] - compilation             [ ALL  OK ]
-                                                               -----------
-                                                               5    /    7
-
-
-:: (env) OpenMPI 5.0 + GNU GCC 13.2 (+offload)                 
-
- 01 blast [stagger2/bifrost] - compilation                     [ ALL  OK ]
- 02 rt_shadow [ramses/hlls] - compilation                      [ ALL  OK ]
- 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ALL  OK ]
- 04 └──── single step (1x MPI 4x OpenMP)                       [ ERRORS! ]
- 05 └──── single step (4x MPI 1x OpenMP)                       [ ERRORS! ]
- 06 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ALL  OK ]
- 07 PIC Unit no fields [ramses/hlld] - compilation             [ ALL  OK ]
- 08 └──── Run experiment                                       [ ALL  OK ]
- 09 └──── julia test                                           [ ALL  OK ]
- 10 PIC Unit Static E [ramses/hlld] - compilation              [ ALL  OK ]
- 11 └──── Run experiment Ex                                    [ ALL  OK ]
- 12 └──── Run experiment Ey                                    [ ALL  OK ]
- 13 └──── Run experiment Ez                                    [ ALL  OK ]
- 14 └──── check output in julia                                [ ALL  OK ]
-                                                               -----------
-                                                               12   /   14
-
-
-::::::::::::::::::::::::::: Δt = 0:07:22.132064 :::::::::::::::::::::::::::
+Traceback (most recent call last):
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/bifrost_test.py", line 256, in <module>
+    main()
+  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/bifrost_test.py", line 170, in main
+    res = subprocess.run(f"{s.setup}{unit.run}",
+  File "/usr/lib64/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib64/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib64/python3.9/subprocess.py", line 2021, in _communicate
+    stderr = self._translate_newlines(stderr,
+  File "/usr/lib64/python3.9/subprocess.py", line 1011, in _translate_newlines
+    data = data.decode(encoding, errors)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcc in position 1785: invalid continuation byte
