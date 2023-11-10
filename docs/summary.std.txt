@@ -1,5 +1,5 @@
 
-The repo hash for this run is: 0e5b87658
+The repo hash for this run is: 7b51f3c4b
 
 The branch on which it was run: HLLS_bunch
 
@@ -78,4 +78,4 @@ make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
 :: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
 :: (env) setup failed ... all tests skipped
 
-::::::::::::::::::::::::::: Δt = 0:00:01.692470 :::::::::::::::::::::::::::
+::::::::::::::::::::::::::: Δt = 0:00:01.718887 :::::::::::::::::::::::::::
