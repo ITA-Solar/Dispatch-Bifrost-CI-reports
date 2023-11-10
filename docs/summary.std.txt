@@ -1,39 +1,81 @@
 
-The repo hash for this run is: 6ab3bbcb3
+The repo hash for this run is: 0e5b87658
 
-The branch on which it was run: pic_michael
+The branch on which it was run: HLLS_bunch
 
 
 ::: Setting up enviroment for Intel oneAPI 2022 (ifort-classic)
 
 ::::::::::::::::::::::::: blast [ramses/hlld_eos] :::::::::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:203: io_unit_mod.o] Error 127
+make: *** Waiting for unfinished jobs....
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
+
 
 ::::::::::::::::::::::::: rt_shadow [ramses/hlls] :::::::::::::::::::::::::
 ::: Compilation
+::: Compilation Errors:
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:203: io_unit_mod.o] Error 127
+make: *** Waiting for unfinished jobs....
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
+
 
 :::::::::::::::::: stellar_atmospheres [ramses/hlld_eos] ::::::::::::::::::
 ::: Compilation
-::: Running single step (1x MPI 4x OpenMP)
-Traceback (most recent call last):
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/bifrost_test.py", line 256, in <module>
-    main()
-  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1157, in __call__
-    return self.main(*args, **kwargs)
-  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1078, in main
-    rv = self.invoke(ctx)
-  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 1434, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/mn/stornext/u3/miko/.local/lib/python3.9/site-packages/click/core.py", line 783, in invoke
-    return __callback(*args, **kwargs)
-  File "/var/lib/jenkins/workspace/Dispatch-Bifrost_pic_michael/utilities/python/bifrost_test.py", line 170, in main
-    res = subprocess.run(f"{s.setup}{unit.run}",
-  File "/usr/lib64/python3.9/subprocess.py", line 507, in run
-    stdout, stderr = process.communicate(input, timeout=timeout)
-  File "/usr/lib64/python3.9/subprocess.py", line 1134, in communicate
-    stdout, stderr = self._communicate(input, endtime, timeout)
-  File "/usr/lib64/python3.9/subprocess.py", line 2021, in _communicate
-    stderr = self._translate_newlines(stderr,
-  File "/usr/lib64/python3.9/subprocess.py", line 1011, in _translate_newlines
-    data = data.decode(encoding, errors)
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcc in position 1785: invalid continuation byte
+::: Compilation Errors:
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:203: io_unit_mod.o] Error 127
+make: *** Waiting for unfinished jobs....
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
+
+
+:::::::::::::::::: stellar_atmospheres [ramses/hlls_eos] ::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:203: io_unit_mod.o] Error 127
+make: *** Waiting for unfinished jobs....
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
+
+
+::::::::::::::::::::: stellar_atmospheres [stagger2/e] ::::::::::::::::::::
+::: Compilation
+::: Compilation Errors:
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:203: io_unit_mod.o] Error 127
+make: *** Waiting for unfinished jobs....
+/bin/bash: line 1: mpiifort: command not found
+make: *** [../../config/Makefile:204: mpi_lib.o] Error 127
+
+
+::: Setting up enviroment for OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3
+::: Enviroment setup errors:
+
+/bin/sh: line 2: /opt/rh/devtoolset-12/enable: No such file or directory
+
+
+::::::::::::::::::::::::::::::::: SUMMARY :::::::::::::::::::::::::::::::::
+
+:: (env) Intel oneAPI 2022 (ifort-classic)                     
+
+ 01 blast [ramses/hlld_eos] - compilation                      [ ERRORS! ]
+ 02 rt_shadow [ramses/hlls] - compilation                      [ ERRORS! ]
+ 03 stellar_atmospheres [ramses/hlld_eos] - compilation        [ ERRORS! ]
+ 04 stellar_atmospheres [ramses/hlls_eos] - compilation        [ ERRORS! ]
+ 05 stellar_atmospheres [stagger2/e] - compilation             [ ERRORS! ]
+                                                               -----------
+                                                               0    /    5
+
+
+:: (env) OpenMPI 4.1.4 (ucx) + GNU GCC 12.1.1-3                
+:: (env) setup failed ... all tests skipped
+
+::::::::::::::::::::::::::: Δt = 0:00:01.692470 :::::::::::::::::::::::::::
